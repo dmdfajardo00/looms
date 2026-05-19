@@ -72,6 +72,30 @@ These three patches are what make this fork actually work on my setup:
 
 Other changes: Deepgram → Gladia, Resend `RESEND_API_KEY` for outbound mail, white-label all visible "Cap" text → "Looms", new SVG mark/wordmark/favicon, hide Pro upsell UI on self-hosted, force-hide the Cap logo on share pages.
 
+## Repository map
+
+| Path | What lives there |
+|-|-|
+| `apps/desktop` | Tauri v2 desktop app with SolidStart UI and Rust backend (upstream Cap, untouched) |
+| `apps/web` | Next.js web app — share pages, dashboard, API routes, auth (where most Looms changes live) |
+| `apps/cli` | Rust CLI |
+| `apps/media-server` | ffmpeg jobs, thumbnails, audio extraction for transcription |
+| `apps/discord-bot` | Discord integration (unused in this fork) |
+| `packages/database` | Drizzle schema, auth, email config |
+| `packages/ui` | Shared React UI (Logo + favicon swapped here) |
+| `packages/ui-solid` | Shared Solid UI (desktop app) |
+| `packages/web-backend` | Backend service layer — S3Buckets, ImageUploads (R2 patches live here) |
+| `packages/web-domain` | Web domain models and types |
+| `packages/env` | Environment validation (Gladia/Resend env vars added here) |
+| `packages/sdk-embed` | Embed SDK |
+| `packages/sdk-recorder` | Recorder SDK |
+| `crates/*` | Recording, capture, camera, audio, encoding, rendering, muxing crates |
+| `scripts/*` | Build + maintenance tooling. `scripts/rebrand.py` (gitignored) is the Cap→Looms text sweep |
+| `infra/*` | Infrastructure configuration |
+| `deploy/*` | This fork's Dokploy compose + deployment runbook |
+
+The web API uses Effect and `@effect/platform` HTTP APIs. Desktop capture and export paths are backed by Rust crates for fast recording, rendering, and platform-specific media access.
+
 ## Local development
 
 Same as upstream Cap (this is a fork). See the original [CapSoftware/Cap README](https://github.com/CapSoftware/Cap) for the full dev setup. Short version:
