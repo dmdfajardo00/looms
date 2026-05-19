@@ -267,7 +267,7 @@ const instantModeConfig: FeaturePageConfig = {
 			title: "See Instant Mode in Action",
 			iframe: {
 				src: "https://cap.so/embed/8cq21vmz12tm1zf",
-				title: "See Instant Mode in Action - Looms Screen Recording",
+				title: "See Instant Mode in Action - Caps Screen Recording",
 			},
 		},
 		cta: {

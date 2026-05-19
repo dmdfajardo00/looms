@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title:
-			"HIPAA-Compliant Screen Recording — Secure Healthcare Recordings | Looms",
+			"HIPAA-Compliant Screen Recording — Secure Healthcare Recordings | Caps",
 		description:
 			"Cap enables HIPAA-compliant screen recording for healthcare teams. Self-host recordings on your own AWS S3 bucket, keep PHI off third-party servers.",
 		images: ["https://cap.so/og.png"],

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AboutPage } from "@/components/pages/AboutPage";
 
 export const metadata: Metadata = {
-	title: "About — Looms",
+	title: "About — Caps",
 	description:
 		"Looms is a personal Loom alternative. Learn why we started Cap and our commitment to privacy, transparency, and community-driven development.",
 };

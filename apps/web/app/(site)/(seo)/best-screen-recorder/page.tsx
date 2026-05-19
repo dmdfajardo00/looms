@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title:
-			"Best Screen Recorder in 2026 — Free, No Watermark, 4K Quality | Looms",
+			"Best Screen Recorder in 2026 — Free, No Watermark, 4K Quality | Caps",
 		description:
 			"Cap is the best screen recorder for Mac and Windows. Record in 4K with audio and webcam overlay, then share instantly. Free, open-source, no watermarks.",
 		images: ["https://cap.so/og.png"],

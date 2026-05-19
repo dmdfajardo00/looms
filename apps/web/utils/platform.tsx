@@ -21,7 +21,7 @@ export const getDownloadButtonText = (
 	isIntel: boolean = false,
 ): string => {
 	if (loading) {
-		return "Download Looms";
+		return "Download Caps";
 	} else if (platform === "windows") {
 		return "Download for free";
 	} else if (platform === "macos") {

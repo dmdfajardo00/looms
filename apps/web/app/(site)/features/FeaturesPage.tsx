@@ -367,7 +367,7 @@ export const FeaturesPage = () => {
 							size="lg"
 							className="flex justify-center items-center w-full font-medium text-md sm:w-auto"
 						>
-							Download Looms Free
+							Download Caps Free
 						</Button>
 						<Button
 							href="/pricing"

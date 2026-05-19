@@ -16,7 +16,7 @@ import { useVideosAnalyticsQuery } from "@/lib/Queries/Analytics";
 import { useDashboardContext } from "../Contexts";
 import {
 	NewFolderDialog,
-	SelectedLoomsBar,
+	SelectedCapsBar,
 	UploadCapButton,
 	UploadPlaceholderCard,
 	WebRecorderDialog,
@@ -63,7 +63,7 @@ export type VideoData = {
 	settings?: Partial<Record<ViewerSettingKey, boolean>> | null;
 }[];
 
-export const Looms = ({
+export const Caps = ({
 	data,
 	count,
 	analyticsEnabled,
@@ -111,7 +111,7 @@ export const Looms = ({
 		VideoDelete: (id: Video.VideoId) => Effect.Effect<void, unknown, never>;
 	};
 
-	const { mutate: deleteLooms, isPending: isDeletingLooms } = useEffectMutation({
+	const { mutate: deleteCaps, isPending: isDeletingLooms } = useEffectMutation({
 		mutationFn: Effect.fn(function* (ids: Video.VideoId[]) {
 			if (ids.length === 0) return { success: 0 };
 
@@ -199,7 +199,7 @@ export const Looms = ({
 						document.activeElement?.tagName || "",
 					)
 				) {
-					deleteLooms(selectedLooms);
+					deleteCaps(selectedLooms);
 				}
 			}
 
@@ -220,7 +220,7 @@ export const Looms = ({
 		return () => {
 			window.removeEventListener("keydown", handleKeyDown);
 		};
-	}, [selectedLooms, data, deleteLooms]);
+	}, [selectedLooms, data, deleteCaps]);
 
 	useEffect(() => {
 		const handleDragStart = () => setIsDraggingCap(true);
@@ -296,7 +296,7 @@ export const Looms = ({
 									analytics={videoAnalytics ?? 0}
 									onDelete={() => {
 										if (selectedLooms.length > 0) {
-											deleteLooms(selectedLooms);
+											deleteCaps(selectedLooms);
 										} else {
 											deleteCap(video.id);
 										}
@@ -317,10 +317,10 @@ export const Looms = ({
 					<CapPagination currentPage={page} totalPages={totalPages} />
 				</div>
 			)}
-			<SelectedLoomsBar
+			<SelectedCapsBar
 				selectedLooms={selectedLooms}
 				setSelectedLooms={setSelectedLooms}
-				deleteSelectedLooms={() => deleteLooms(selectedLooms)}
+				deleteSelectedLooms={() => deleteCaps(selectedLooms)}
 				isDeleting={isDeletingLooms || isDeletingCap}
 			/>
 			{isDraggingCap && (

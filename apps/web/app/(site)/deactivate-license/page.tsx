@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { LicenseDeactivationPage } from "@/components/pages/LicenseDeactivationPage";
 
 export const metadata: Metadata = {
-	title: "Deactivate License — Looms",
+	title: "Deactivate License — Caps",
 	description:
 		"Deactivate your Cap commercial license from its current device to use it elsewhere.",
 };

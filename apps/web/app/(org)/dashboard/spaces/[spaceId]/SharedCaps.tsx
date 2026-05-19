@@ -78,7 +78,7 @@ type SpaceData = {
 	hasPassword?: boolean;
 };
 
-export const SharedLooms = ({
+export const SharedCaps = ({
 	data,
 	count,
 	spaceData,

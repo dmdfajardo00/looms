@@ -5,7 +5,7 @@ import type { ToolPageContent } from "@/components/tools/types";
 import { createBreadcrumbSchema } from "@/utils/web-schema";
 
 export const metadata: Metadata = {
-	title: "MP4 to WebM Converter | Free Online Video Converter | Looms",
+	title: "MP4 to WebM Converter | Free Online Video Converter | Caps",
 	description:
 		"Convert MP4 videos to WebM format for better web compatibility directly in your browser. Free online tool with no uploads required.",
 	openGraph: {
@@ -88,7 +88,7 @@ export default function MP4ToWebMPage() {
 			title: "Cap is the open source Loom alternative",
 			description:
 				"Record, edit, and share video messages with Cap. 100% open source and privacy focused.",
-			buttonText: "Download Looms Free",
+			buttonText: "Download Caps Free",
 		},
 	};
 

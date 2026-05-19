@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Video Recording Software — Free HD Capture, Instant Sharing | Looms",
+		title: "Video Recording Software — Free HD Capture, Instant Sharing | Caps",
 		description:
 			"Cap is free video recording software for Mac and Windows. Record in HD with audio and webcam, then share with a link instantly. Open-source, no watermarks.",
 		images: ["https://cap.so/og.png"],

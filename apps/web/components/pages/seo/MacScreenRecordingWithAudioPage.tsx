@@ -278,7 +278,7 @@ export const macScreenRecordingWithAudioContent: SeoPageContent = {
 
 	cta: {
 		title: "Record Your Mac Screen with Audio — Free",
-		buttonText: "Download Looms Free for Mac",
+		buttonText: "Download Caps Free for Mac",
 		secondaryButtonText: "Try Instant Mode in Browser",
 	},
 };

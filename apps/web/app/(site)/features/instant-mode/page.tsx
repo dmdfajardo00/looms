@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Instant Mode - Quick Screen Recording & Sharing | Looms",
+		title: "Instant Mode - Quick Screen Recording & Sharing | Caps",
 		description:
 			"Record and share instantly with Cap's cloud-powered Instant Mode. Get automatic transcriptions, collaborative comments, shareable links, and team workspaces for fast feedback loops.",
 		images: ["https://cap.so/og.png"],

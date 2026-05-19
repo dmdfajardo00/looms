@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "MP4 to GIF Converter — Free Online Animated GIF Maker | Looms",
+		title: "MP4 to GIF Converter — Free Online Animated GIF Maker | Caps",
 		description:
 			"Convert MP4 to animated GIF directly in your browser. No uploads, no installs, 100% private.",
 		images: ["https://cap.so/og.png"],
@@ -181,7 +181,7 @@ export default function MP4ToGIFPage() {
 			title: "Cap is the open source Loom alternative",
 			description:
 				"Record, edit, and share video messages with Cap. 100% open source and privacy focused. Export directly to MP4 — no conversion needed.",
-			buttonText: "Download Looms Free",
+			buttonText: "Download Caps Free",
 		},
 	};
 

@@ -9,7 +9,7 @@ import {
 } from "@/utils/releases";
 
 export const metadata: Metadata = {
-	title: "All Versions — Looms",
+	title: "All Versions — Caps",
 	description: "Download previous versions of Cap for macOS and Windows.",
 };
 

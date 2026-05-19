@@ -10,7 +10,7 @@ export const LogoSection = () => {
 					className="inline-block w-[250px] h-auto mx-auto"
 				>
 					<svg
-						aria-label="Looms Logo"
+						aria-label="Caps Logo"
 						xmlns="http://www.w3.org/2000/svg"
 						className="w-[250px] h-auto mx-auto"
 						fill="none"

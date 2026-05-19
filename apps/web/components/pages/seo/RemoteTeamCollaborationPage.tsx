@@ -198,7 +198,7 @@ export const remoteTeamCollaborationContent: SeoPageContent = {
 
 	cta: {
 		title: "Ready to Transform Your Remote Team Communication?",
-		buttonText: "Download Looms Free",
+		buttonText: "Download Caps Free",
 	},
 };
 

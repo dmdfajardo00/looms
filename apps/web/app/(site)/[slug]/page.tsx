@@ -15,7 +15,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 		return {
 			title: "Cap — Personal screen recordings.",
 			description:
-				"Looms is a personal Loom alternative. Lightweight, powerful, and cross-platform. Record and share in seconds.",
+				"Caps is a personal Loom alternative. Lightweight, powerful, and cross-platform. Record and share in seconds.",
 		};
 	}
 

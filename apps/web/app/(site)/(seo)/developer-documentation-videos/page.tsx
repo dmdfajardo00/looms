@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title:
-			"Developer Documentation Videos — Record API Demos and SDK Walkthroughs | Looms",
+			"Developer Documentation Videos — Record API Demos and SDK Walkthroughs | Caps",
 		description:
 			"Record API demos, SDK walkthroughs, and changelog videos instantly. Share a link, embed in your docs, get AI transcripts. Free and open-source.",
 		images: ["https://cap.so/og.png"],

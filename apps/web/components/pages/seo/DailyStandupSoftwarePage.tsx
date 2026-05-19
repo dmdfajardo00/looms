@@ -198,7 +198,7 @@ export const dailyStandupSoftwareContent: SeoPageContent = {
 
 	cta: {
 		title: "Ready to Transform Your Daily Standups?",
-		buttonText: "Download Looms Free",
+		buttonText: "Download Caps Free",
 	},
 };
 

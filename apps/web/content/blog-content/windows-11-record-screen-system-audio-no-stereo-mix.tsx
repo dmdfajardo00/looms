@@ -182,7 +182,7 @@ export const recordScreenWindowsContent = {
 		title: "Start Recording with System Audio Today",
 		description:
 			"Cap makes recording your Windows screen with system audio incredibly simple. No Stereo Mix required, no complex audio routing.",
-		buttonText: "Download Looms",
+		buttonText: "Download Caps",
 		buttonLink: "/download",
 		subtitle:
 			"Download Looms for Windows – free forever • Open-source • 14-day Pro trial",

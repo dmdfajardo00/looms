@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title:
-			"Video Speed Controller Online – Speed Up or Slow Down Videos Free | Looms",
+			"Video Speed Controller Online – Speed Up or Slow Down Videos Free | Caps",
 		description:
 			"Adjust video playback speed from 0.25× to 3× directly in your browser. Free, private, no uploads required.",
 		images: ["https://cap.so/og.png"],
@@ -192,7 +192,7 @@ export default function SpeedControllerPage() {
 			title: "Cap is the open source Loom alternative",
 			description:
 				"Record, edit, and share video messages with Cap. 100% open source and privacy focused. No speed adjustments needed — just hit record.",
-			buttonText: "Download Looms Free",
+			buttonText: "Download Caps Free",
 		},
 	};
 

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Screen Recording Software — Free HD Screen Capture | Looms",
+		title: "Screen Recording Software — Free HD Screen Capture | Caps",
 		description:
 			"Free, open-source screen recording software for Mac and Windows. Capture HD video with audio, share instantly, and own your data.",
 		images: ["https://cap.so/og.png"],

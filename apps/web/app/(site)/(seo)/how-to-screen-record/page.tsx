@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "How to Screen Record on Mac, Windows & Chrome (2026 Guide) | Looms",
+		title: "How to Screen Record on Mac, Windows & Chrome (2026 Guide) | Caps",
 		description:
 			"Learn how to screen record with audio on Mac, Windows, and Chrome. Free step-by-step guide.",
 		images: ["https://cap.so/og.png"],

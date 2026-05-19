@@ -198,7 +198,7 @@ export const screenRecordingContent: SeoPageContent = {
 
 	cta: {
 		title: "Start Screen Recording for Free with Cap",
-		buttonText: "Download Looms Free",
+		buttonText: "Download Caps Free",
 		secondaryButtonText: "Try Instant Mode in Browser",
 	},
 };

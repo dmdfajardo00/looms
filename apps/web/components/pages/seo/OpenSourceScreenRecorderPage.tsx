@@ -262,7 +262,7 @@ export const openSourceScreenRecorderContent: SeoPageContent = {
 
 	cta: {
 		title: "Start Recording with the Best Open Source Screen Recorder",
-		buttonText: "Download Looms Free",
+		buttonText: "Download Caps Free",
 		secondaryButtonText: "View on GitHub",
 	},
 };

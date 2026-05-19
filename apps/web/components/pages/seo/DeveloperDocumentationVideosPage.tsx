@@ -284,7 +284,7 @@ export const developerDocumentationVideosContent: SeoPageContent = {
 
 	cta: {
 		title: "Start Recording Developer Documentation Videos",
-		buttonText: "Download Looms Free",
+		buttonText: "Download Caps Free",
 		secondaryButtonText: "View Pricing",
 	},
 };

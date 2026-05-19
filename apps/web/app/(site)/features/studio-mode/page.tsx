@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Studio Mode - Professional Screen Recording | Looms",
+		title: "Studio Mode - Professional Screen Recording | Caps",
 		description:
 			"Create professional-quality screen recordings with Cap Studio Mode. Local recording, 4K 60fps quality, precision editing tools, and complete privacy control.",
 		images: ["https://cap.so/og.png"],

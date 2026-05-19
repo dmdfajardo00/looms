@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title:
-			"OBS Alternative — Easier Screen Recording with Instant Sharing | Looms",
+			"OBS Alternative — Easier Screen Recording with Instant Sharing | Caps",
 		description:
 			"Cap is the modern OBS alternative for async screen sharing. Record in 4K, get a shareable link in seconds, and collaborate with timestamped comments. No configuration required.",
 		images: ["https://cap.so/og.png"],

@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Record Screen — Free HD Screen Recorder with Instant Sharing | Looms",
+		title: "Record Screen — Free HD Screen Recorder with Instant Sharing | Caps",
 		description:
 			"Record your screen in HD on Mac or Windows. Capture audio and webcam, then share with a link instantly. Free, open-source, no watermarks.",
 		images: ["https://cap.so/og.png"],

@@ -7,7 +7,7 @@ import NumberFlow from "@number-flow/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ConfirmationDialog } from "@/app/(org)/dashboard/_components/ConfirmationDialog";
 
-interface SelectedLoomsBarProps {
+interface SelectedCapsBarProps {
 	selectedLooms: string[];
 	setSelectedLooms: (caps: Video.VideoId[]) => void;
 	deleteSelectedLooms: () => void;
@@ -17,12 +17,12 @@ interface SelectedLoomsBarProps {
 import type { Video } from "@cap/web-domain";
 import { useState } from "react";
 
-export const SelectedLoomsBar = ({
+export const SelectedCapsBar = ({
 	selectedLooms,
 	setSelectedLooms,
 	deleteSelectedLooms,
 	isDeleting,
-}: SelectedLoomsBarProps) => {
+}: SelectedCapsBarProps) => {
 	const [confirmOpen, setConfirmOpen] = useState(false);
 
 	const handleConfirmDelete = () => {

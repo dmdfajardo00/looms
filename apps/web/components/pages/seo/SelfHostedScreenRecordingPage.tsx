@@ -280,7 +280,7 @@ export const selfHostedScreenRecordingContent: SeoPageContent = {
 
 	cta: {
 		title: "Start Self-Hosting Your Screen Recordings with Cap",
-		buttonText: "Download Looms Free",
+		buttonText: "Download Caps Free",
 		secondaryButtonText: "View Self-Hosting Docs",
 	},
 };

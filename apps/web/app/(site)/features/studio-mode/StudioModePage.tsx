@@ -273,7 +273,7 @@ const studioModeConfig: FeaturePageConfig = {
 		cta: {
 			title: "Start Creating Professional Content Today",
 			description:
-				"Download Looms and experience the power of Studio Mode for yourself. Create stunning, professional-quality recordings that engage your audience.",
+				"Download Caps and experience the power of Studio Mode for yourself. Create stunning, professional-quality recordings that engage your audience.",
 			primaryButton: "Download Looms Free",
 			secondaryButton: "Upgrade to Pro",
 		},

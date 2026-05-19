@@ -278,7 +278,7 @@ export const screenRecordWindowsContent: SeoPageContent = {
 
 	cta: {
 		title: "Start Recording Your Windows Screen in Seconds",
-		buttonText: "Download Looms Free for Windows",
+		buttonText: "Download Caps Free for Windows",
 	},
 };
 

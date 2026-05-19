@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Data Processing Agreement - Looms",
+	title: "Data Processing Agreement - Caps",
 	description:
 		"Cap's Data Processing Agreement for GDPR, UK GDPR, and related data protection laws.",
 };
@@ -139,7 +139,7 @@ export default function DataProcessingAgreementPage() {
 							ensuring that Customer Content is lawful.
 							<br />
 							Customer is responsible for configuring the Services for its
-							compliance needs, including whether to use Looms storage, a
+							compliance needs, including whether to use Caps storage, a
 							custom S3-compatible bucket, a self-hosted deployment,
 							password-protected sharing, restricted access, optional AI
 							features, retention settings, or other available controls.

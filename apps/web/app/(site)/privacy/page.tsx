@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Privacy Policy — Looms",
+	title: "Privacy Policy — Caps",
 };
 
 export default function App() {

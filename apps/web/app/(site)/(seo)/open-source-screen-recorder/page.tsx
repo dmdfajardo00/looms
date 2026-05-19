@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Open Source Screen Recorder — Free, Private, Self-Hostable | Looms",
+		title: "Open Source Screen Recorder — Free, Private, Self-Hostable | Caps",
 		description:
 			"Cap is the leading open-source screen recorder for Mac and Windows. MIT-licensed, 4K quality, instant sharing, self-hostable storage. No watermarks, no vendor lock-in.",
 		images: ["https://cap.so/og.png"],

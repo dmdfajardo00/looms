@@ -204,7 +204,7 @@ export const loomAlternativeContent: SeoPageContent = {
 	migrationGuide: {
 		title: "How to Get Started with Cap (Easy Guide)",
 		steps: [
-			"Download Looms for your operating system (Mac or Windows)",
+			"Download Caps for your operating system (Mac or Windows)",
 			"Launch the application and sign in to your Looms account",
 			"Import your existing Loom videos using Cap's built-in Loom video importer",
 			"Start recording using either Instant Mode or Studio Mode",
@@ -221,7 +221,7 @@ export const loomAlternativeContent: SeoPageContent = {
 
 	cta: {
 		title: "Ready to Try Cap for Your Screen Recording Needs?",
-		buttonText: "Download Looms Free",
+		buttonText: "Download Caps Free",
 	},
 };
 

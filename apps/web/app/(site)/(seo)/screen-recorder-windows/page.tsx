@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Best Free Screen Recorder for Windows 10 & 11 | Looms",
+		title: "Best Free Screen Recorder for Windows 10 & 11 | Caps",
 		description:
 			"Record your screen on Windows with Cap — free, open-source screen recorder with HD video, audio, webcam overlay, and instant sharing. No watermarks.",
 		images: ["https://cap.so/og.png"],

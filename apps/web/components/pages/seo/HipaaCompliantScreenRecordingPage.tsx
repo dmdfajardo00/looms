@@ -279,7 +279,7 @@ export const hipaaCompliantScreenRecordingContent: SeoPageContent = {
 
 	cta: {
 		title: "Start HIPAA-Compliant Screen Recording with Cap",
-		buttonText: "Download Looms Free",
+		buttonText: "Download Caps Free",
 		secondaryButtonText: "View Self-Hosting Docs",
 	},
 };

@@ -330,7 +330,7 @@ export const agenciesContent: SeoPageContent = {
 	migrationGuide: {
 		title: "Getting Started with Cap for Your Agency",
 		steps: [
-			"Download Looms for all team members (available on Mac and Windows)",
+			"Download Caps for all team members (available on Mac and Windows)",
 			"Set up Looms Pro with custom domain for professional share links",
 			"Connect your own S3 storage for complete data ownership (optional)",
 			"Create agency guidelines for video updates (length, format, etc.)",

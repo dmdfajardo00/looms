@@ -8,9 +8,9 @@ import { toast } from "sonner";
 import { useDashboardContext } from "@/app/(org)/dashboard/Contexts";
 import { useEffectMutation, useRpcClient } from "@/lib/EffectRuntime";
 import { useVideosAnalyticsQuery } from "@/lib/Queries/Analytics";
-import type { VideoData } from "../../../caps/Looms";
+import type { VideoData } from "../../../caps/Caps";
 import { CapCard } from "../../../caps/components/CapCard/CapCard";
-import { SelectedLoomsBar } from "../../../caps/components/SelectedLoomsBar";
+import { SelectedCapsBar } from "../../../caps/components/SelectedCapsBar";
 import { UploadPlaceholderCard } from "../../../caps/components/UploadPlaceholderCard";
 import { useUploadingStatus } from "../../../caps/UploadingContext";
 
@@ -31,7 +31,7 @@ export default function FolderVideosSection({
 
 	const rpc = useRpcClient();
 
-	const { mutate: deleteLooms, isPending: isDeletingLooms } = useEffectMutation({
+	const { mutate: deleteCaps, isPending: isDeletingLooms } = useEffectMutation({
 		mutationFn: Effect.fn(function* (ids: Video.VideoId[]) {
 			if (ids.length === 0) return;
 
@@ -152,7 +152,7 @@ export default function FolderVideosSection({
 								onSelectToggle={() => handleCapSelection(video.id)}
 								onDelete={() => {
 									if (selectedLooms.length > 0) {
-										deleteLooms(selectedLooms);
+										deleteCaps(selectedLooms);
 									} else {
 										deleteCap(video.id);
 									}
@@ -162,10 +162,10 @@ export default function FolderVideosSection({
 					</>
 				)}
 			</div>
-			<SelectedLoomsBar
+			<SelectedCapsBar
 				selectedLooms={selectedLooms}
 				setSelectedLooms={setSelectedLooms}
-				deleteSelectedLooms={() => deleteLooms(selectedLooms)}
+				deleteSelectedLooms={() => deleteCaps(selectedLooms)}
 				isDeleting={isDeletingLooms || isDeletingCap}
 			/>
 		</>

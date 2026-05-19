@@ -261,7 +261,7 @@ export const bestScreenRecorderContent: SeoPageContent = {
 
 	cta: {
 		title: "Start Using the Best Screen Recorder for Free",
-		buttonText: "Download Looms Free",
+		buttonText: "Download Caps Free",
 		secondaryButtonText: "Try Instant Mode in Browser",
 	},
 };

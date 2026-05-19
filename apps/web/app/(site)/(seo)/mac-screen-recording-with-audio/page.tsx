@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Mac Screen Recording with Audio — Loomsture System Sound & Mic | Looms",
+		title: "Mac Screen Recording with Audio — Loomsture System Sound & Mic | Caps",
 		description:
 			"Record your Mac screen with system audio and microphone using Cap. No BlackHole, no plugins required. Free and open-source for macOS.",
 		images: ["https://cap.so/og.png"],

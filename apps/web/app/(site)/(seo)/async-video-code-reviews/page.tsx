@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Async Video Code Reviews — Ship Faster Without the Meetings | Looms",
+		title: "Async Video Code Reviews — Ship Faster Without the Meetings | Caps",
 		description:
 			"Record PR walkthroughs and share instant links with timestamped comments. No meetings, no scheduling. Just faster code reviews.",
 		images: ["https://cap.so/og.png"],

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Best Screen Recorder for Mac | Looms",
+		title: "Best Screen Recorder for Mac | Caps",
 		description:
 			"Cap is the best free screen recorder for Mac, offering HD quality, unlimited recording, and easy export. Ideal for tutorials, presentations, and educational videos.",
 		images: ["https://cap.so/og.png"],

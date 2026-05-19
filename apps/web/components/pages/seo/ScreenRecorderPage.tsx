@@ -113,7 +113,7 @@ export const screenRecorderContent: SeoPageContent = {
 	cta: {
 		title:
 			"Get Started with Cap – The Easy, High-Quality, and Free Screen Recorder",
-		buttonText: "Download Looms Free",
+		buttonText: "Download Caps Free",
 	},
 };
 

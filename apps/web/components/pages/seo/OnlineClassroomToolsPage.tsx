@@ -198,7 +198,7 @@ export const onlineClassroomToolsContent: SeoPageContent = {
 
 	cta: {
 		title: "Ready to Transform Your Online Teaching Experience?",
-		buttonText: "Download Looms Free",
+		buttonText: "Download Caps Free",
 	},
 };
 

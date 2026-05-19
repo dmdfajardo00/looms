@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title:
-			"Self-Hosted Screen Recording — Own Your Data, No Vendor Lock-In | Looms",
+			"Self-Hosted Screen Recording — Own Your Data, No Vendor Lock-In | Caps",
 		description:
 			"Cap lets you self-host screen recordings on your own S3-compatible storage. AWS S3, Cloudflare R2, MinIO — your infrastructure, instant shareable links.",
 		images: ["https://cap.so/og.png"],

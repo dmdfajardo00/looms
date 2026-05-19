@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Employee Onboarding Platform | Looms Screen Recorder",
+		title: "Employee Onboarding Platform | Caps Screen Recorder",
 		description:
 			"Discover how Cap's open-source screen recorder simplifies new-hire training with asynchronous video and built-in feedback.",
 		images: ["https://cap.so/og.png"],

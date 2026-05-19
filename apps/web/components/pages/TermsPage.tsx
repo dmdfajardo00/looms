@@ -17,7 +17,7 @@ export const TermsPage = () => {
 						<li>
 							<h3>Introduction</h3>
 							<br />
-							Welcome to Looms Software, Inc. ("Cap," "we," "us," or "our"). These
+							Welcome to Caps Software, Inc. ("Cap," "we," "us," or "our"). These
 							Terms of Service ("Terms") govern your access to and use of our
 							website, software, and services (collectively, the "Services"). By
 							accessing or using our Services, you agree to be bound by these

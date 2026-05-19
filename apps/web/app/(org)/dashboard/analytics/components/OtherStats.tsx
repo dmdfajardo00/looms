@@ -183,7 +183,7 @@ export default function OtherStats({ data, isLoading }: OtherStatsProps) {
 			{data.topLooms && data.topLooms.length > 0 && (
 				<OtherStatBox
 					className="col-span-2"
-					title="Top Looms"
+					title="Top Caps"
 					icon={faRecordVinyl}
 				>
 					<div className="flex flex-col flex-1 gap-5 justify-center w-full">

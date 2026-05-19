@@ -221,7 +221,7 @@ export const AboutPage = () => {
 									size="lg"
 									className="font-medium"
 								>
-									Download Looms
+									Download Caps
 								</Button>
 								<Button
 									href="https://github.com/CapSoftware/Cap"

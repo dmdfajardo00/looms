@@ -202,7 +202,7 @@ export const employeeOnboardingContent: SeoPageContent = {
 
 	cta: {
 		title: "Ready to Transform Your Employee Onboarding Experience?",
-		buttonText: "Download Looms Free",
+		buttonText: "Download Caps Free",
 	},
 };
 

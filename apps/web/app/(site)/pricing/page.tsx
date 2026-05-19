@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PricingPage } from "@/components/pages/PricingPage";
 
 export const metadata: Metadata = {
-	title: "Pricing — Looms",
+	title: "Pricing — Caps",
 };
 
 export default function App() {

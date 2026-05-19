@@ -285,7 +285,7 @@ export const seoMetadata = {
 	},
 	"developer-documentation-videos": {
 		title:
-			"Developer Documentation Videos — Record API Demos and SDK Walkthroughs | Looms",
+			"Developer Documentation Videos — Record API Demos and SDK Walkthroughs | Caps",
 		description:
 			"Create professional developer documentation videos with screen recording. Record API demos, SDK walkthroughs, and technical tutorials instantly. Cap is free, open-source, 4K quality, and built for developers.",
 		keywords: [

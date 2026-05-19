@@ -290,7 +290,7 @@ export const obsAlternativeContent: SeoPageContent = {
 
 	cta: {
 		title: "Switch to the Simpler OBS Alternative",
-		buttonText: "Download Looms Free",
+		buttonText: "Download Caps Free",
 		secondaryButtonText: "View on GitHub",
 	},
 };

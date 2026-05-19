@@ -6,7 +6,7 @@ import { createBreadcrumbSchema } from "@/utils/web-schema";
 
 export const metadata: Metadata = {
 	title:
-		"Loom Video Downloader — Download Loom Videos Free + Migrate to Cap | Looms",
+		"Loom Video Downloader — Download Loom Videos Free + Migrate to Cap | Caps",
 	description:
 		"Download any Loom video for free with Cap's online Loom video downloader. Then migrate your entire Loom library to Cap — the open source Loom alternative — with 20% off using code MIGRATE20.",
 	keywords: [
@@ -144,7 +144,7 @@ const pageContent: ToolPageContent = {
 	cta: {
 		title: "Ready to leave Loom for good?",
 		description:
-			"Skip the one-by-one downloads. Looms Pro imports your entire Loom library in one click — and costs half what Loom charges. Use MIGRATE20 at checkout for an extra 20% off your first year.",
+			"Skip the one-by-one downloads. Caps Pro imports your entire Loom library in one click — and costs half what Loom charges. Use MIGRATE20 at checkout for an extra 20% off your first year.",
 		buttonText: "Migrate to Looms Pro — save 20%",
 		buttonHref:
 			"/pricing?promo=MIGRATE20&utm_source=loom-downloader&utm_campaign=migrate20",

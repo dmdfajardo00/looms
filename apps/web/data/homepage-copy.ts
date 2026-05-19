@@ -374,7 +374,7 @@ export const homepageCopy: HomePageCopy = {
 			{
 				question: "What about GDPR/HIPAA compliance?",
 				answer:
-					"Looms Pro supports custom S3 buckets in any region for GDPR compliance. For HIPAA and other regulations, our self-hosted option gives you complete control. We also offer signed BAAs for enterprise customers.",
+					"Caps Pro supports custom S3 buckets in any region for GDPR compliance. For HIPAA and other regulations, our self-hosted option gives you complete control. We also offer signed BAAs for enterprise customers.",
 			},
 		],
 	},

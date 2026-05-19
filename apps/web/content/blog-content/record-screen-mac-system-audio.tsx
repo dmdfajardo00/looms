@@ -191,7 +191,7 @@ export const recordScreenMacContent = {
 		title: "Start Recording with System Audio Today",
 		description:
 			"Cap makes recording your Mac screen with system audio incredibly simple. No complex audio routing, no expensive software.",
-		buttonText: "Download Looms",
+		buttonText: "Download Caps",
 		buttonLink: "/download",
 		subtitle:
 			"Download Looms for macOS – free forever • Open-source • 14-day Pro trial",

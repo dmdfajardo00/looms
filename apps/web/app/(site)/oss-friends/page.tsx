@@ -2,7 +2,7 @@ import { ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "OSS Friends — Looms",
+	title: "OSS Friends — Caps",
 	description:
 		"Discover amazing open source projects and tools built by our friends in the community.",
 };

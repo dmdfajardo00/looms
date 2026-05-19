@@ -183,7 +183,7 @@ export const testimonials = [
 		name: "Dozie",
 		handle: "@dozibe",
 		image: "/testimonials/dozibe.jpg",
-		content: "Came at the right time. Looms was well needed.",
+		content: "Came at the right time. Caps was well needed.",
 		url: "https://x.com/dozibe/status/1842653324635455914",
 	},
 	{
