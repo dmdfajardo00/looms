@@ -3,8 +3,7 @@ import { organizations, videos, videoUploads } from "@cap/database/schema";
 import { serverEnv } from "@cap/env";
 import type { Video } from "@cap/web-domain";
 import { eq } from "drizzle-orm";
-import { start } from "workflow/api";
-import { transcribeVideoWorkflow } from "@/workflows/transcribe";
+import { runTranscribeInline } from "@/workflows/transcribe";
 
 type TranscribeResult = {
 	success: boolean;
@@ -110,34 +109,22 @@ export async function transcribeVideo(
 		};
 	}
 
-	try {
+	console.log(
+		`[transcribeVideo] Running inline transcription for video ${videoId}`,
+	);
+
+	void runTranscribeInline({
+		videoId,
+		userId,
+		aiGenerationEnabled,
+	}).then((res) => {
 		console.log(
-			`[transcribeVideo] Triggering transcription workflow for video ${videoId}`,
+			`[transcribeVideo] Inline transcription finished for video ${videoId}: ${res.message}`,
 		);
+	});
 
-		await start(transcribeVideoWorkflow, [
-			{
-				videoId,
-				userId,
-				aiGenerationEnabled,
-			},
-		]);
-
-		return {
-			success: true,
-			message: "Transcription workflow started",
-		};
-	} catch (error) {
-		console.error("[transcribeVideo] Failed to trigger workflow:", error);
-
-		await db()
-			.update(videos)
-			.set({ transcriptionStatus: null })
-			.where(eq(videos.id, videoId));
-
-		return {
-			success: false,
-			message: "Failed to start transcription workflow",
-		};
-	}
+	return {
+		success: true,
+		message: "Transcription started",
+	};
 }

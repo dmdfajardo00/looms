@@ -52,6 +52,27 @@ export async function transcribeVideoWorkflow(
 ) {
 	"use workflow";
 
+	return runTranscribeBody(payload);
+}
+
+export async function runTranscribeInline(
+	payload: TranscribeWorkflowPayload,
+): Promise<{ success: boolean; message: string }> {
+	try {
+		return await runTranscribeBody(payload);
+	} catch (error) {
+		console.error(
+			`[transcribeInline] Workflow failed for video ${payload.videoId}:`,
+			error,
+		);
+		return {
+			success: false,
+			message: error instanceof Error ? error.message : String(error),
+		};
+	}
+}
+
+async function runTranscribeBody(payload: TranscribeWorkflowPayload) {
 	const { videoId, userId, aiGenerationEnabled } = payload;
 
 	const videoData = await validateVideo(videoId);
