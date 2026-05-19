@@ -319,6 +319,20 @@ async function resolveVideoSourceUrl(
 	throw new Error("Video file not accessible");
 }
 
+async function fetchWithTimeout(
+	url: string,
+	init: RequestInit,
+	timeoutMs: number,
+): Promise<Response> {
+	const controller = new AbortController();
+	const timer = setTimeout(() => controller.abort(), timeoutMs);
+	try {
+		return await fetch(url, { ...init, signal: controller.signal });
+	} finally {
+		clearTimeout(timer);
+	}
+}
+
 const GLADIA_API_BASE = "https://api.gladia.io";
 const GLADIA_POLL_TIMEOUT_MS = 10 * 60 * 1000;
 const GLADIA_POLL_INITIAL_DELAY_MS = 2_000;
@@ -355,14 +369,16 @@ async function transcribeWithGladia(
 	"use step";
 
 	const apiKey = serverEnv().GLADIA_API_KEY as string;
+	console.log("[gladia] downloading audio from signed URL");
 
-	const audioResponse = await fetch(audioUrl);
+	const audioResponse = await fetchWithTimeout(audioUrl, {}, 30_000);
 	if (!audioResponse.ok) {
 		throw new Error(
 			`Audio URL not accessible: ${audioResponse.status} ${audioResponse.statusText}`,
 		);
 	}
 	const audioBuffer = Buffer.from(await audioResponse.arrayBuffer());
+	console.log(`[gladia] audio downloaded: ${audioBuffer.length} bytes`);
 
 	const form = new FormData();
 	form.append(
@@ -371,11 +387,16 @@ async function transcribeWithGladia(
 		"audio.mp3",
 	);
 
-	const uploadResp = await fetch(`${GLADIA_API_BASE}/v2/upload`, {
-		method: "POST",
-		headers: { "x-gladia-key": apiKey },
-		body: form,
-	});
+	console.log("[gladia] POST /v2/upload");
+	const uploadResp = await fetchWithTimeout(
+		`${GLADIA_API_BASE}/v2/upload`,
+		{
+			method: "POST",
+			headers: { "x-gladia-key": apiKey },
+			body: form,
+		},
+		60_000,
+	);
 	if (!uploadResp.ok) {
 		throw new Error(
 			`Gladia upload failed: ${uploadResp.status} ${await uploadResp.text()}`,
@@ -383,6 +404,7 @@ async function transcribeWithGladia(
 	}
 	const { audio_url: gladiaAudioUrl } =
 		(await uploadResp.json()) as GladiaUploadResponse;
+	console.log(`[gladia] upload OK, audio_url=${gladiaAudioUrl}`);
 
 	const initBody: Record<string, unknown> = {
 		audio_url: gladiaAudioUrl,
@@ -394,14 +416,19 @@ async function transcribeWithGladia(
 		initBody.language_config = { languages: [language] };
 	}
 
-	const initResp = await fetch(`${GLADIA_API_BASE}/v2/pre-recorded`, {
-		method: "POST",
-		headers: {
-			"x-gladia-key": apiKey,
-			"Content-Type": "application/json",
+	console.log("[gladia] POST /v2/pre-recorded");
+	const initResp = await fetchWithTimeout(
+		`${GLADIA_API_BASE}/v2/pre-recorded`,
+		{
+			method: "POST",
+			headers: {
+				"x-gladia-key": apiKey,
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(initBody),
 		},
-		body: JSON.stringify(initBody),
-	});
+		30_000,
+	);
 	if (!initResp.ok) {
 		throw new Error(
 			`Gladia init failed (language=${language}): ${initResp.status} ${await initResp.text()}`,
@@ -409,14 +436,17 @@ async function transcribeWithGladia(
 	}
 	const { result_url: resultUrl } =
 		(await initResp.json()) as GladiaInitResponse;
+	console.log(`[gladia] init OK, polling ${resultUrl}`);
 
 	const startedAt = Date.now();
 	let delayMs = GLADIA_POLL_INITIAL_DELAY_MS;
 	while (Date.now() - startedAt < GLADIA_POLL_TIMEOUT_MS) {
 		await new Promise((resolve) => setTimeout(resolve, delayMs));
-		const poll = await fetch(resultUrl, {
-			headers: { "x-gladia-key": apiKey },
-		});
+		const poll = await fetchWithTimeout(
+			resultUrl,
+			{ headers: { "x-gladia-key": apiKey } },
+			15_000,
+		);
 		if (!poll.ok) {
 			throw new Error(
 				`Gladia poll failed: ${poll.status} ${await poll.text()}`,
