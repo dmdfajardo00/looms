@@ -3,7 +3,7 @@ name: "Screen Fork — Build cap-web"
 on:
   push:
     branches:
-      - screen-fork
+      - main
     paths:
       - "apps/web/**"
       - "packages/**"
