@@ -39,6 +39,8 @@ export async function proxy(request: NextRequest) {
 	if (buildEnv.NEXT_PUBLIC_IS_CAP !== "true") {
 		if (
 			!(
+				path === "/" ||
+				path.startsWith("/embed/") ||
 				path.startsWith("/s/") ||
 				path.startsWith("/middleware") ||
 				path.startsWith("/dashboard") ||
@@ -49,7 +51,16 @@ export async function proxy(request: NextRequest) {
 				path.startsWith("/invite") ||
 				path.startsWith("/self-hosting") ||
 				path.startsWith("/terms") ||
-				path.startsWith("/verify-otp")
+				path.startsWith("/privacy") ||
+				path.startsWith("/verify-otp") ||
+				path.startsWith("/_next/") ||
+				path.startsWith("/fonts/") ||
+				path.startsWith("/rive/") ||
+				path === "/site.webmanifest" ||
+				path === "/favicon.ico" ||
+				path === "/robots.txt" ||
+				path === "/sitemap.xml" ||
+				/\.(png|jpe?g|svg|gif|webp|ico|woff2?|ttf|otf|css|js|map)$/i.test(path)
 			) &&
 			process.env.NODE_ENV !== "development"
 		)
