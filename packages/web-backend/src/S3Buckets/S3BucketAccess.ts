@@ -47,8 +47,13 @@ export const createS3BucketAccess = Effect.gen(function* () {
 		getSignedObjectUrl: (
 			key: string,
 			signingArgs?: RequestPresigningArguments,
-		) =>
-			wrapS3Promise(
+		) => {
+			if (provider.publicBucketUrl) {
+				return Effect.succeed(
+					`${provider.publicBucketUrl.replace(/\/+$/, "")}/${key}`,
+				).pipe(Effect.withSpan("getSignedObjectUrl.publicBucket"));
+			}
+			return wrapS3Promise(
 				provider.getPublic.pipe(
 					Effect.map((client) =>
 						S3Presigner.getSignedUrl(
@@ -60,7 +65,8 @@ export const createS3BucketAccess = Effect.gen(function* () {
 						),
 					),
 				),
-			).pipe(Effect.withSpan("getSignedObjectUrl")),
+			).pipe(Effect.withSpan("getSignedObjectUrl"));
+		},
 		getInternalSignedObjectUrl: (
 			key: string,
 			signingArgs?: RequestPresigningArguments,
@@ -222,7 +228,10 @@ export const createS3BucketAccess = Effect.gen(function* () {
 			signingArgs?: RequestPresigningArguments,
 		) =>
 			wrapS3Promise(
-				provider.getPublic.pipe(
+				(provider.publicBucketUrl
+					? provider.getInternal
+					: provider.getPublic
+				).pipe(
 					Effect.map((client) =>
 						S3Presigner.getSignedUrl(
 							client,
@@ -265,7 +274,10 @@ export const createS3BucketAccess = Effect.gen(function* () {
 			args: Omit<PresignedPostOptions, "Bucket" | "Key">,
 		) =>
 			wrapS3Promise(
-				provider.getPublic.pipe(
+				(provider.publicBucketUrl
+					? provider.getInternal
+					: provider.getPublic
+				).pipe(
 					Effect.map((client) =>
 						createPresignedPost(client, {
 							...args,
@@ -303,7 +315,10 @@ export const createS3BucketAccess = Effect.gen(function* () {
 				>,
 			) =>
 				wrapS3Promise(
-					provider.getPublic.pipe(
+					(provider.publicBucketUrl
+						? provider.getInternal
+						: provider.getPublic
+					).pipe(
 						Effect.map((client) =>
 							S3Presigner.getSignedUrl(
 								client,

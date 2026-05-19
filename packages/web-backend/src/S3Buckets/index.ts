@@ -32,6 +32,9 @@ export class S3Buckets extends Effect.Service<S3Buckets>()("S3Buckets", {
 					yield* Config.boolean("S3_PATH_STYLE").pipe(Config.option),
 				) ?? true,
 			bucket: yield* Config.string("CAP_AWS_BUCKET"),
+			publicBucketUrl: Option.getOrNull(
+				yield* Config.string("S3_PUBLIC_BUCKET_URL").pipe(Config.option),
+			),
 		};
 
 		const createDefaultClient = (internal: boolean) =>
@@ -146,6 +149,7 @@ export class S3Buckets extends Effect.Service<S3Buckets>()("S3Buckets", {
 						getPublic: Effect.succeed(createDefaultClient(false)),
 						bucket: defaultConfigs.bucket,
 						isPathStyle: defaultConfigs.forcePathStyle,
+						publicBucketUrl: defaultConfigs.publicBucketUrl,
 					});
 
 					return Option.match(cloudfrontBucketAccess, {
@@ -167,6 +171,7 @@ export class S3Buckets extends Effect.Service<S3Buckets>()("S3Buckets", {
 							getPublic: Effect.succeed(client),
 							bucket,
 							isPathStyle: client.config.forcePathStyle ?? true,
+							publicBucketUrl: null,
 						});
 
 						return yield* createS3BucketAccess.pipe(Effect.provide(provider));
