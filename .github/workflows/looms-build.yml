@@ -1,4 +1,4 @@
-name: "Screen Fork — Build cap-web"
+name: "Build looms-web"
 
 on:
   push:
@@ -8,14 +8,14 @@ on:
       - "apps/web/**"
       - "packages/**"
       - "apps/web/Dockerfile"
-      - ".github/workflows/screen-build.yml"
+      - ".github/workflows/looms-build.yml"
       - "pnpm-lock.yaml"
       - "package.json"
   workflow_dispatch:
 
 jobs:
   build:
-    name: Build cap-web (amd64)
+    name: Build looms-web (amd64)
     runs-on: ubuntu-24.04
     permissions:
       contents: read
@@ -51,7 +51,7 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/${{ env.REPOSITORY_OWNER }}/cap-web:screen
-            ghcr.io/${{ env.REPOSITORY_OWNER }}/cap-web:screen-${{ github.sha }}
-          cache-from: type=gha,scope=screen-amd64
-          cache-to: type=gha,mode=max,scope=screen-amd64
+            ghcr.io/${{ env.REPOSITORY_OWNER }}/looms-web:latest
+            ghcr.io/${{ env.REPOSITORY_OWNER }}/looms-web:${{ github.sha }}
+          cache-from: type=gha,scope=looms-amd64
+          cache-to: type=gha,mode=max,scope=looms-amd64
