@@ -1,5 +1,6 @@
 "use client";
 
+import { buildEnv } from "@cap/env";
 import { Button, Card, CardDescription, CardHeader, CardTitle } from "@cap/ui";
 import { useQuery } from "@tanstack/react-query";
 import { format } from "date-fns";
@@ -14,6 +15,11 @@ import { manageBilling } from "@/actions/organization/manage-billing";
 import { useDashboardContext } from "@/app/(org)/dashboard/Contexts";
 
 export function BillingSummaryCard() {
+	if (buildEnv.NEXT_PUBLIC_IS_CAP !== "true") return null;
+	return <BillingSummaryCardImpl />;
+}
+
+function BillingSummaryCardImpl() {
 	const { activeOrganization, setUpgradeModalOpen } = useDashboardContext();
 	const router = useRouter();
 	const [billingLoading, setBillingLoading] = useState(false);
