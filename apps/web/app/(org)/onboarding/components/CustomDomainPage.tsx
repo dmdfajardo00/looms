@@ -2,16 +2,14 @@
 
 import { Button } from "@cap/ui";
 import { useRouter } from "next/navigation";
-import { startTransition, useState } from "react";
+import { startTransition } from "react";
 import { toast } from "sonner";
-import { UpgradeModal } from "@/components/UpgradeModal";
 import { useEffectMutation, useRpcClient } from "@/lib/EffectRuntime";
 import { Base } from "./Base";
 
 export function CustomDomainPage() {
 	const router = useRouter();
 	const rpc = useRpcClient();
-	const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
 	const customDomainMutation = useEffectMutation({
 		mutationFn: (_redirect: boolean) =>
@@ -39,45 +37,23 @@ export function CustomDomainPage() {
 		<Base
 			title="Custom Domain"
 			description={
-				<div>
-					<p className="w-full text-base max-w-[340px] text-gray-10">
-						Pro users can setup a custom domain to access their shareable Cap
-						links i.e{" "}
-						<span className="font-medium text-blue-500">
-							cap.yourdomain.com
-						</span>
-					</p>
-				</div>
+				<p className="w-full text-base max-w-[340px] text-gray-10">
+					Configure a custom domain later from organization settings if you want
+					share links on your own subdomain.
+				</p>
 			}
 			descriptionClassName="max-w-[400px]"
 		>
 			<Button
-				onClick={() => setShowUpgradeModal(true)}
-				className="w-full"
-				disabled={customDomainMutation.isPending}
-				variant="blue"
-			>
-				Upgrade to Pro
-			</Button>
-			<div className="w-full h-px bg-gray-4" />
-			<Button
 				type="button"
-				variant="dark"
+				variant="blue"
 				spinner={customDomainMutation.isPending}
 				disabled={customDomainMutation.isPending}
 				className="mx-auto w-full"
 				onClick={() => handleSubmit()}
 			>
-				Skip
+				Continue
 			</Button>
-			<UpgradeModal
-				onCheckout={async () => {
-					await handleSubmit();
-				}}
-				onboarding={true}
-				open={showUpgradeModal}
-				onOpenChange={setShowUpgradeModal}
-			/>
 		</Base>
 	);
 }
