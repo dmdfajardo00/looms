@@ -12,7 +12,7 @@ export default async function Home() {
 		(bootstrapData.featureFlags["homepage-copy"] as string) || "";
 
 	if (sessionCookie) {
-		redirect("/dashboard/caps");
+		redirect("/dashboard/videos");
 	}
 
 	return <HomePage serverHomepageCopyVariant={homepageCopyVariant} />;

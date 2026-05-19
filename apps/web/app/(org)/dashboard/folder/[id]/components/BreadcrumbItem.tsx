@@ -9,7 +9,7 @@ import { toast } from "sonner";
 
 import { moveVideoToFolder } from "@/actions/folders/moveVideoToFolder";
 import { useDashboardContext } from "../../../Contexts";
-import { AllFolders } from "../../../caps/components/Folders";
+import { AllFolders } from "../../../videos/components/Folders";
 
 interface BreadcrumbItemProps {
 	id: Folder.FolderId;

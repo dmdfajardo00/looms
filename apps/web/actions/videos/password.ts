@@ -40,7 +40,7 @@ export async function setVideoPassword(
 			.set({ password: hashed })
 			.where(eq(videos.id, videoId));
 
-		revalidatePath("/dashboard/caps");
+		revalidatePath("/dashboard/videos");
 		revalidatePath("/dashboard/shared-caps");
 		revalidatePath(`/s/${videoId}`);
 
@@ -73,7 +73,7 @@ export async function removeVideoPassword(videoId: Video.VideoId) {
 			.set({ password: null })
 			.where(eq(videos.id, videoId));
 
-		revalidatePath("/dashboard/caps");
+		revalidatePath("/dashboard/videos");
 		revalidatePath("/dashboard/shared-caps");
 		revalidatePath(`/s/${videoId}`);
 

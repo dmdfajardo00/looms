@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { moveRecordingSpoolToInMemoryBackup } from "@/app/(org)/dashboard/caps/components/web-recorder-dialog/recording-spool-fallback";
+import { moveRecordingSpoolToInMemoryBackup } from "@/app/(org)/dashboard/videos/components/web-recorder-dialog/recording-spool-fallback";
 
 const blobToText = async (blob: Blob) =>
 	new TextDecoder().decode(await blob.arrayBuffer());

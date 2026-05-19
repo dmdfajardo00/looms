@@ -20,7 +20,7 @@ export const Bottom = () => {
 			}),
 		onSuccess: () => {
 			startTransition(() => {
-				router.push("/dashboard/caps");
+				router.push("/dashboard/videos");
 				router.refresh();
 			});
 		},

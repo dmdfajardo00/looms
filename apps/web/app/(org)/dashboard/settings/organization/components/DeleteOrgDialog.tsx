@@ -38,7 +38,7 @@ const DeleteOrgDialog = ({ open, onOpenChange }: DeleteOrgDialogProps) => {
 			toast.success("Organization deleted successfully");
 			onOpenChange(false);
 			startTransition(() => {
-				router.push("/dashboard/caps");
+				router.push("/dashboard/videos");
 				router.refresh();
 			});
 		},

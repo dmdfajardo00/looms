@@ -2,7 +2,7 @@
 
 import { use, useEffect, useMemo, useState } from "react";
 import { getVideoAnalytics } from "@/actions/videos/get-analytics";
-import { CapCardAnalytics } from "@/app/(org)/dashboard/caps/components/CapCard/CapCardAnalytics";
+import { CapCardAnalytics } from "@/app/(org)/dashboard/videos/components/CapCard/CapCardAnalytics";
 import type { CommentType } from "../../../Share";
 
 const Analytics = (props: {

@@ -70,7 +70,7 @@ const AdminNavItems = ({ toggleMobileNav }: Props) => {
 	const manageNavigation = [
 		{
 			name: "My Looms",
-			href: `/dashboard/caps`,
+			href: `/dashboard/videos`,
 			extraText: userLoomsCount,
 			icon: <CapIcon />,
 			subNav: [],
@@ -84,7 +84,7 @@ const AdminNavItems = ({ toggleMobileNav }: Props) => {
 		},
 		{
 			name: "Record a Loom",
-			href: `/dashboard/caps/record`,
+			href: `/dashboard/videos/record`,
 			icon: <RecordIcon />,
 			subNav: [],
 		},
@@ -271,7 +271,7 @@ const AdminNavItems = ({ toggleMobileNav }: Props) => {
 															organization.organization.id,
 														);
 														setOpen(false);
-														router.push("/dashboard/caps");
+														router.push("/dashboard/videos");
 													}}
 												>
 													<div className="flex gap-2 items-center w-full">
@@ -386,7 +386,7 @@ const AdminNavItems = ({ toggleMobileNav }: Props) => {
 						</div>
 					)}
 					<p className="mt-2 text-xs text-center truncate text-gray-10">
-						Cap Software, Inc. {new Date().getFullYear()}.
+						Looms · {new Date().getFullYear()}
 					</p>
 				</div>
 			</nav>

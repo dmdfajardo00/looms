@@ -63,7 +63,7 @@ function validateIcon(file: File) {
 }
 
 function revalidateOrganizationBrandingPaths() {
-	revalidatePath("/dashboard/caps");
+	revalidatePath("/dashboard/videos");
 	revalidatePath("/dashboard/settings/organization");
 	revalidatePath("/dashboard/settings/organization/preferences");
 }

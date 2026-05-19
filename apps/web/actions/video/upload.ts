@@ -232,7 +232,7 @@ export async function createVideoAndGetUploadUrl({
 				});
 		}
 
-		revalidatePath("/dashboard/caps");
+		revalidatePath("/dashboard/videos");
 		revalidatePath("/dashboard/folder");
 		revalidatePath("/dashboard/spaces");
 
@@ -310,7 +310,7 @@ export async function deleteVideoResultFile({
 	}
 
 	revalidatePath(`/s/${videoId}`);
-	revalidatePath("/dashboard/caps");
+	revalidatePath("/dashboard/videos");
 	revalidatePath("/dashboard/folder");
 	revalidatePath("/dashboard/spaces");
 

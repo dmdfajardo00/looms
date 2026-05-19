@@ -55,7 +55,7 @@ export async function editDate(videoId: Video.VideoId, date: string) {
 			.where(eq(videos.id, videoId));
 
 		// Revalidate paths to update the UI
-		revalidatePath("/dashboard/caps");
+		revalidatePath("/dashboard/videos");
 		revalidatePath("/dashboard/shared-caps");
 
 		return { success: true };

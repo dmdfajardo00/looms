@@ -118,7 +118,7 @@ export async function addVideosToOrganization(
 		}
 
 		revalidatePath(`/dashboard/spaces/${organizationId}`);
-		revalidatePath("/dashboard/caps");
+		revalidatePath("/dashboard/videos");
 
 		const totalUpdated = existingVideoIds.length + newVideoIds.length;
 		return {

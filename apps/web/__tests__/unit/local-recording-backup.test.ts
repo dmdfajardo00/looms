@@ -3,7 +3,7 @@ import {
 	appendLocalRecordingChunk,
 	finalizeLocalRecording,
 	initialLocalRecordingState,
-} from "@/app/(org)/dashboard/caps/components/web-recorder-dialog/local-recording-backup";
+} from "@/app/(org)/dashboard/videos/components/web-recorder-dialog/local-recording-backup";
 
 const makeBlob = (size: number, type = "video/webm;codecs=vp9,opus") =>
 	new Blob([new Uint8Array(size)], { type });

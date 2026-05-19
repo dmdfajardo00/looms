@@ -42,7 +42,7 @@ async function generateEmbedToken(
 export default async function ReferPage() {
 	// Check if Dub Partners is available
 	if (!serverEnv().DUB_API_KEY) {
-		redirect("/dashboard/caps");
+		redirect("/dashboard/videos");
 	}
 
 	const user = await getCurrentUser();

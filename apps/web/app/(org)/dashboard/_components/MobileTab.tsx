@@ -25,7 +25,7 @@ import { updateActiveOrganization } from "./Navbar/server";
 
 const Tabs = [
 	{ icon: <LayersIcon size={20} />, href: "/dashboard/spaces/browse" },
-	{ icon: <CapIcon size={25} />, href: "/dashboard/caps" },
+	{ icon: <CapIcon size={25} />, href: "/dashboard/videos" },
 	{
 		icon: <CogIcon size={22} />,
 		href: "/dashboard/settings/organization",
@@ -146,7 +146,7 @@ const OrgsMenu = ({
 						onClick={async () => {
 							await updateActiveOrganization(organization.organization.id);
 							setOpen(false);
-							router.push("/dashboard/caps");
+							router.push("/dashboard/videos");
 						}}
 					>
 						<div className="flex gap-2 items-center w-full">

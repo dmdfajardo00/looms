@@ -103,7 +103,7 @@ export async function updateOrganizationSettings(
 		.set({ settings: nextSettings })
 		.where(eq(organizations.id, user.activeOrganizationId));
 
-	revalidatePath("/dashboard/caps");
+	revalidatePath("/dashboard/videos");
 	revalidatePath("/dashboard/settings/organization");
 	revalidatePath("/dashboard/settings/organization/preferences");
 

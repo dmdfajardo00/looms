@@ -106,7 +106,7 @@ export async function addVideosToFolder(
 				);
 		}
 
-		revalidatePath(`/dashboard/caps`);
+		revalidatePath(`/dashboard/videos`);
 		revalidatePath(`/dashboard/folder/${folderId}`);
 		if (spaceId) {
 			revalidatePath(`/dashboard/spaces/${spaceId}/folder/${folderId}`);

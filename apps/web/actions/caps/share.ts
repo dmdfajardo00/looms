@@ -148,8 +148,8 @@ export async function shareCap({
 				.where(eq(videos.id, capId));
 		}
 
-		revalidatePath("/dashboard/caps");
-		revalidatePath(`/dashboard/caps/${capId}`);
+		revalidatePath("/dashboard/videos");
+		revalidatePath(`/dashboard/videos/${capId}`);
 		return { success: true };
 	} catch (error) {
 		console.error("Error sharing cap:", error);

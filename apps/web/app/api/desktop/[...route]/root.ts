@@ -617,7 +617,7 @@ app.post(
 			customer: customerId as string,
 			line_items: [{ price: priceId, quantity: 1 }],
 			mode: "subscription",
-			success_url: `${serverEnv().WEB_URL}/dashboard/caps?upgrade=true`,
+			success_url: `${serverEnv().WEB_URL}/dashboard/videos?upgrade=true`,
 			cancel_url: `${serverEnv().WEB_URL}/pricing`,
 			allow_promotion_codes: true,
 			metadata: { platform: "desktop", dubCustomerId: user.id },

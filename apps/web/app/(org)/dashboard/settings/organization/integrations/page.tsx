@@ -16,7 +16,7 @@ export default async function OrganizationIntegrationsPage() {
 	}
 
 	if (!user.activeOrganizationId) {
-		redirect("/dashboard/caps");
+		redirect("/dashboard/videos");
 	}
 
 	const settings = await getOrganizationStorageSettings(
@@ -28,7 +28,7 @@ export default async function OrganizationIntegrationsPage() {
 				"Organization settings are only available to admins and owners" ||
 				error.message === "Organization not found")
 		) {
-			redirect("/dashboard/caps");
+			redirect("/dashboard/videos");
 		}
 
 		throw error;

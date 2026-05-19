@@ -3,7 +3,7 @@ name: screen
 services:
   cap-web:
     container_name: screen-web
-    image: ghcr.io/dmdfajardo00/cap-web:screen
+    image: ghcr.io/dmdfajardo00/looms-web:latest
     restart: unless-stopped
     depends_on:
       mysql:
@@ -27,6 +27,8 @@ services:
       RESEND_API_KEY: ${RESEND_API_KEY:-}
       RESEND_FROM_DOMAIN: ${RESEND_FROM_DOMAIN:-}
       GLADIA_API_KEY: ${GLADIA_API_KEY}
+      TINYBIRD_HOST: ${TINYBIRD_HOST:-}
+      TINYBIRD_TOKEN: ${TINYBIRD_TOKEN:-}
       MEDIA_SERVER_URL: http://media-server:3456
       MEDIA_SERVER_WEBHOOK_URL: http://cap-web:3000
       CAP_VIDEOS_DEFAULT_PUBLIC: "false"

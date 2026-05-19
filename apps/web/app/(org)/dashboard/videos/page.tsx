@@ -122,7 +122,7 @@ const getSharedSpacesForVideos = Effect.fn(function* (
 	return sharedSpacesMap;
 });
 
-export default async function CapsPage(props: PageProps<"/dashboard/caps">) {
+export default async function CapsPage(props: PageProps<"/dashboard/videos">) {
 	const searchParams = await props.searchParams;
 	const user = await getCurrentUser();
 

@@ -309,7 +309,7 @@ describe("importFromLoom", () => {
 			}),
 		);
 		expect(startMock).toHaveBeenCalledTimes(1);
-		expect(revalidatePathMock).toHaveBeenCalledWith("/dashboard/caps");
+		expect(revalidatePathMock).toHaveBeenCalledWith("/dashboard/videos");
 	});
 
 	it("rejects a CSV import when the current user is not the organization owner", async () => {

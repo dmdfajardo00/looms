@@ -6,7 +6,7 @@ import {
 	RecordingSpoolBackpressureError,
 	type RecordingSpoolSessionRecord,
 	recoverOrphanedRecordingSpools,
-} from "@/app/(org)/dashboard/caps/components/web-recorder-dialog/recording-spool";
+} from "@/app/(org)/dashboard/videos/components/web-recorder-dialog/recording-spool";
 
 class MemoryRecordingSpoolBackend implements RecordingSpoolBackend {
 	private readonly sessions = new Map<string, RecordingSpoolSessionRecord>();

@@ -204,7 +204,7 @@ export async function saveVideoEdits(
 
 	revalidatePath(`/s/${videoId}`);
 	revalidatePath(`/s/${videoId}/edit`);
-	revalidatePath("/dashboard/caps");
+	revalidatePath("/dashboard/videos");
 
 	return { success: true };
 }

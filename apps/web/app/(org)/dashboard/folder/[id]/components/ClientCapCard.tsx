@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import {
 	CapCard,
 	type CapCardProps,
-} from "../../../caps/components/CapCard/CapCard";
+} from "../../../videos/components/CapCard/CapCard";
 
 type ClientCapCardProps = CapCardProps & {
 	videoId: string;

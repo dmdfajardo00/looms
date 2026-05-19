@@ -9,7 +9,7 @@ import MobileTab from "./_components/MobileTab";
 import DesktopNav from "./_components/Navbar/Desktop";
 import MobileNav from "./_components/Navbar/Mobile";
 import { DashboardContexts } from "./Contexts";
-import { UploadingProvider } from "./caps/UploadingContext";
+import { UploadingProvider } from "./videos/UploadingContext";
 import {
 	getDashboardData,
 	type Organization,

@@ -27,7 +27,7 @@ import {
 	NormalFolder,
 	RedFolder,
 	YellowFolder,
-} from "../../../caps/components/Folders";
+} from "../../../videos/components/Folders";
 
 interface Props {
 	open: boolean;

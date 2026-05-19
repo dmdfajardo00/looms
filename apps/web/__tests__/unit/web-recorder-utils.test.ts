@@ -3,7 +3,7 @@ import {
 	openShareUrlInNewTab,
 	selectRecordingPipelineFromSupport,
 	shouldPreferStreamingUpload,
-} from "@/app/(org)/dashboard/caps/components/web-recorder-dialog/web-recorder-utils";
+} from "@/app/(org)/dashboard/videos/components/web-recorder-dialog/web-recorder-utils";
 
 describe("selectRecordingPipelineFromSupport", () => {
 	it("prefers streaming webm when webm and mp4 are both supported and streaming is preferred", () => {

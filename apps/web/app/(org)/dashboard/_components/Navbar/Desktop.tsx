@@ -51,7 +51,7 @@ export const DesktopNav = () => {
 				<div className="flex justify-between items-center px-3 pt-5 mb-3.5 w-full truncate min-h-8">
 					{isDeveloperSection ? (
 						<Link
-							href="/dashboard/caps"
+							href="/dashboard/videos"
 							className={clsx(
 								"flex items-center gap-2 text-gray-11 hover:text-gray-12 transition-colors",
 								sidebarCollapsed ? "justify-center" : "",

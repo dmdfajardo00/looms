@@ -61,7 +61,7 @@ export const NewOrganization: React.FC<NewOrganizationProps> = (props) => {
 
 						await createOrganization(formData);
 						toast.success("Organization created successfully");
-						router.push(`/dashboard/caps`);
+						router.push(`/dashboard/videos`);
 						props.onOrganizationCreated();
 					} catch (error) {
 						console.error("Error creating organization:", error);

@@ -3,7 +3,7 @@ import {
 	installAvcLevelClamp,
 	pickMobileSafeAvcCodec,
 	rewriteAvcCodecString,
-} from "@/app/(org)/dashboard/caps/components/web-recorder-dialog/avc-level-clamp";
+} from "@/app/(org)/dashboard/videos/components/web-recorder-dialog/avc-level-clamp";
 
 describe("pickMobileSafeAvcCodec", () => {
 	it("returns Level 4.2 for 1080p and below", () => {

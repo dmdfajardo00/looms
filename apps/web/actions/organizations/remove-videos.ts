@@ -111,7 +111,7 @@ export async function removeVideosFromOrganization(
 		}
 
 		revalidatePath(`/dashboard/spaces/${organizationId}`);
-		revalidatePath("/dashboard/caps");
+		revalidatePath("/dashboard/videos");
 
 		return {
 			success: true,

@@ -127,7 +127,7 @@ export async function addVideosToSpace(
 		}
 
 		revalidatePath(`/dashboard/spaces/${spaceId}`);
-		revalidatePath("/dashboard/caps");
+		revalidatePath("/dashboard/videos");
 
 		return {
 			success: true,

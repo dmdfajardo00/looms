@@ -113,7 +113,7 @@ export function ClientMyLoomsLink({
 	return (
 		<Link
 			ref={linkRef}
-			href={spaceId ? `/dashboard/spaces/${spaceId}` : "/dashboard/caps"}
+			href={spaceId ? `/dashboard/spaces/${spaceId}` : "/dashboard/videos"}
 			className={clsx(
 				"text-xl whitespace-nowrap flex items-center gap-1.5 transition-colors duration-200 hover:text-gray-12",
 				isDragOver ? "text-blue-10" : "text-gray-9",

@@ -84,7 +84,7 @@ export async function moveVideoToFolder({
 	}
 
 	// Always revalidate the main caps page
-	revalidatePath(`/dashboard/caps`);
+	revalidatePath(`/dashboard/videos`);
 
 	if (spaceId) {
 		revalidatePath(`/dashboard/spaces/${spaceId}/folder/${folderId}`);

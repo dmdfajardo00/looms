@@ -142,7 +142,7 @@ export async function updateSpace(formData: FormData) {
 	}
 
 	revalidatePath("/dashboard");
-	revalidatePath("/dashboard/caps");
+	revalidatePath("/dashboard/videos");
 	revalidatePath(`/dashboard/spaces/${id}`);
 	return { success: true };
 }

@@ -11,8 +11,8 @@ import {
 } from "@/lib/folder";
 import { runPromise } from "@/lib/server";
 
-import { UploadCapButton } from "../../caps/components";
-import FolderCard from "../../caps/components/Folder";
+import { UploadCapButton } from "../../videos/components";
+import FolderCard from "../../videos/components/Folder";
 import {
 	BreadcrumbItem,
 	ClientMyLoomsLink,

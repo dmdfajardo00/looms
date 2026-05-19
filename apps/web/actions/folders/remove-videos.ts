@@ -88,7 +88,7 @@ export async function removeVideosFromFolder(
 		}
 
 		// Revalidate relevant paths
-		revalidatePath(`/dashboard/caps`);
+		revalidatePath(`/dashboard/videos`);
 		revalidatePath(`/dashboard/folder/${folderId}`);
 		if (folder.spaceId) {
 			revalidatePath(`/dashboard/spaces/${folder.spaceId}/folder/${folderId}`);

@@ -3,7 +3,7 @@
 import type { Video } from "@cap/web-domain";
 import type React from "react";
 import { forwardRef, type JSX, Suspense, useState } from "react";
-import { CapCardAnalytics } from "@/app/(org)/dashboard/caps/components/CapCard/CapCardAnalytics";
+import { CapCardAnalytics } from "@/app/(org)/dashboard/videos/components/CapCard/CapCardAnalytics";
 import { useCurrentUser } from "@/app/Layout/AuthContext";
 import type { CommentType } from "../../../Share";
 import { AuthOverlay } from "../../AuthOverlay";

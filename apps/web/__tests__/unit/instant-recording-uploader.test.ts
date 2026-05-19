@@ -2,8 +2,8 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import {
 	InstantRecordingUploader,
 	MultipartCompletionUncertainError,
-} from "@/app/(org)/dashboard/caps/components/web-recorder-dialog/instant-mp4-uploader";
-import type { VideoId } from "@/app/(org)/dashboard/caps/components/web-recorder-dialog/web-recorder-types";
+} from "@/app/(org)/dashboard/videos/components/web-recorder-dialog/instant-mp4-uploader";
+import type { VideoId } from "@/app/(org)/dashboard/videos/components/web-recorder-dialog/web-recorder-types";
 
 const STREAMED_PART_BYTES = 5 * 1024 * 1024 + 128;
 const DRIVE_PART_BYTES = 16 * 1024 * 1024;
@@ -223,7 +223,7 @@ describe("InstantRecordingUploader", () => {
 		vi.stubGlobal("fetch", fetchMock);
 
 		const { initiateMultipartUpload } = await import(
-			"@/app/(org)/dashboard/caps/components/web-recorder-dialog/instant-mp4-uploader"
+			"@/app/(org)/dashboard/videos/components/web-recorder-dialog/instant-mp4-uploader"
 		);
 
 		await expect(

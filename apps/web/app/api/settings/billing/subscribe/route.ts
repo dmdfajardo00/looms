@@ -69,7 +69,7 @@ export async function POST(request: NextRequest) {
 			mode: "subscription",
 			success_url: isOnBoarding
 				? `${serverEnv().WEB_URL}/dashboard/settings/organization?upgrade=true&session_id={CHECKOUT_SESSION_ID}`
-				: `${serverEnv().WEB_URL}/dashboard/caps?upgrade=true&session_id={CHECKOUT_SESSION_ID}`,
+				: `${serverEnv().WEB_URL}/dashboard/videos?upgrade=true&session_id={CHECKOUT_SESSION_ID}`,
 			cancel_url: isOnBoarding
 				? `${serverEnv().WEB_URL}/onboarding`
 				: `${serverEnv().WEB_URL}/pricing`,

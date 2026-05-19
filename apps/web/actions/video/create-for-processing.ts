@@ -106,7 +106,7 @@ export async function createVideoForServerProcessing({
 			});
 	}
 
-	revalidatePath("/dashboard/caps");
+	revalidatePath("/dashboard/videos");
 	revalidatePath("/dashboard/folder");
 	revalidatePath("/dashboard/spaces");
 

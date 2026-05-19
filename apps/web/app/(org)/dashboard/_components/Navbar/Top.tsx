@@ -58,10 +58,10 @@ const Top = () => {
 	const params = useParams();
 
 	const titles: Record<string, string> = {
-		"/dashboard/caps": "Looms",
+		"/dashboard/videos": "Looms",
 		"/dashboard/folder": "Looms",
 		"/dashboard/shared-caps": "Shared Looms",
-		"/dashboard/caps/record": "Record a Loom",
+		"/dashboard/videos/record": "Record a Loom",
 		"/dashboard/settings/organization": "Organization Settings",
 		"/dashboard/settings/organization/preferences": "Organization Settings",
 		"/dashboard/settings/organization/billing": "Organization Settings",

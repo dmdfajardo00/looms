@@ -12,11 +12,11 @@ import { toast } from "sonner";
 import { createVideoForServerProcessing } from "@/actions/video/create-for-processing";
 import { triggerVideoProcessing } from "@/actions/video/trigger-processing";
 import { useDashboardContext } from "@/app/(org)/dashboard/Contexts";
-import { sendProgressUpdate } from "@/app/(org)/dashboard/caps/components/sendProgressUpdate";
+import { sendProgressUpdate } from "@/app/(org)/dashboard/videos/components/sendProgressUpdate";
 import {
 	type UploadStatus,
 	useUploadingContext,
-} from "@/app/(org)/dashboard/caps/UploadingContext";
+} from "@/app/(org)/dashboard/videos/UploadingContext";
 import { UpgradeModal } from "@/components/UpgradeModal";
 import { uploadWithTarget } from "@/utils/upload-target";
 
@@ -44,7 +44,7 @@ export const ImportFilePage = () => {
 				activeOrganization.organization.id,
 				setUploadStatus,
 			);
-			if (ok) router.push("/dashboard/caps");
+			if (ok) router.push("/dashboard/videos");
 		},
 		[user, activeOrganization, setUploadStatus, router],
 	);

@@ -126,7 +126,7 @@ export const Footer = () => {
 							</p>
 						</div>
 						<p className="pt-4 text-sm text-gray-9">
-							© Cap Software, Inc. {new Date().getFullYear()}.
+							© Looms · {new Date().getFullYear()}
 						</p>
 						<div className="flex flex-wrap justify-center gap-x-10 gap-y-3 pt-6">
 							<a className="text-sm text-gray-8" href="/terms">

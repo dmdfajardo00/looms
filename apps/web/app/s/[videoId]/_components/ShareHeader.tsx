@@ -21,7 +21,7 @@ import {
 } from "@/actions/organization/shareable-link-icon";
 import { editTitle } from "@/actions/videos/edit-title";
 import { useDashboardContext } from "@/app/(org)/dashboard/Contexts";
-import { SharingDialog } from "@/app/(org)/dashboard/caps/components/SharingDialog";
+import { SharingDialog } from "@/app/(org)/dashboard/videos/components/SharingDialog";
 import type { Spaces } from "@/app/(org)/dashboard/dashboard-data";
 import { useCurrentUser } from "@/app/Layout/AuthContext";
 import { SignedImageUrl } from "@/components/SignedImageUrl";
@@ -546,7 +546,7 @@ export const ShareHeader = ({
 									size="xs"
 									className="h-8 rounded-full px-2.5 text-xs"
 									onClick={() => {
-										push("/dashboard/caps?page=1");
+										push("/dashboard/videos?page=1");
 									}}
 								>
 									Go to dashboard

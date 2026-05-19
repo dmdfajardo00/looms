@@ -344,7 +344,7 @@ export const ImportLoomPage = () => {
 			toast.success(
 				"Loom video import started! It will appear in your caps shortly.",
 			);
-			router.push("/dashboard/caps");
+			router.push("/dashboard/videos");
 		} catch {
 			toast.error("An unexpected error occurred. Please try again.");
 		} finally {

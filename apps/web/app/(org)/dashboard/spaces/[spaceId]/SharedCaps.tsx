@@ -27,9 +27,9 @@ import {
 import { useVideosAnalyticsQuery } from "@/lib/Queries/Analytics";
 import SpaceDialog from "../../_components/Navbar/SpaceDialog";
 import { useDashboardContext } from "../../Contexts";
-import { CapPagination } from "../../caps/components/CapPagination";
-import Folder, { type FolderDataType } from "../../caps/components/Folder";
-import { NewFolderDialog } from "../../caps/components/NewFolderDialog";
+import { CapPagination } from "../../videos/components/CapPagination";
+import Folder, { type FolderDataType } from "../../videos/components/Folder";
+import { NewFolderDialog } from "../../videos/components/NewFolderDialog";
 import { AddVideosDialog } from "./components/AddVideosDialog";
 import { AddVideosToOrganizationDialog } from "./components/AddVideosToOrganizationDialog";
 import { EmptySharedCapState } from "./components/EmptySharedCapState";

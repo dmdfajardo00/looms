@@ -36,7 +36,7 @@ export async function editTitle(videoId: Video.VideoId, title: string) {
 			.set({ name: title })
 			.where(eq(videos.id, videoId));
 
-		revalidatePath("/dashboard/caps");
+		revalidatePath("/dashboard/videos");
 		revalidatePath("/dashboard/shared-caps");
 		revalidatePath(`/s/${videoId}`);
 

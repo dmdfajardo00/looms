@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 vi.mock(
-	"@/app/(org)/dashboard/caps/components/web-recorder-dialog/recording-spool",
+	"@/app/(org)/dashboard/videos/components/web-recorder-dialog/recording-spool",
 	() => ({
 		recoverOrphanedRecordingSpools: vi.fn(),
 	}),
@@ -10,7 +10,7 @@ vi.mock(
 describe("recovered recording cache", () => {
 	afterEach(async () => {
 		const { resetRecoveredRecordingSpoolsCache } = await import(
-			"@/app/(org)/dashboard/caps/components/web-recorder-dialog/recovered-recording-cache"
+			"@/app/(org)/dashboard/videos/components/web-recorder-dialog/recovered-recording-cache"
 		);
 		resetRecoveredRecordingSpoolsCache();
 		vi.clearAllMocks();
@@ -20,7 +20,7 @@ describe("recovered recording cache", () => {
 		const recoverOrphanedRecordingSpools = vi.mocked(
 			(
 				await import(
-					"@/app/(org)/dashboard/caps/components/web-recorder-dialog/recording-spool"
+					"@/app/(org)/dashboard/videos/components/web-recorder-dialog/recording-spool"
 				)
 			).recoverOrphanedRecordingSpools,
 		);
@@ -49,7 +49,7 @@ describe("recovered recording cache", () => {
 			loadRecoveredRecordingSpools,
 			removeRecoveredRecordingSpoolFromCache,
 		} = await import(
-			"@/app/(org)/dashboard/caps/components/web-recorder-dialog/recovered-recording-cache"
+			"@/app/(org)/dashboard/videos/components/web-recorder-dialog/recovered-recording-cache"
 		);
 
 		const firstLoad = await loadRecoveredRecordingSpools();

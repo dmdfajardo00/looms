@@ -416,7 +416,7 @@ async function importLoomVideoForOwner({
 		},
 	]);
 
-	revalidatePath("/dashboard/caps");
+	revalidatePath("/dashboard/videos");
 
 	return { success: true, videoId };
 }

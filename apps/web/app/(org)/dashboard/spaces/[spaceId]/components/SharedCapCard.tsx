@@ -5,7 +5,7 @@ import type { SpaceRuleSource, ViewerSettingKey } from "@cap/web-backend";
 import type { ImageUpload, Video } from "@cap/web-domain";
 import { faBuilding, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { CapCard } from "../../../caps/components/CapCard/CapCard";
+import { CapCard } from "../../../videos/components/CapCard/CapCard";
 
 interface SharedCapCardProps {
 	cap: {

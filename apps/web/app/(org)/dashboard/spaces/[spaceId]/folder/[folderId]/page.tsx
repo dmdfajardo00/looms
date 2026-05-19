@@ -4,7 +4,7 @@ import { makeCurrentUserLayer, Spaces } from "@cap/web-backend";
 import { type Folder, Space } from "@cap/web-domain";
 import { Effect } from "effect";
 import { notFound } from "next/navigation";
-import FolderCard from "@/app/(org)/dashboard/caps/components/Folder";
+import FolderCard from "@/app/(org)/dashboard/videos/components/Folder";
 import {
 	getChildFolders,
 	getFolderBreadcrumb,

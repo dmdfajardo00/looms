@@ -8,11 +8,11 @@ import { toast } from "sonner";
 import { useDashboardContext } from "@/app/(org)/dashboard/Contexts";
 import { useEffectMutation, useRpcClient } from "@/lib/EffectRuntime";
 import { useVideosAnalyticsQuery } from "@/lib/Queries/Analytics";
-import type { VideoData } from "../../../caps/Caps";
-import { CapCard } from "../../../caps/components/CapCard/CapCard";
-import { SelectedCapsBar } from "../../../caps/components/SelectedCapsBar";
-import { UploadPlaceholderCard } from "../../../caps/components/UploadPlaceholderCard";
-import { useUploadingStatus } from "../../../caps/UploadingContext";
+import type { VideoData } from "../../../videos/Caps";
+import { CapCard } from "../../../videos/components/CapCard/CapCard";
+import { SelectedCapsBar } from "../../../videos/components/SelectedCapsBar";
+import { UploadPlaceholderCard } from "../../../videos/components/UploadPlaceholderCard";
+import { useUploadingStatus } from "../../../videos/UploadingContext";
 
 interface FolderVideosSectionProps {
 	initialVideos: VideoData;

@@ -17,7 +17,7 @@ export default async function OrganizationSettingsLayout({
 	}
 
 	if (!user.activeOrganizationId) {
-		redirect("/dashboard/caps");
+		redirect("/dashboard/videos");
 	}
 
 	const access = await getOrganizationAccess(
