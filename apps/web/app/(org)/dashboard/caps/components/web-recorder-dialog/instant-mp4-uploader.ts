@@ -353,7 +353,7 @@ export class InstantRecordingUploader {
 		this.bufferedChunks.push(blob);
 		this.bufferedBytes += blob.size;
 
-		if (this.bufferedBytes >= MIN_PART_SIZE_BYTES) {
+		if (this.bufferedBytes >= FINAL_BLOB_PART_SIZE_BYTES) {
 			this.flushBuffer();
 		}
 	}
@@ -364,14 +364,22 @@ export class InstantRecordingUploader {
 			return;
 		}
 
-		if (this.bufferedBytes === 0) return;
-		if (!force && this.bufferedBytes < MIN_PART_SIZE_BYTES) return;
+		while (this.bufferedBytes > 0) {
+			if (!force && this.bufferedBytes < FINAL_BLOB_PART_SIZE_BYTES) return;
 
-		const chunk = new Blob(this.bufferedChunks, { type: this.mimeType });
-		this.bufferedChunks = [];
-		this.bufferedBytes = 0;
+			const partSize =
+				force && this.bufferedBytes <= FINAL_BLOB_PART_SIZE_BYTES
+					? this.bufferedBytes
+					: FINAL_BLOB_PART_SIZE_BYTES;
+			const { part, remainingChunks, remainingBytes } =
+				this.takeBufferedPart(partSize);
 
-		this.enqueueUpload(chunk);
+			this.bufferedChunks = remainingChunks;
+			this.bufferedBytes = remainingBytes;
+			this.enqueueUpload(part);
+
+			if (partSize < FINAL_BLOB_PART_SIZE_BYTES) return;
+		}
 	}
 
 	private flushDriveBuffer(force = false) {
