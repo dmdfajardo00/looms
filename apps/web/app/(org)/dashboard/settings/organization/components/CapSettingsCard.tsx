@@ -43,7 +43,7 @@ const options: Array<{
 	{
 		label: "Enable comments",
 		value: "disableComments",
-		description: "Allow viewers to comment on caps",
+		description: "Allow viewers to comment on Looms",
 	},
 	{
 		label: "Enable summary",
@@ -54,7 +54,7 @@ const options: Array<{
 	{
 		label: "Enable captions",
 		value: "disableCaptions",
-		description: "Allow viewers to use captions for caps",
+		description: "Allow viewers to use captions for Looms",
 	},
 	{
 		label: "Enable chapters",
@@ -65,7 +65,7 @@ const options: Array<{
 	{
 		label: "Enable reactions",
 		value: "disableReactions",
-		description: "Allow viewers to react to caps",
+		description: "Allow viewers to react to Looms",
 	},
 	{
 		label: "Enable transcript",
@@ -232,7 +232,7 @@ const CapSettingsCard = () => {
 				<CardTitle>Cap Settings</CardTitle>
 				<CardDescription>
 					Enable or disable specific settings for your organization. These
-					settings will be applied as defaults for new caps.
+					settings will be applied as defaults for new Looms.
 				</CardDescription>
 			</CardHeader>
 

@@ -59,7 +59,7 @@ export const ImportLoomButton = ({
 			}
 
 			toast.success(
-				"Loom video import started! It will appear in your caps shortly.",
+				"Loom video import started! It will appear in your Looms shortly.",
 			);
 			setDialogOpen(false);
 			setLoomUrl("");

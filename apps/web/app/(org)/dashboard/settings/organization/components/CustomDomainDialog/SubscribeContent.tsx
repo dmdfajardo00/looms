@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 
 const SubscribeContent = () => {
-	const capsDomainText = "caps.yourdomain.com";
+	const capsDomainText = "videos.yourdomain.com";
 
 	return (
 		<div className="flex absolute z-10 flex-col gap-3 justify-center items-center w-full h-full backdrop-blur-md">

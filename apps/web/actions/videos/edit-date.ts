@@ -56,7 +56,7 @@ export async function editDate(videoId: Video.VideoId, date: string) {
 
 		// Revalidate paths to update the UI
 		revalidatePath("/dashboard/videos");
-		revalidatePath("/dashboard/shared-caps");
+		revalidatePath("/dashboard/shared-videos");
 
 		return { success: true };
 	} catch (error) {

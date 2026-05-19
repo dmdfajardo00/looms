@@ -342,7 +342,7 @@ export const ImportLoomPage = () => {
 			}
 
 			toast.success(
-				"Loom video import started! It will appear in your caps shortly.",
+				"Loom video import started! It will appear in your Looms shortly.",
 			);
 			router.push("/dashboard/videos");
 		} catch {

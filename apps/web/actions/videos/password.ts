@@ -41,7 +41,7 @@ export async function setVideoPassword(
 			.where(eq(videos.id, videoId));
 
 		revalidatePath("/dashboard/videos");
-		revalidatePath("/dashboard/shared-caps");
+		revalidatePath("/dashboard/shared-videos");
 		revalidatePath(`/s/${videoId}`);
 
 		return { success: true, value: "Password updated successfully" };
@@ -74,7 +74,7 @@ export async function removeVideoPassword(videoId: Video.VideoId) {
 			.where(eq(videos.id, videoId));
 
 		revalidatePath("/dashboard/videos");
-		revalidatePath("/dashboard/shared-caps");
+		revalidatePath("/dashboard/shared-videos");
 		revalidatePath(`/s/${videoId}`);
 
 		return { success: true, value: "Password removed successfully" };

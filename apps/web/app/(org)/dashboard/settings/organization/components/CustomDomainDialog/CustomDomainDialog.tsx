@@ -374,7 +374,7 @@ const CustomDomainDialog = ({
 				>
 					<DialogHeader
 						icon={<FontAwesomeIcon icon={faGlobe} />}
-						description="Let's get you setup with your custom domain for your caps."
+						description="Let's get you setup with your custom domain for your Looms."
 					>
 						<DialogTitle className="text-lg text-gray-12">
 							Custom Domain

@@ -73,7 +73,7 @@ export default function FolderVideosSection({
 					}`;
 				},
 				error: (error) =>
-					error.message || "An error occurred while deleting caps",
+					error.message || "An error occurred while deleting Looms",
 			});
 
 			return yield* fiber.await.pipe(Effect.flatten);

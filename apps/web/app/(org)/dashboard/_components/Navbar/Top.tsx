@@ -60,7 +60,7 @@ const Top = () => {
 	const titles: Record<string, string> = {
 		"/dashboard/videos": "Looms",
 		"/dashboard/folder": "Looms",
-		"/dashboard/shared-caps": "Shared Looms",
+		"/dashboard/shared-videos": "Shared Looms",
 		"/dashboard/videos/record": "Record a Loom",
 		"/dashboard/settings/organization": "Organization Settings",
 		"/dashboard/settings/organization/preferences": "Organization Settings",

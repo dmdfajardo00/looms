@@ -33,14 +33,14 @@ const DomainStep = ({
 				<h3 className="text-lg font-semibold text-gray-12">Your domain</h3>
 				<p className="text-sm text-gray-11">
 					Enter the custom domain you'd like to use e.g.{" "}
-					<span className="font-medium text-gray-12">caps.yourdomain.com</span>
+					<span className="font-medium text-gray-12">videos.yourdomain.com</span>
 				</p>
 			</div>
 			<div className="space-y-3">
 				<Input
 					type="text"
 					id="customDomain"
-					placeholder="caps.yourdomain.com"
+					placeholder="videos.yourdomain.com"
 					value={domain}
 					disabled={!user.isPro || submitLoading}
 					className={clsx(

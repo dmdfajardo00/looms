@@ -164,7 +164,7 @@ export const Caps = ({
 			const message =
 				error instanceof Error
 					? error.message
-					: "An error occurred while deleting caps";
+					: "An error occurred while deleting Looms";
 			toast.error(message);
 		},
 	});

@@ -177,7 +177,7 @@ function getSharePageBranding(data: {
 	shareableLinkIconUrl?: ImageUpload.ImageUrl | null;
 }): SharePageBranding | null {
 	if (!data.owner.isPro) {
-		return { type: "cap" };
+		return null;
 	}
 
 	const brandedIcon = data.orgSettings?.shareableLinkUseOrganizationIcon
