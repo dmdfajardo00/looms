@@ -8,9 +8,9 @@ import { toast } from "sonner";
 import { useDashboardContext } from "@/app/(org)/dashboard/Contexts";
 import { useEffectMutation, useRpcClient } from "@/lib/EffectRuntime";
 import { useVideosAnalyticsQuery } from "@/lib/Queries/Analytics";
-import type { VideoData } from "../../../caps/Caps";
+import type { VideoData } from "../../../caps/Looms";
 import { CapCard } from "../../../caps/components/CapCard/CapCard";
-import { SelectedCapsBar } from "../../../caps/components/SelectedCapsBar";
+import { SelectedLoomsBar } from "../../../caps/components/SelectedLoomsBar";
 import { UploadPlaceholderCard } from "../../../caps/components/UploadPlaceholderCard";
 import { useUploadingStatus } from "../../../caps/UploadingContext";
 
@@ -26,12 +26,12 @@ export default function FolderVideosSection({
 	const router = useRouter();
 	const { user } = useDashboardContext();
 
-	const [selectedCaps, setSelectedCaps] = useState<Video.VideoId[]>([]);
+	const [selectedLooms, setSelectedLooms] = useState<Video.VideoId[]>([]);
 	const previousCountRef = useRef<number>(0);
 
 	const rpc = useRpcClient();
 
-	const { mutate: deleteCaps, isPending: isDeletingCaps } = useEffectMutation({
+	const { mutate: deleteLooms, isPending: isDeletingLooms } = useEffectMutation({
 		mutationFn: Effect.fn(function* (ids: Video.VideoId[]) {
 			if (ids.length === 0) return;
 
@@ -79,7 +79,7 @@ export default function FolderVideosSection({
 			return yield* fiber.await.pipe(Effect.flatten);
 		}),
 		onSuccess: () => {
-			setSelectedCaps([]);
+			setSelectedLooms([]);
 			router.refresh();
 		},
 	});
@@ -96,7 +96,7 @@ export default function FolderVideosSection({
 	});
 
 	const handleCapSelection = (capId: Video.VideoId) => {
-		setSelectedCaps((prev) => {
+		setSelectedLooms((prev) => {
 			const newSelection = prev.includes(capId)
 				? prev.filter((id) => id !== capId)
 				: [...prev, capId];
@@ -146,13 +146,13 @@ export default function FolderVideosSection({
 								analytics={analytics[video.id] || 0}
 								userId={user?.id}
 								isLoadingAnalytics={analyticsQuery.isLoading}
-								isSelected={selectedCaps.includes(video.id)}
-								anyCapSelected={selectedCaps.length > 0}
-								isDeleting={isDeletingCaps || isDeletingCap}
+								isSelected={selectedLooms.includes(video.id)}
+								anyCapSelected={selectedLooms.length > 0}
+								isDeleting={isDeletingLooms || isDeletingCap}
 								onSelectToggle={() => handleCapSelection(video.id)}
 								onDelete={() => {
-									if (selectedCaps.length > 0) {
-										deleteCaps(selectedCaps);
+									if (selectedLooms.length > 0) {
+										deleteLooms(selectedLooms);
 									} else {
 										deleteCap(video.id);
 									}
@@ -162,11 +162,11 @@ export default function FolderVideosSection({
 					</>
 				)}
 			</div>
-			<SelectedCapsBar
-				selectedCaps={selectedCaps}
-				setSelectedCaps={setSelectedCaps}
-				deleteSelectedCaps={() => deleteCaps(selectedCaps)}
-				isDeleting={isDeletingCaps || isDeletingCap}
+			<SelectedLoomsBar
+				selectedLooms={selectedLooms}
+				setSelectedLooms={setSelectedLooms}
+				deleteSelectedLooms={() => deleteLooms(selectedLooms)}
+				isDeleting={isDeletingLooms || isDeletingCap}
 			/>
 		</>
 	);

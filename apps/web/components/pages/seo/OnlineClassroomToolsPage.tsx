@@ -181,7 +181,7 @@ export const onlineClassroomToolsContent: SeoPageContent = {
 	migrationGuide: {
 		title: "How to Implement Cap in Your Classroom",
 		steps: [
-			"Download Cap for your operating system (Mac and Windows)",
+			"Download Looms for your operating system (Mac and Windows)",
 			"Create a sample lecture to understand the workflow and features",
 			"Set up shared S3 storage (optional) for complete data ownership",
 			"Develop guidelines for video length and format (3-10 minutes recommended per topic)",
@@ -198,7 +198,7 @@ export const onlineClassroomToolsContent: SeoPageContent = {
 
 	cta: {
 		title: "Ready to Transform Your Online Teaching Experience?",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 	},
 };
 

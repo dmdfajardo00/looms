@@ -23,10 +23,10 @@ export async function generateMetadata(
 	const ogImage = image ? `${buildEnv.NEXT_PUBLIC_WEB_URL}${image}` : undefined;
 
 	return {
-		title: `${title} - Cap Docs`,
+		title: `${title} - Looms Docs`,
 		description: description || title,
 		openGraph: {
-			title: `${title} - Cap Docs`,
+			title: `${title} - Looms Docs`,
 			description: description || title,
 			type: "article",
 			url: `${buildEnv.NEXT_PUBLIC_WEB_URL}/docs/${slug}`,

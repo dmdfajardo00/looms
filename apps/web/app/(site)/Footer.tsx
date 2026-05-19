@@ -35,7 +35,7 @@ const footerLinks = {
 		{ label: "Testimonials", href: "/testimonials" },
 		{ label: "FAQs", href: "/faq" },
 		{ label: "Self-hosting", href: "/self-hosting" },
-		{ label: "Email Support", href: "mailto:hello@cap.so" },
+		{ label: "Email Support", href: "mailto:looms-manager@dmdfajardo.pro" },
 		{ label: "Help Center", href: "https://help.cap.so" },
 		{ label: "Trust Portal", href: "https://trust.cap.so" },
 		{
@@ -120,7 +120,7 @@ export const Footer = () => {
 						<Logo className="w-[104px] h-auto mx-auto" />
 						<div className="w-full">
 							<p className="max-w-sm text-gray-12">
-								Cap is the open source alternative to Loom. Lightweight,
+								Looms is a personal Loom alternative. Lightweight,
 								powerful, and cross-platform. Record and share in seconds.
 								Import your existing Loom videos seamlessly.
 							</p>

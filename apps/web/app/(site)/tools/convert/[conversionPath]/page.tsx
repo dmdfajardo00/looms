@@ -23,7 +23,7 @@ export async function generateMetadata(
 
 	if (!CONVERSION_CONFIGS[conversionPath]) {
 		return {
-			title: "Conversion Not Supported | Cap",
+			title: "Conversion Not Supported | Looms",
 			description:
 				"This conversion type is not supported by our free online tools.",
 		};
@@ -35,7 +35,7 @@ export async function generateMetadata(
 	const targetUpper = targetFormat.toUpperCase();
 
 	return {
-		title: `${sourceUpper} to ${targetUpper} Converter | Free Online Tool | Cap`,
+		title: `${sourceUpper} to ${targetUpper} Converter | Free Online Tool | Looms`,
 		description: `${config.description(
 			sourceFormat,
 			targetFormat,
@@ -118,7 +118,7 @@ export default async function ConversionPage(props: ConversionPageProps) {
 			title: "Cap is the open source Loom alternative",
 			description:
 				"Record, edit, and share video messages with Cap. 100% open source and privacy focused.",
-			buttonText: "Download Cap Free",
+			buttonText: "Download Looms Free",
 		},
 	};
 

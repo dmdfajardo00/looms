@@ -38,7 +38,7 @@ export const screenRecordingSoftwareContent: SeoPageContent = {
 		{
 			title: "Unlimited Recording and Cloud Storage",
 			description:
-				"Record as long as you need with no time limits. Store and share your recordings with unlimited cloud storage on Cap Pro.",
+				"Record as long as you need with no time limits. Store and share your recordings with unlimited cloud storage on Looms Pro.",
 		},
 		{
 			title: "Instant Sharing with Links",
@@ -158,7 +158,7 @@ export const screenRecordingSoftwareContent: SeoPageContent = {
 		{
 			question: "Can I share recordings with others?",
 			answer:
-				"Yes, Cap generates instant shareable links the moment you stop recording. Share with colleagues, clients, or students in seconds. Cap Pro includes built-in thread commenting so recipients can leave feedback directly on your videos.",
+				"Yes, Cap generates instant shareable links the moment you stop recording. Share with colleagues, clients, or students in seconds. Looms Pro includes built-in thread commenting so recipients can leave feedback directly on your videos.",
 		},
 		{
 			question: "How does Cap compare to other screen recording software?",
@@ -168,7 +168,7 @@ export const screenRecordingSoftwareContent: SeoPageContent = {
 		{
 			question: "What is the best screen recording software in 2026?",
 			answer:
-				"Cap is the best screen recording software for users who want a balance of quality, simplicity, and value. It records in up to 4K at 60fps, shares instantly via link, is open-source, and offers a generous free plan. For teams, Cap Pro adds cloud storage, thread commenting, and custom domains at a fraction of competitors' prices.",
+				"Cap is the best screen recording software for users who want a balance of quality, simplicity, and value. It records in up to 4K at 60fps, shares instantly via link, is open-source, and offers a generous free plan. For teams, Looms Pro adds cloud storage, thread commenting, and custom domains at a fraction of competitors' prices.",
 		},
 		{
 			question: "How does screen recording software work?",
@@ -178,7 +178,7 @@ export const screenRecordingSoftwareContent: SeoPageContent = {
 		{
 			question: "Is there free screen recording software without watermarks?",
 			answer:
-				"Yes, Cap is completely free screen recording software with no watermarks, no time limits, and no hidden branding. Your recordings look clean and professional from the start. <a href='/free-screen-recorder'>Download Cap's free screen recorder</a> to start recording without watermarks today.",
+				"Yes, Cap is completely free screen recording software with no watermarks, no time limits, and no hidden branding. Your recordings look clean and professional from the start. <a href='/free-screen-recorder'>Download Looms's free screen recorder</a> to start recording without watermarks today.",
 		},
 	],
 
@@ -190,7 +190,7 @@ export const screenRecordingSoftwareContent: SeoPageContent = {
 
 	cta: {
 		title: "Get Started with Cap — Free Screen Recording Software",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 		secondaryButtonText: "Try Instant Mode in Browser",
 	},
 };

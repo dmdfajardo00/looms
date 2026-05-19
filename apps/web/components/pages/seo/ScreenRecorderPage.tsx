@@ -80,7 +80,7 @@ export const screenRecorderContent: SeoPageContent = {
 		{
 			question: "Is Cap a free screen recorder?",
 			answer:
-				"Yes, Cap offers a powerful free version, making it one of the best free screen recorders available. The local version is 100% free with no usage limits, but Cap Pro is available for users who need additional features.",
+				"Yes, Cap offers a powerful free version, making it one of the best free screen recorders available. The local version is 100% free with no usage limits, but Looms Pro is available for users who need additional features.",
 		},
 		{
 			question: "How does Cap compare to OBS?",
@@ -113,7 +113,7 @@ export const screenRecorderContent: SeoPageContent = {
 	cta: {
 		title:
 			"Get Started with Cap – The Easy, High-Quality, and Free Screen Recorder",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 	},
 };
 

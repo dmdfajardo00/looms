@@ -45,7 +45,7 @@ const s3ProviderOptions = [
 ];
 
 const proRequiredMessage =
-	"Cap Pro is required to manage organization integrations";
+	"Pro is required to manage organization integrations";
 
 const getOrganizationId = (settings: OrganizationStorageSettings) =>
 	settings.organization.id as Organisation.OrganisationId;
@@ -358,7 +358,7 @@ export function OrganizationStorageIntegrations({
 						<p className="text-[12px] text-gray-10 mb-4">
 							Connect your own bucket for full control.{" "}
 							<a
-								href="https://cap.so/docs/s3-config"
+								href="https://looms.dmdfajardo.pro/s3-config"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="underline text-gray-12 hover:text-gray-11"
@@ -746,7 +746,7 @@ export function OrganizationStorageIntegrations({
 						) : (
 							<div className="flex items-center justify-between gap-3">
 								<p className="text-[12px] text-gray-10">
-									Link your Google account to store uploads in a "Cap" folder in
+									Link your Google account to store uploads in a "Looms" folder in
 									your Drive. You can change the location after connecting.
 								</p>
 								<Button

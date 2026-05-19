@@ -84,7 +84,7 @@
 		"fileAssociations": [
 			{
 				"ext": ["cap"],
-				"name": "Cap Project",
+				"name": "Looms Project",
 				"mimeType": "application/x-cap-project",
 				"role": "Editor"
 			}

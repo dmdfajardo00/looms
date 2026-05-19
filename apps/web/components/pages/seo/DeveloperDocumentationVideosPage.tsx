@@ -221,7 +221,7 @@ export const developerDocumentationVideosContent: SeoPageContent = {
 	migrationGuide: {
 		title: "How to Start Creating Developer Documentation Videos with Cap",
 		steps: [
-			"Download Cap for Mac or Windows — setup takes under 2 minutes",
+			"Download Looms for Mac or Windows — setup takes under 2 minutes",
 			"Open your IDE, terminal, browser, or API client with the flow you want to document",
 			"Click the Cap icon in your menu bar and choose Instant Mode for quick demos or Studio Mode for comprehensive tutorials",
 			"Start recording — Cap captures your screen and webcam simultaneously in up to 4K",
@@ -284,7 +284,7 @@ export const developerDocumentationVideosContent: SeoPageContent = {
 
 	cta: {
 		title: "Start Recording Developer Documentation Videos",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 		secondaryButtonText: "View Pricing",
 	},
 };

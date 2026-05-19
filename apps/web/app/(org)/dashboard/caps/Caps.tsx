@@ -16,7 +16,7 @@ import { useVideosAnalyticsQuery } from "@/lib/Queries/Analytics";
 import { useDashboardContext } from "../Contexts";
 import {
 	NewFolderDialog,
-	SelectedCapsBar,
+	SelectedLoomsBar,
 	UploadCapButton,
 	UploadPlaceholderCard,
 	WebRecorderDialog,
@@ -63,7 +63,7 @@ export type VideoData = {
 	settings?: Partial<Record<ViewerSettingKey, boolean>> | null;
 }[];
 
-export const Caps = ({
+export const Looms = ({
 	data,
 	count,
 	analyticsEnabled,
@@ -82,10 +82,10 @@ export const Caps = ({
 	const [openNewFolderDialog, setOpenNewFolderDialog] = useState(false);
 	const totalPages = Math.ceil(count / limit);
 	const previousCountRef = useRef<number>(0);
-	const [selectedCaps, setSelectedCaps] = useState<Video.VideoId[]>([]);
+	const [selectedLooms, setSelectedLooms] = useState<Video.VideoId[]>([]);
 	const [isDraggingCap, setIsDraggingCap] = useState(false);
 
-	const anyCapSelected = selectedCaps.length > 0;
+	const anyCapSelected = selectedLooms.length > 0;
 
 	const analyticsQuery = useVideosAnalyticsQuery(
 		data.map((video) => video.id),
@@ -96,7 +96,7 @@ export const Caps = ({
 	const isLoadingAnalytics = analyticsEnabled && analyticsQuery.isLoading;
 
 	const handleCapSelection = (capId: Video.VideoId) => {
-		setSelectedCaps((prev) => {
+		setSelectedLooms((prev) => {
 			const newSelection = prev.includes(capId)
 				? prev.filter((id) => id !== capId)
 				: [...prev, capId];
@@ -111,7 +111,7 @@ export const Caps = ({
 		VideoDelete: (id: Video.VideoId) => Effect.Effect<void, unknown, never>;
 	};
 
-	const { mutate: deleteCaps, isPending: isDeletingCaps } = useEffectMutation({
+	const { mutate: deleteLooms, isPending: isDeletingLooms } = useEffectMutation({
 		mutationFn: Effect.fn(function* (ids: Video.VideoId[]) {
 			if (ids.length === 0) return { success: 0 };
 
@@ -142,7 +142,7 @@ export const Caps = ({
 			);
 		},
 		onSuccess: (data: { success: number; error?: number }) => {
-			setSelectedCaps([]);
+			setSelectedLooms([]);
 			router.refresh();
 			if (data.error) {
 				toast.success(
@@ -182,13 +182,13 @@ export const Caps = ({
 
 	useEffect(() => {
 		const handleKeyDown = (e: KeyboardEvent) => {
-			if (e.key === "Escape" && selectedCaps.length > 0) {
-				setSelectedCaps([]);
+			if (e.key === "Escape" && selectedLooms.length > 0) {
+				setSelectedLooms([]);
 			}
 
 			if (
 				(e.key === "Delete" || e.key === "Backspace") &&
-				selectedCaps.length > 0
+				selectedLooms.length > 0
 			) {
 				if (e.key === "Backspace") {
 					e.preventDefault();
@@ -199,7 +199,7 @@ export const Caps = ({
 						document.activeElement?.tagName || "",
 					)
 				) {
-					deleteCaps(selectedCaps);
+					deleteLooms(selectedLooms);
 				}
 			}
 
@@ -210,7 +210,7 @@ export const Caps = ({
 					)
 				) {
 					e.preventDefault();
-					setSelectedCaps(data.map((cap) => cap.id));
+					setSelectedLooms(data.map((cap) => cap.id));
 				}
 			}
 		};
@@ -220,7 +220,7 @@ export const Caps = ({
 		return () => {
 			window.removeEventListener("keydown", handleKeyDown);
 		};
-	}, [selectedCaps, data, deleteCaps]);
+	}, [selectedLooms, data, deleteLooms]);
 
 	useEffect(() => {
 		const handleDragStart = () => setIsDraggingCap(true);
@@ -295,15 +295,15 @@ export const Caps = ({
 									cap={video}
 									analytics={videoAnalytics ?? 0}
 									onDelete={() => {
-										if (selectedCaps.length > 0) {
-											deleteCaps(selectedCaps);
+										if (selectedLooms.length > 0) {
+											deleteLooms(selectedLooms);
 										} else {
 											deleteCap(video.id);
 										}
 									}}
 									userId={user?.id}
 									isLoadingAnalytics={isLoadingAnalytics}
-									isSelected={selectedCaps.includes(video.id)}
+									isSelected={selectedLooms.includes(video.id)}
 									anyCapSelected={anyCapSelected}
 									onSelectToggle={() => handleCapSelection(video.id)}
 								/>
@@ -317,11 +317,11 @@ export const Caps = ({
 					<CapPagination currentPage={page} totalPages={totalPages} />
 				</div>
 			)}
-			<SelectedCapsBar
-				selectedCaps={selectedCaps}
-				setSelectedCaps={setSelectedCaps}
-				deleteSelectedCaps={() => deleteCaps(selectedCaps)}
-				isDeleting={isDeletingCaps || isDeletingCap}
+			<SelectedLoomsBar
+				selectedLooms={selectedLooms}
+				setSelectedLooms={setSelectedLooms}
+				deleteSelectedLooms={() => deleteLooms(selectedLooms)}
+				isDeleting={isDeletingLooms || isDeletingCap}
 			/>
 			{isDraggingCap && (
 				<div className="fixed inset-0 z-50 pointer-events-none">

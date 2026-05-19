@@ -185,7 +185,7 @@ export const employeeOnboardingContent: SeoPageContent = {
 	migrationGuide: {
 		title: "How to Implement Cap for Employee Onboarding",
 		steps: [
-			"Download Cap for your HR team (available on Mac and Windows)",
+			"Download Looms for your HR team (available on Mac and Windows)",
 			"Set up shared S3 storage (optional) for secure onboarding content",
 			"Create an onboarding content structure with key training categories",
 			"Record essential system walkthroughs and company introductions",
@@ -202,7 +202,7 @@ export const employeeOnboardingContent: SeoPageContent = {
 
 	cta: {
 		title: "Ready to Transform Your Employee Onboarding Experience?",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 	},
 };
 

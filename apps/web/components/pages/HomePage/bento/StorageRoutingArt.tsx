@@ -25,7 +25,7 @@ interface Packet {
 const DESTINATIONS: Destination[] = [
 	{
 		id: "cloud",
-		label: "Cap Cloud",
+		label: "Looms",
 		icon: <Cloud size={14} />,
 		cy: 60,
 	},

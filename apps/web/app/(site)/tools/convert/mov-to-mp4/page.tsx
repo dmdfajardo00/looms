@@ -5,7 +5,7 @@ import type { ToolPageContent } from "@/components/tools/types";
 import { createBreadcrumbSchema } from "@/utils/web-schema";
 
 export const metadata: Metadata = {
-	title: "MOV to MP4 Converter — Free Online Video Converter | Cap",
+	title: "MOV to MP4 Converter — Free Online Video Converter | Looms",
 	description:
 		"Convert Apple QuickTime MOV videos to MP4 format directly in your browser. Free, private, no upload needed. Works with iPhone recordings, screen captures, and any MOV file.",
 	keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 		"browser mov converter",
 	],
 	openGraph: {
-		title: "MOV to MP4 Converter — Free Online Video Converter | Cap",
+		title: "MOV to MP4 Converter — Free Online Video Converter | Looms",
 		description:
 			"Convert MOV videos to the universally compatible MP4 format directly in your browser. No uploads, no installs, 100% private. Works with iPhone recordings and QuickTime files.",
 		url: "https://cap.so/tools/convert/mov-to-mp4",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "MOV to MP4 Converter — Free Online Video Converter | Cap",
+		title: "MOV to MP4 Converter — Free Online Video Converter | Looms",
 		description:
 			"Convert MOV to MP4 directly in your browser. No uploads, no installs, 100% private.",
 		images: ["https://cap.so/og.png"],
@@ -190,7 +190,7 @@ export default function MOVToMP4Page() {
 			title: "Cap is the open source Loom alternative",
 			description:
 				"Record, edit, and share video messages with Cap. 100% open source and privacy focused. Records directly to MP4 — no conversion needed.",
-			buttonText: "Download Cap Free",
+			buttonText: "Download Looms Free",
 		},
 	};
 

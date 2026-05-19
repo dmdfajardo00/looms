@@ -6,7 +6,7 @@ import {
 import { createFAQSchema } from "@/utils/web-schema";
 
 export const metadata: Metadata = {
-	title: "OBS Alternative — Easier Screen Recording with Instant Sharing | Cap",
+	title: "OBS Alternative — Easier Screen Recording with Instant Sharing | Looms",
 	description:
 		"Cap is the modern OBS alternative for async screen sharing. Record in 4K, get a shareable link in seconds, and collaborate with timestamped comments. No configuration required.",
 	alternates: {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 	},
 	openGraph: {
 		title:
-			"OBS Alternative — Easier Screen Recording with Instant Sharing | Cap",
+			"OBS Alternative — Easier Screen Recording with Instant Sharing | Looms",
 		description:
 			"Cap is the modern OBS alternative for async screen sharing. Record in 4K, get a shareable link in seconds, and collaborate with timestamped comments. No configuration required.",
 		url: "https://cap.so/obs-alternative",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title:
-			"OBS Alternative — Easier Screen Recording with Instant Sharing | Cap",
+			"OBS Alternative — Easier Screen Recording with Instant Sharing | Looms",
 		description:
 			"Cap is the modern OBS alternative for async screen sharing. Record in 4K, get a shareable link in seconds, and collaborate with timestamped comments. No configuration required.",
 		images: ["https://cap.so/og.png"],

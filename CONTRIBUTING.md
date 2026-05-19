@@ -49,7 +49,7 @@ To run only one of them, use `pnpm dev:desktop` or `pnpm dev:web` respectively.
 ### `@cap/desktop` (desktop app)
 
 When running `@cap/desktop` from a terminal on macOS,
-you will need to grant permissions (screen recording, microphone, etc.) to the terminal, not the Cap app.
+you will need to grant permissions (screen recording, microphone, etc.) to the terminal, not the Looms app.
 For example, if you run `pnpm dev:desktop` in the macOS `Terminal.app`,
 you will need to grant permissions to it instead of `Cap - Development.app`.
 

@@ -6,14 +6,14 @@ import {
 import { createFAQSchema } from "@/utils/web-schema";
 
 export const metadata: Metadata = {
-	title: "Mac Screen Recording with Audio — Capture System Sound & Mic | Cap",
+	title: "Mac Screen Recording with Audio — Loomsture System Sound & Mic | Looms",
 	description:
-		"Record your Mac screen with system audio and microphone using Cap. No BlackHole, no plugins required. Free, open-source, and available for macOS. Download Cap today.",
+		"Record your Mac screen with system audio and microphone using Cap. No BlackHole, no plugins required. Free, open-source, and available for macOS. Download Looms today.",
 	alternates: {
 		canonical: "https://cap.so/mac-screen-recording-with-audio",
 	},
 	openGraph: {
-		title: "Mac Screen Recording with Audio — Capture System Sound & Mic | Cap",
+		title: "Mac Screen Recording with Audio — Loomsture System Sound & Mic | Looms",
 		description:
 			"Record your Mac screen with system audio and microphone using Cap. No BlackHole, no plugins required. Free and open-source for macOS.",
 		url: "https://cap.so/mac-screen-recording-with-audio",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Mac Screen Recording with Audio — Capture System Sound & Mic | Cap",
+		title: "Mac Screen Recording with Audio — Loomsture System Sound & Mic | Looms",
 		description:
 			"Record your Mac screen with system audio and microphone using Cap. No BlackHole, no plugins required. Free and open-source for macOS.",
 		images: ["https://cap.so/og.png"],

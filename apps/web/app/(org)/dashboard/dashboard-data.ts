@@ -95,7 +95,7 @@ export async function getDashboardData(user: typeof userSelectProps) {
 		let anyNewNotifications = false;
 		let spacesData: Spaces[] = [];
 		let organizationSettings: OrganizationSettings | null = null;
-		let userCapsCount = 0;
+		let userLoomsCount = 0;
 		let currentOrganizationRole: OrganizationRole | null = null;
 
 		let activeOrganizationId = organizationIds.find(
@@ -238,7 +238,7 @@ export async function getDashboardData(user: typeof userSelectProps) {
 					.where(eq(sharedVideos.organizationId, activeOrgInfo.id));
 				const orgVideoCount = orgVideoCountResult[0]?.value || 0;
 
-				const userCapsCountResult = await db()
+				const userLoomsCountResult = await db()
 					.select({
 						value: sql<number>`COUNT(DISTINCT ${videos.id})`,
 					})
@@ -250,7 +250,7 @@ export async function getDashboardData(user: typeof userSelectProps) {
 						),
 					);
 
-				userCapsCount = userCapsCountResult[0]?.value || 0;
+				userLoomsCount = userLoomsCountResult[0]?.value || 0;
 
 				const allSpacesEntry = await Effect.gen(function* () {
 					const imageUploads = yield* ImageUploads;
@@ -409,14 +409,14 @@ export async function getDashboardData(user: typeof userSelectProps) {
 			spacesData,
 			anyNewNotifications,
 			userPreferences,
-			userCapsCount,
+			userLoomsCount,
 		};
 	} catch (error) {
 		console.error("Failed to fetch dashboard data", error);
 		return {
 			organizationSelect: [],
 			spacesData: [],
-			userCapsCount: null,
+			userLoomsCount: null,
 			anyNewNotifications: false,
 			userPreferences: null,
 			organizationSettings: null,

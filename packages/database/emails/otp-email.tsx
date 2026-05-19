@@ -40,7 +40,7 @@ export function OTPEmail({
 							Your Verification Code
 						</Heading>
 						<Text className="text-sm leading-6 text-black">
-							Welcome to Cap!
+							Welcome to Looms!
 						</Text>
 						<Text className="text-sm leading-6 text-black">
 							Please use the following verification code to sign in to your

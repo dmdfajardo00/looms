@@ -30,7 +30,7 @@ const getButtonText = (planName: string): string => {
 			return "Download for free";
 		case "Desktop License":
 			return "Get Desktop License";
-		case "Cap Pro":
+		case "Looms Pro":
 			return "Get started";
 		default:
 			return "Get started";
@@ -43,7 +43,7 @@ const getButtonVariant = (planName: string) => {
 			return "gray";
 		case "Desktop License":
 			return "dark";
-		case "Cap Pro":
+		case "Looms Pro":
 			return "blue";
 		default:
 			return "gray";
@@ -72,7 +72,7 @@ const PlanIcon = ({
 		);
 	}
 
-	if (planName === "Cap Pro") {
+	if (planName === "Looms Pro") {
 		return (
 			<div
 				onMouseEnter={() => proArtRef.current?.playHoverAnimation()}
@@ -120,7 +120,7 @@ export const ComparePlans = () => {
 				disabled: isDisabled,
 			},
 			{
-				name: "Cap Pro",
+				name: "Looms Pro",
 				price:
 					"$8.16 /mo per user, billed annually or $12 /mo per user, billed monthly",
 				disabled: isDisabled,
@@ -275,7 +275,7 @@ export const ComparePlans = () => {
 			}
 
 			if (data.subscription === true) {
-				toast.success("You are already on the Cap Pro plan");
+				toast.success("You are already on the Pro plan");
 				return;
 			}
 
@@ -382,7 +382,7 @@ export const ComparePlans = () => {
 																		? "checkout"
 																		: "guest_checkout",
 														target_billing_period:
-															plan.name === "Cap Pro" ? "monthly" : null,
+															plan.name === "Looms Pro" ? "monthly" : null,
 													});
 													if (plan.name === "Free") {
 														window.location.href = "/download";

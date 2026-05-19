@@ -1,7 +1,7 @@
 export const seoMetadata = {
 	"best-screen-recorder": {
 		title:
-			"Best Screen Recorder in 2026 — Free, No Watermark, 4K Quality | Cap",
+			"Best Screen Recorder in 2026 — Free, No Watermark, 4K Quality | Looms",
 		description:
 			"Cap is the best screen recorder for Mac and Windows. Record in 4K with audio and webcam overlay, then share instantly. 100% free with no watermarks, no time limits in Studio Mode.",
 		keywords: [
@@ -15,7 +15,7 @@ export const seoMetadata = {
 		ogImage: "/og.png",
 	},
 	"screen-recorder": {
-		title: "Screen Recorder | Cap - Beautiful Screen Recording Software",
+		title: "Screen Recorder | Looms - Beautiful Screen Recording Software",
 		description:
 			"Cap is a powerful, user-friendly screen recorder that offers high-quality recordings completely free. Perfect for creating tutorials, capturing gameplay, or recording professional presentations.",
 		keywords: [
@@ -27,7 +27,7 @@ export const seoMetadata = {
 		ogImage: "/og.png",
 	},
 	"screen-recorder-mac": {
-		title: "Screen Record on Mac | Cap - Best Screen Recorder for macOS",
+		title: "Screen Record on Mac | Looms - Best Screen Recorder for macOS",
 		description:
 			"Cap is a powerful, user-friendly screen recorder for Mac, offering high-quality video capture with seamless functionality. Perfect for creating tutorials, presentations, and educational content on macOS.",
 		keywords: [
@@ -39,7 +39,7 @@ export const seoMetadata = {
 		ogImage: "/og.png",
 	},
 	"screen-recorder-windows": {
-		title: "Best Free Screen Recorder for Windows 10 & 11 | Cap",
+		title: "Best Free Screen Recorder for Windows 10 & 11 | Looms",
 		description:
 			"Record your screen on Windows with Cap — free, open-source screen recorder with HD video, audio, webcam overlay, and instant sharing. No watermarks. Works on Windows 10 & 11.",
 		keywords: [
@@ -55,7 +55,7 @@ export const seoMetadata = {
 		ogImage: "/og.png",
 	},
 	"free-screen-recorder": {
-		title: "Free Screen Recorder | Cap - High-Quality Recording at No Cost",
+		title: "Free Screen Recorder | Looms - High-Quality Recording at No Cost",
 		description:
 			"Cap offers a top-rated, free screen recorder with high-quality video capture, making it perfect for creating tutorials, educational content, and professional demos without any hidden fees.",
 		keywords: [
@@ -67,7 +67,7 @@ export const seoMetadata = {
 		ogImage: "/og.png",
 	},
 	"screen-recording": {
-		title: "Screen Recording — Free HD Capture, Instant Sharing | Cap",
+		title: "Screen Recording — Free HD Capture, Instant Sharing | Looms",
 		description:
 			"Record your screen in HD with audio and webcam overlay, then share instantly with a link. Cap is free, open-source screen recording software for Mac and Windows.",
 		keywords: [
@@ -80,7 +80,7 @@ export const seoMetadata = {
 		ogImage: "/og.png",
 	},
 	"screen-recording-software": {
-		title: "Screen Recording Software | Cap - Professional Video Capture Tool",
+		title: "Screen Recording Software | Looms - Professional Video Capture Tool",
 		description:
 			"Cap is an all-in-one screen recording software offering high-quality video capture with an intuitive interface. Ideal for creating tutorials, presentations, and educational content.",
 		keywords: [
@@ -183,7 +183,7 @@ export const seoMetadata = {
 		ogImage: "/og.png",
 	},
 	"open-source-screen-recorder": {
-		title: "Open Source Screen Recorder — Free, Private, Self-Hostable | Cap",
+		title: "Open Source Screen Recorder — Free, Private, Self-Hostable | Looms",
 		description:
 			"Cap is the leading open-source screen recorder for Mac and Windows. Audit the code, self-host your recordings, and own your data. MIT-licensed, 4K quality, no watermarks.",
 		keywords: [
@@ -197,7 +197,7 @@ export const seoMetadata = {
 		ogImage: "/og.png",
 	},
 	"video-recording-software": {
-		title: "Video Recording Software — Free HD Capture, Instant Sharing | Cap",
+		title: "Video Recording Software — Free HD Capture, Instant Sharing | Looms",
 		description:
 			"Cap is free video recording software for Mac and Windows. Record your screen, webcam, and audio in HD, then share instantly with a link. Open-source, no watermarks, no time limits in Studio Mode.",
 		keywords: [
@@ -211,7 +211,7 @@ export const seoMetadata = {
 		ogImage: "/og.png",
 	},
 	"mac-screen-recording-with-audio": {
-		title: "Mac Screen Recording with Audio — Capture System Sound & Mic | Cap",
+		title: "Mac Screen Recording with Audio — Loomsture System Sound & Mic | Looms",
 		description:
 			"Record your Mac screen with system audio and microphone using Cap. No BlackHole, no plugins required. Free, open-source screen recorder for macOS.",
 		keywords: [
@@ -226,7 +226,7 @@ export const seoMetadata = {
 	},
 	"obs-alternative": {
 		title:
-			"OBS Alternative — Easier Screen Recording with Instant Sharing | Cap",
+			"OBS Alternative — Easier Screen Recording with Instant Sharing | Looms",
 		description:
 			"Cap is the modern OBS alternative for async screen sharing. Record in 4K, get a shareable link in seconds, and collaborate with timestamped comments. No configuration required.",
 		keywords: [
@@ -241,7 +241,7 @@ export const seoMetadata = {
 	},
 	"hipaa-compliant-screen-recording": {
 		title:
-			"HIPAA-Compliant Screen Recording — Secure Healthcare Recordings | Cap",
+			"HIPAA-Compliant Screen Recording — Secure Healthcare Recordings | Looms",
 		description:
 			"Cap enables HIPAA-compliant screen recording for healthcare teams. Self-host recordings on your own AWS S3 bucket, keep PHI off third-party servers, and audit every line of open-source code.",
 		keywords: [
@@ -256,7 +256,7 @@ export const seoMetadata = {
 	},
 	"self-hosted-screen-recording": {
 		title:
-			"Self-Hosted Screen Recording — Own Your Data, No Vendor Lock-In | Cap",
+			"Self-Hosted Screen Recording — Own Your Data, No Vendor Lock-In | Looms",
 		description:
 			"Cap lets you self-host screen recordings on your own S3-compatible storage. Connect AWS S3, Cloudflare R2, or MinIO — recordings go directly to your infrastructure. Open source, MIT-licensed, free to use.",
 		keywords: [
@@ -270,7 +270,7 @@ export const seoMetadata = {
 		ogImage: "/og.png",
 	},
 	"async-video-code-reviews": {
-		title: "Async Video Code Reviews — Ship Faster Without the Meetings | Cap",
+		title: "Async Video Code Reviews — Ship Faster Without the Meetings | Looms",
 		description:
 			"Record screen walkthroughs of pull requests and share a timestamped link your team watches on their schedule. Cap makes async code reviews faster and calendar-free.",
 		keywords: [
@@ -285,7 +285,7 @@ export const seoMetadata = {
 	},
 	"developer-documentation-videos": {
 		title:
-			"Developer Documentation Videos — Record API Demos and SDK Walkthroughs | Cap",
+			"Developer Documentation Videos — Record API Demos and SDK Walkthroughs | Looms",
 		description:
 			"Create professional developer documentation videos with screen recording. Record API demos, SDK walkthroughs, and technical tutorials instantly. Cap is free, open-source, 4K quality, and built for developers.",
 		keywords: [

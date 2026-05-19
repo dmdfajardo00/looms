@@ -27,7 +27,7 @@ export interface OrgAnalyticsResponse {
 		browsers: BreakdownRow[];
 		operatingSystems: BreakdownRow[];
 		devices: BreakdownRow[];
-		topCaps: Array<BreakdownRow & { id: string }>;
+		topLooms: Array<BreakdownRow & { id: string }>;
 	};
 	capName?: string;
 }

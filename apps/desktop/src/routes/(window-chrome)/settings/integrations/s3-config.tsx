@@ -171,7 +171,7 @@ export default function S3ConfigPage() {
 									It should take under 10 minutes to set up and connect your
 									storage bucket to Cap. View the{" "}
 									<a
-										href="https://cap.so/docs/s3-config"
+										href="https://looms.dmdfajardo.pro/s3-config"
 										target="_blank"
 										class="underline text-gray-12"
 										rel="noopener"

@@ -14,7 +14,7 @@ export const webmToMp4Content: ToolPageContent = {
 		title: "Need advanced screen recording with effects?",
 		description:
 			"Cap is a free open-source screen recorder with editing, GIFs, and annotations.",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 	},
 
 	featuresTitle: "Why Use Our WEBM to MP4 Converter?",
@@ -91,7 +91,7 @@ export const mp4ToWebmContent: ToolPageContent = {
 		title: "Need advanced screen recording with effects?",
 		description:
 			"Cap is a free open-source screen recorder with editing, GIFs, and annotations.",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 	},
 
 	featuresTitle: "Why Use Our MP4 to WEBM Converter?",
@@ -174,7 +174,7 @@ export const videoSpeedControllerContent: ToolPageContent = {
 		title: "Need advanced screen recording with effects?",
 		description:
 			"Cap is a free open-source screen recorder with editing, GIFs, and annotations.",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 	},
 
 	featuresTitle: "Why Use Our Video Speed Controller?",
@@ -251,7 +251,7 @@ export const trimVideoContent: ToolPageContent = {
 		title: "The open source Loom alternative",
 		description:
 			"Cap is lightweight, powerful, and cross-platform. Record and share securely in seconds with custom S3 bucket support..",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 	},
 
 	featuresTitle: "Why Use Cap's Online Video Trimmer?",

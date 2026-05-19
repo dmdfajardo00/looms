@@ -424,7 +424,7 @@ function ChatView({
 
 			if (hasNewReply) {
 				if (document.hidden) {
-					document.title = "New Reply — Cap";
+					document.title = "New Reply — Looms";
 				}
 				const inputFocused = document.activeElement === inputRef.current;
 				if (document.hidden || (!inputFocused && !isHoveringRef.current)) {

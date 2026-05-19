@@ -31,7 +31,7 @@ type TinybirdAnalyticsData = {
 	browsers: BreakdownSourceRow[];
 	devices: BreakdownSourceRow[];
 	operatingSystems: BreakdownSourceRow[];
-	topCapsRaw: TopCapRow[];
+	topLoomsRaw: TopCapRow[];
 };
 
 type RollingAnalyticsRange = Exclude<AnalyticsRange, "lifetime">;
@@ -216,7 +216,7 @@ export const getOrgAnalyticsData = async (
 				browsers: [],
 				operatingSystems: [],
 				devices: [],
-				topCaps: [],
+				topLooms: [],
 			},
 			capName,
 		};
@@ -281,9 +281,9 @@ export const getOrgAnalyticsData = async (
 				videoIds,
 			);
 
-			const topCapsRaw = capId
+			const topLoomsRaw = capId
 				? []
-				: yield* queryTopCaps(tinybird, typedOrgId, from, to, videoIds);
+				: yield* queryTopLooms(tinybird, typedOrgId, from, to, videoIds);
 
 			return {
 				viewSeries,
@@ -292,7 +292,7 @@ export const getOrgAnalyticsData = async (
 				browsers,
 				devices,
 				operatingSystems,
-				topCapsRaw,
+				topLoomsRaw,
 			} satisfies TinybirdAnalyticsData;
 		}),
 	);
@@ -301,7 +301,7 @@ export const getOrgAnalyticsData = async (
 		(sum: number, row: ViewSeriesRow) => sum + row.views,
 		0,
 	);
-	const totalCaps = capsSeries.reduce(
+	const totalLooms = capsSeries.reduce(
 		(sum: number, row: CountSeriesRow) => sum + row.count,
 		0,
 	);
@@ -332,7 +332,7 @@ export const getOrgAnalyticsData = async (
 	}));
 
 	const videoNames = await loadVideoNames(
-		tinybirdData.topCapsRaw
+		tinybirdData.topLoomsRaw
 			.map((cap: TopCapRow) => cap.videoId)
 			.filter(Boolean),
 	);
@@ -345,7 +345,7 @@ export const getOrgAnalyticsData = async (
 
 	return {
 		counts: {
-			caps: totalCaps,
+			caps: totalLooms,
 			views: totalViews,
 			comments: totalComments,
 			reactions: totalReactions,
@@ -380,7 +380,7 @@ export const getOrgAnalyticsData = async (
 				(row) => row.name,
 				normalizeDeviceName,
 			),
-			topCaps: tinybirdData.topCapsRaw.map((row: TopCapRow) => ({
+			topLooms: tinybirdData.topLoomsRaw.map((row: TopCapRow) => ({
 				id: row.videoId,
 				name: videoNames.get(row.videoId) ?? row.videoId,
 				views: row.views,
@@ -906,7 +906,7 @@ const queryOperatingSystems = (
 	);
 };
 
-const queryTopCaps = (
+const queryTopLooms = (
 	tinybird: TinybirdService,
 	orgId: OrgId,
 	from: Date,

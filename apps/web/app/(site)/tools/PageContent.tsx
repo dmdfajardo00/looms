@@ -124,7 +124,7 @@ export function PageContent() {
 								size="lg"
 								className="w-full sm:w-auto transition-all duration-300 font-medium px-8 py-3"
 							>
-								Download Cap Free
+								Download Looms Free
 							</Button>
 						</div>
 					</div>

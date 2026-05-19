@@ -11,7 +11,7 @@ export const createOrganizationSchema = () => ({
 		height: 512,
 	},
 	description:
-		"Cap is the open source alternative to Loom. Lightweight, powerful, and cross-platform screen recorder.",
+		"Looms is a personal Loom alternative. Lightweight, powerful, and cross-platform screen recorder.",
 	sameAs: [
 		"https://github.com/capsoftware/cap",
 		"https://twitter.com/cap",
@@ -20,7 +20,7 @@ export const createOrganizationSchema = () => ({
 	],
 	contactPoint: {
 		"@type": "ContactPoint",
-		email: "hello@cap.so",
+		email: "looms-manager@dmdfajardo.pro",
 		contactType: "customer service",
 	},
 });
@@ -32,7 +32,7 @@ export const createWebSiteSchema = () => ({
 	url: "https://cap.so",
 	name: "Cap",
 	description:
-		"Beautiful screen recordings, owned by you. The open source alternative to Loom.",
+		"Personal screen recordings. The open source alternative to Loom.",
 	publisher: {
 		"@id": "https://cap.so/#organization",
 	},

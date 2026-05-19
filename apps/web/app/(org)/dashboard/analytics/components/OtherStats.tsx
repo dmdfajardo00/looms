@@ -23,7 +23,7 @@ export interface OtherStatsData {
 	browsers: BreakdownRow[];
 	operatingSystems: BreakdownRow[];
 	deviceTypes: BreakdownRow[];
-	topCaps?: Array<BreakdownRow & { id?: string }> | null;
+	topLooms?: Array<BreakdownRow & { id?: string }> | null;
 }
 
 interface OtherStatsProps {
@@ -180,17 +180,17 @@ export default function OtherStats({ data, isLoading }: OtherStatsProps) {
 					/>
 				</div>
 			</OtherStatBox>
-			{data.topCaps && data.topCaps.length > 0 && (
+			{data.topLooms && data.topLooms.length > 0 && (
 				<OtherStatBox
 					className="col-span-2"
-					title="Top Caps"
+					title="Top Looms"
 					icon={faRecordVinyl}
 				>
 					<div className="flex flex-col flex-1 gap-5 justify-center w-full">
 						<TableCard
-							title="Caps"
+							title="Looms"
 							columns={["Name", "Views", "Percentage"]}
-							rows={data.topCaps.map(toCapRow)}
+							rows={data.topLooms.map(toCapRow)}
 							type="cap"
 							isLoading={isLoading}
 						/>

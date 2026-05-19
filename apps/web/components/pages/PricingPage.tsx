@@ -109,7 +109,7 @@ export const PricingPage = () => {
 					</motion.div>
 				</div>
 
-				{/* Comparison Table (Cap Pro vs Desktop License) */}
+				{/* Comparison Table (Looms Pro vs Desktop License) */}
 				<div>
 					<ComparePlans />
 				</div>

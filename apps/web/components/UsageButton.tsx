@@ -21,7 +21,7 @@ export const UsageButton = memo(
 		if (buildEnv.NEXT_PUBLIC_IS_CAP !== "true") return null;
 		if (subscribed) {
 			return (
-				<Tooltip position="right" content="Cap Pro">
+				<Tooltip position="right" content="Looms Pro">
 					<Link
 						className="flex justify-center mx-auto w-full"
 						href="/dashboard/settings/workspace"
@@ -43,7 +43,7 @@ export const UsageButton = memo(
 								)}
 								icon={faCheck}
 							/>
-							{sidebarCollapsed ? null : <p className="text-white">Cap Pro</p>}
+							{sidebarCollapsed ? null : <p className="text-white">Looms Pro</p>}
 						</Button>
 					</Link>
 				</Tooltip>

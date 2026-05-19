@@ -41,7 +41,7 @@ export function LoginLink({
 							Your Login Link
 						</Heading>
 						<Text className="text-sm leading-6 text-black">
-							Welcome to Cap!
+							Welcome to Looms!
 						</Text>
 						<Text className="text-sm leading-6 text-black">
 							Please click the magic link below to sign in to your account.

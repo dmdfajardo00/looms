@@ -6,11 +6,11 @@ import {
 import { createFAQSchema, createHowToSchema } from "@/utils/web-schema";
 
 export const metadata: Metadata = {
-	title: "How to Screen Record on Mac, Windows & Chrome (2026 Guide) | Cap",
+	title: "How to Screen Record on Mac, Windows & Chrome (2026 Guide) | Looms",
 	description:
 		"Learn how to screen record with audio on Mac, Windows, and Chrome. Free step-by-step guide covering built-in tools and Cap, the open-source screen recorder.",
 	openGraph: {
-		title: "How to Screen Record on Mac, Windows & Chrome (2026 Guide) | Cap",
+		title: "How to Screen Record on Mac, Windows & Chrome (2026 Guide) | Looms",
 		description:
 			"Learn how to screen record with audio on any platform. Step-by-step instructions for macOS, Windows, and Chrome with free and paid options.",
 		url: "https://cap.so/how-to-screen-record",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "How to Screen Record on Mac, Windows & Chrome (2026 Guide) | Cap",
+		title: "How to Screen Record on Mac, Windows & Chrome (2026 Guide) | Looms",
 		description:
 			"Learn how to screen record with audio on Mac, Windows, and Chrome. Free step-by-step guide.",
 		images: ["https://cap.so/og.png"],
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 const howToSteps = [
 	{
 		name: "Download and install Cap",
-		text: "Download Cap for free from cap.so/download for Mac or Windows, or use Instant Mode in your browser for quick recordings without any installation.",
+		text: "Download Looms for free from cap.so/download for Mac or Windows, or use Instant Mode in your browser for quick recordings without any installation.",
 	},
 	{
 		name: "Choose your recording settings",

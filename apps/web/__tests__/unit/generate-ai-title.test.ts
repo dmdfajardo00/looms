@@ -40,7 +40,7 @@ describe("shouldReplaceVideoTitle", () => {
 	it("replaces default Cap titles", () => {
 		expect(
 			shouldReplaceVideoTitle({
-				currentTitle: "Cap Recording - 15 May 2026",
+				currentTitle: "Looms - 15 May 2026",
 				nextAiTitle: "Quarterly Roadmap Review",
 			}),
 		).toBe(true);
@@ -81,7 +81,7 @@ describe("shouldReplaceVideoTitle", () => {
 	it("does not replace with a blank generated title", () => {
 		expect(
 			shouldReplaceVideoTitle({
-				currentTitle: "Cap Recording - 15 May 2026",
+				currentTitle: "Looms - 15 May 2026",
 				nextAiTitle: "   ",
 			}),
 		).toBe(false);

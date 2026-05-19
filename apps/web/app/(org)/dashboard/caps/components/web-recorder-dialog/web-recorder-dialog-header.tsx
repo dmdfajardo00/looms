@@ -46,7 +46,7 @@ export const WebRecorderDialogHeader = ({
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
 						viewBox="0 0 103 40"
-						aria-label="Cap Logo"
+						aria-label="Looms Logo"
 					>
 						<title>Cap Logo</title>
 						<rect

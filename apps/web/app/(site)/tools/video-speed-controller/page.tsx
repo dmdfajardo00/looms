@@ -6,7 +6,7 @@ import { createBreadcrumbSchema } from "@/utils/web-schema";
 
 export const metadata: Metadata = {
 	title:
-		"Video Speed Controller Online – Speed Up or Slow Down Videos Free | Cap",
+		"Video Speed Controller Online – Speed Up or Slow Down Videos Free | Looms",
 	description:
 		"Free online video speed controller. Adjust playback from 0.25× to 3× without quality loss — processed locally in your browser for complete privacy. No uploads required.",
 	keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 	],
 	openGraph: {
 		title:
-			"Video Speed Controller Online – Speed Up or Slow Down Videos Free | Cap",
+			"Video Speed Controller Online – Speed Up or Slow Down Videos Free | Looms",
 		description:
 			"Adjust video playback speed from 0.25× to 3× directly in your browser. Free, private, no uploads — works with MP4, WebM, MOV, AVI and MKV.",
 		url: "https://cap.so/tools/video-speed-controller",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title:
-			"Video Speed Controller Online – Speed Up or Slow Down Videos Free | Cap",
+			"Video Speed Controller Online – Speed Up or Slow Down Videos Free | Looms",
 		description:
 			"Adjust video playback speed from 0.25× to 3× directly in your browser. Free, private, no uploads required.",
 		images: ["https://cap.so/og.png"],
@@ -192,7 +192,7 @@ export default function SpeedControllerPage() {
 			title: "Cap is the open source Loom alternative",
 			description:
 				"Record, edit, and share video messages with Cap. 100% open source and privacy focused. No speed adjustments needed — just hit record.",
-			buttonText: "Download Cap Free",
+			buttonText: "Download Looms Free",
 		},
 	};
 

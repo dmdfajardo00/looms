@@ -25,7 +25,7 @@ const chartConfig = {
 		color: "#f97316",
 	},
 	caps: {
-		label: "Caps",
+		label: "Looms",
 		color: "var(--gray-12)",
 	},
 } satisfies ChartConfig;

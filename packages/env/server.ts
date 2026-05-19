@@ -93,8 +93,8 @@ function createServerEnv() {
 			SUPERMEMORY_API_KEY: z.string().optional(),
 			SUPERMEMORY_KNOWLEDGE_TAG: z.string().optional(),
 
-			/// Cap Cloud
-			// These are only needed for Cap Cloud (https://cap.so)
+			/// Looms
+			// These are only needed for Looms (https://cap.so)
 			STRIPE_SECRET_KEY: z.string().optional(),
 			STRIPE_WEBHOOK_SECRET: z.string().optional(),
 			DISCORD_FEEDBACK_WEBHOOK_URL: z.string().optional(),

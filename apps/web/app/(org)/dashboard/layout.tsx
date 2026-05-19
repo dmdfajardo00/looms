@@ -33,7 +33,7 @@ export default async function DashboardLayout({
 	}
 
 	let organizationSelect: Organization[] = [];
-	let userCapsCount: number | null = 0;
+	let userLoomsCount: number | null = 0;
 	let organizationSettings: OrganizationSettings | null = null;
 	let spacesData: Spaces[] = [];
 	let anyNewNotifications = false;
@@ -41,7 +41,7 @@ export default async function DashboardLayout({
 	try {
 		const dashboardData = await getDashboardData(user);
 		organizationSelect = dashboardData.organizationSelect;
-		userCapsCount = dashboardData.userCapsCount;
+		userLoomsCount = dashboardData.userLoomsCount;
 		organizationSettings = dashboardData.organizationSettings;
 		userPreferences = dashboardData.userPreferences?.preferences || null;
 		spacesData = dashboardData.spacesData;
@@ -49,7 +49,7 @@ export default async function DashboardLayout({
 	} catch (error) {
 		console.error("Failed to load dashboard data", error);
 		organizationSelect = [];
-		userCapsCount = 0;
+		userLoomsCount = 0;
 		organizationSettings = null;
 		spacesData = [];
 		anyNewNotifications = false;
@@ -74,7 +74,7 @@ export default async function DashboardLayout({
 			<UploadingProvider>
 				<DashboardContexts
 					organizationSettings={organizationSettings}
-					userCapsCount={userCapsCount}
+					userLoomsCount={userLoomsCount}
 					organizationData={organizationSelect}
 					activeOrganization={activeOrganization || null}
 					spacesData={spacesData}

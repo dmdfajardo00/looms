@@ -149,7 +149,7 @@ export const hipaaCompliantScreenRecordingContent: SeoPageContent = {
 
 	comparisonTitle: "How Cap Enables HIPAA-Compliant Recording",
 	comparisonDescription:
-		"Most screen recorders store recordings on third-party servers by default — Cap gives healthcare teams the controls to change that",
+		"Most screen recorders store recordings on third-party servers by default — Looms gives healthcare teams the controls to change that",
 
 	comparison: [
 		{
@@ -216,7 +216,7 @@ export const hipaaCompliantScreenRecordingContent: SeoPageContent = {
 		steps: [
 			"Create a HIPAA-eligible AWS S3 bucket in your AWS account — ensure your AWS account is covered by an AWS BAA",
 			"Configure Cap's storage settings to point to your AWS S3 bucket using your AWS access key and secret",
-			"Download Cap for Mac or Windows — installation takes under 2 minutes",
+			"Download Looms for Mac or Windows — installation takes under 2 minutes",
 			"Disable AI auto-captions in Cap settings if your HIPAA policy restricts external audio transcription",
 			"Test a recording — stop recording and verify the file appears in your S3 bucket, not Cap's storage",
 			"Configure password protection on shared links for any recordings containing clinical content",
@@ -279,7 +279,7 @@ export const hipaaCompliantScreenRecordingContent: SeoPageContent = {
 
 	cta: {
 		title: "Start HIPAA-Compliant Screen Recording with Cap",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 		secondaryButtonText: "View Self-Hosting Docs",
 	},
 };

@@ -138,7 +138,7 @@ const setupPermissions: readonly SetupPermission[] = [
 	{
 		name: "Microphone",
 		key: "microphone",
-		description: "This permission is required to record audio in your Caps.",
+		description: "This permission is required to record audio in your Looms.",
 		requiresManualGrant: false,
 		optional: true,
 	},
@@ -146,7 +146,7 @@ const setupPermissions: readonly SetupPermission[] = [
 		name: "Camera",
 		key: "camera",
 		description:
-			"This permission is required to record your camera in your Caps.",
+			"This permission is required to record your camera in your Looms.",
 		requiresManualGrant: false,
 		optional: true,
 	},
@@ -700,7 +700,7 @@ function ModesOverviewStep(props: { active: boolean }) {
 					One app, every workflow
 				</h2>
 				<p class="text-[14px] text-gray-10 leading-relaxed">
-					Whether you need speed, studio quality, or a quick screenshot — Cap
+					Whether you need speed, studio quality, or a quick screenshot — Looms
 					has a mode for it.
 				</p>
 			</div>
@@ -1921,10 +1921,10 @@ function StartupOverlay(props: {
 						/>
 					</div>
 					<h1 class="text-5xl md:text-5xl font-bold mb-4 mt-8 drop-shadow-[0_0_20px_rgba(0,0,0,0.2)]">
-						Welcome to Cap
+						Welcome to Looms
 					</h1>
 					<p class="text-xl md:text-2xl opacity-80 mx-auto drop-shadow-[0_0_20px_rgba(0,0,0,0.2)] whitespace-nowrap">
-						Beautiful screen recordings, owned by you.
+						Personal screen recordings.
 					</p>
 				</div>
 

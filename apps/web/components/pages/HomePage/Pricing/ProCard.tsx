@@ -81,7 +81,7 @@ export const ProCard = () => {
 			}
 
 			if (data.subscription === true) {
-				toast.success("You are already on the Cap Pro plan");
+				toast.success("You are already on the Pro plan");
 			}
 
 			if (data.url) {
@@ -308,7 +308,7 @@ export const ProCard = () => {
 				onClick={() => planCheckout.mutate()}
 				disabled={planCheckout.isPending || guestCheckout.isPending}
 				className="w-full font-medium"
-				aria-label="Purchase Cap Pro License"
+				aria-label="Purchase Looms Pro License"
 			>
 				{planCheckout.isPending || guestCheckout.isPending
 					? "Loading..."

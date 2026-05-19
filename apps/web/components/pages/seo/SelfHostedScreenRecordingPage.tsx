@@ -150,7 +150,7 @@ export const selfHostedScreenRecordingContent: SeoPageContent = {
 
 	comparisonTitle: "Why Self-Host Your Screen Recordings with Cap",
 	comparisonDescription:
-		"Most screen recorders lock your data to their cloud — Cap is built from the ground up to run entirely on your own infrastructure",
+		"Most screen recorders lock your data to their cloud — Looms is built from the ground up to run entirely on your own infrastructure",
 
 	comparison: [
 		{
@@ -217,7 +217,7 @@ export const selfHostedScreenRecordingContent: SeoPageContent = {
 		steps: [
 			"Create an S3-compatible bucket — AWS S3, Cloudflare R2, Backblaze B2, or a self-hosted MinIO instance all work",
 			"Generate access credentials for your bucket with read/write permissions",
-			"Download Cap for Mac or Windows — installation takes under 2 minutes",
+			"Download Looms for Mac or Windows — installation takes under 2 minutes",
 			"Open Cap settings and navigate to the storage configuration section",
 			"Enter your bucket name, region, access key, secret key, and optional custom endpoint",
 			"Record a test video — verify the file appears in your bucket directly after stopping",
@@ -280,7 +280,7 @@ export const selfHostedScreenRecordingContent: SeoPageContent = {
 
 	cta: {
 		title: "Start Self-Hosting Your Screen Recordings with Cap",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 		secondaryButtonText: "View Self-Hosting Docs",
 	},
 };

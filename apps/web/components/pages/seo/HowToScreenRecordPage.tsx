@@ -152,7 +152,7 @@ export const howToScreenRecordContent: SeoPageContent = {
 	migrationGuide: {
 		title: "Quick Start: How to Screen Record with Cap in 4 Steps",
 		steps: [
-			"Download Cap for free from cap.so/download for Mac or Windows, or use Instant Mode in your browser for quick recordings without any installation.",
+			"Download Looms for free from cap.so/download for Mac or Windows, or use Instant Mode in your browser for quick recordings without any installation.",
 			"Open Cap and select your recording source. Choose between full screen, specific window, or custom region capture. Toggle microphone and system audio on or off based on your needs.",
 			"Click the record button to begin capturing your screen. Cap records in high definition with minimal system impact so you can present, demo, or teach without lag.",
 			"Stop the recording when finished. Cap generates an instant shareable link, or you can export the video locally in your preferred format. Share your recording with anyone in seconds.",
@@ -204,7 +204,7 @@ export const howToScreenRecordContent: SeoPageContent = {
 		{
 			question: "How long can I screen record?",
 			answer:
-				"With Cap's desktop app, there are no time limits on screen recordings. You can record for as long as you need, whether it is a 30-second quick demo or a 2-hour training session. Cap's Instant Mode (browser-based) supports recordings up to 5 minutes on the free plan. For unlimited browser-based recording length, Cap Pro is available at an affordable monthly price. The macOS built-in recorder and Windows Game Bar also have no strict time limits, though they lack the sharing and editing features that Cap provides.",
+				"With Cap's desktop app, there are no time limits on screen recordings. You can record for as long as you need, whether it is a 30-second quick demo or a 2-hour training session. Cap's Instant Mode (browser-based) supports recordings up to 5 minutes on the free plan. For unlimited browser-based recording length, Looms Pro is available at an affordable monthly price. The macOS built-in recorder and Windows Game Bar also have no strict time limits, though they lack the sharing and editing features that Cap provides.",
 		},
 		{
 			question: "What format do screen recordings save in?",
@@ -221,7 +221,7 @@ export const howToScreenRecordContent: SeoPageContent = {
 
 	cta: {
 		title: "Start Screen Recording for Free with Cap",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 		secondaryButtonText: "Try Instant Mode in Browser",
 	},
 };

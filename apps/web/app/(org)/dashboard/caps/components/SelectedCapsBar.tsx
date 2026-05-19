@@ -7,32 +7,32 @@ import NumberFlow from "@number-flow/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ConfirmationDialog } from "@/app/(org)/dashboard/_components/ConfirmationDialog";
 
-interface SelectedCapsBarProps {
-	selectedCaps: string[];
-	setSelectedCaps: (caps: Video.VideoId[]) => void;
-	deleteSelectedCaps: () => void;
+interface SelectedLoomsBarProps {
+	selectedLooms: string[];
+	setSelectedLooms: (caps: Video.VideoId[]) => void;
+	deleteSelectedLooms: () => void;
 	isDeleting: boolean;
 }
 
 import type { Video } from "@cap/web-domain";
 import { useState } from "react";
 
-export const SelectedCapsBar = ({
-	selectedCaps,
-	setSelectedCaps,
-	deleteSelectedCaps,
+export const SelectedLoomsBar = ({
+	selectedLooms,
+	setSelectedLooms,
+	deleteSelectedLooms,
 	isDeleting,
-}: SelectedCapsBarProps) => {
+}: SelectedLoomsBarProps) => {
 	const [confirmOpen, setConfirmOpen] = useState(false);
 
 	const handleConfirmDelete = () => {
-		deleteSelectedCaps();
+		deleteSelectedLooms();
 		setConfirmOpen(false);
 	};
 
 	return (
 		<AnimatePresence>
-			{selectedCaps.length > 0 && (
+			{selectedLooms.length > 0 && (
 				<motion.div
 					className="flex fixed right-0 left-0 bottom-12 z-50 justify-between items-center p-3 mx-auto w-full max-w-xl rounded-xl border shadow-lg border-gray-2 bg-gray-1"
 					initial={{ opacity: 0, y: 10, scale: 0.9 }}
@@ -51,15 +51,15 @@ export const SelectedCapsBar = ({
 				>
 					<div className="flex gap-1 text-sm font-medium text-gray-10">
 						<NumberFlow
-							value={selectedCaps.length}
+							value={selectedLooms.length}
 							className="tabular-nums text-md text-gray-12"
 						/>
-						cap{selectedCaps.length !== 1 ? "s" : ""} selected
+						cap{selectedLooms.length !== 1 ? "s" : ""} selected
 					</div>
 					<div className="flex gap-2 ml-4">
 						<Button
 							variant="dark"
-							onClick={() => setSelectedCaps([])}
+							onClick={() => setSelectedLooms([])}
 							className="text-sm"
 							size="sm"
 						>
@@ -77,11 +77,11 @@ export const SelectedCapsBar = ({
 						<ConfirmationDialog
 							open={confirmOpen}
 							icon={<FontAwesomeIcon icon={faFilm} />}
-							title="Delete selected Caps"
+							title="Delete selected Looms"
 							description={`Are you sure you want to delete ${
-								selectedCaps.length
+								selectedLooms.length
 							} cap${
-								selectedCaps.length === 1 ? "" : "s"
+								selectedLooms.length === 1 ? "" : "s"
 							}? This action cannot be undone.`}
 							confirmLabel={isDeleting ? "Deleting..." : "Delete"}
 							cancelLabel="Cancel"

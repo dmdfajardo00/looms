@@ -28,7 +28,7 @@ interface HeaderProps {
 	selectedSpaceId?: string | null;
 	onOrganizationChange?: (organizationId: Organisation.OrganisationId) => void;
 	onSpaceChange?: (spaceId: string | null) => void;
-	hideCapsSelect?: boolean;
+	hideLoomsSelect?: boolean;
 	capId?: string | null;
 	capName?: string | null;
 }
@@ -106,7 +106,7 @@ export default function Header({
 	selectedSpaceId,
 	onOrganizationChange,
 	onSpaceChange,
-	hideCapsSelect = false,
+	hideLoomsSelect = false,
 	capId,
 	capName,
 }: HeaderProps) {
@@ -221,28 +221,28 @@ export default function Header({
 		? filteredSpaces?.find((s) => s.id === selectedSpaceId)
 		: null;
 
-	const isMyCapsSelected =
+	const isMyLoomsSelected =
 		!selectedSpaceId &&
 		selectedOrg?.organization.id === activeOrganization?.organization.id;
 
 	const displayName = selectedSpace
 		? selectedSpace.name
-		: isMyCapsSelected
+		: isMyLoomsSelected
 			? user?.name
-				? `${user.name}'s Caps`
-				: "My Caps"
+				? `${user.name}'s Looms`
+				: "My Looms"
 			: selectedOrg?.organization.name || "Select organization";
 
 	const displayIcon = selectedSpace
 		? selectedSpace.iconUrl
-		: isMyCapsSelected
+		: isMyLoomsSelected
 			? user?.imageUrl || selectedOrg?.organization.iconUrl || undefined
 			: selectedOrg?.organization.iconUrl;
 
 	const displayIconName = selectedSpace
 		? selectedSpace.name
-		: isMyCapsSelected
-			? user?.name || selectedOrg?.organization.name || "My Caps"
+		: isMyLoomsSelected
+			? user?.name || selectedOrg?.organization.name || "My Looms"
 			: selectedOrg?.organization.name || "Select organization";
 
 	if (!activeOrganization) {
@@ -279,7 +279,7 @@ export default function Header({
 					</div>
 				</div>
 			)}
-			{!hideCapsSelect && (
+			{!hideLoomsSelect && (
 				<SelectPrimitive.Root
 					value={selectValue}
 					onValueChange={handleOrgChange}
@@ -323,7 +323,7 @@ export default function Header({
 										className="size-5 flex-shrink-0"
 									/>
 									<SelectPrimitive.ItemText>
-										{user?.name ? `${user.name}'s Caps` : "My Caps"}
+										{user?.name ? `${user.name}'s Looms` : "My Looms"}
 									</SelectPrimitive.ItemText>
 								</SelectPrimitive.Item>
 								{filteredSpaces && filteredSpaces.length > 0 && (

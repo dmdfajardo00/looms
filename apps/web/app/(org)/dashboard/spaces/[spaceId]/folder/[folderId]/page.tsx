@@ -13,7 +13,7 @@ import {
 import { runPromise } from "@/lib/server";
 import {
 	BreadcrumbItem,
-	ClientMyCapsLink,
+	ClientMyLoomsLink,
 	NewSubfolderButton,
 } from "../../../../folder/[id]/components";
 import FolderVideosSection from "../../../../folder/[id]/components/FolderVideosSection";
@@ -64,7 +64,7 @@ const FolderPage = async (props: {
 				</div>
 				<div className="flex justify-between items-center mb-6 w-full">
 					<div className="flex overflow-x-auto items-center font-medium">
-						<ClientMyCapsLink spaceId={params.spaceId} />
+						<ClientMyLoomsLink spaceId={params.spaceId} />
 						{breadcrumb.map((folder, index) => (
 							<div key={folder.id} className="flex items-center">
 								<p className="mx-2 text-gray-10">/</p>

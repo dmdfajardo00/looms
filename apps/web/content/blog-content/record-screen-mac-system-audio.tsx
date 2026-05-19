@@ -52,7 +52,7 @@ export const recordScreenMacContent = {
 				{
 					title: "Step 1: Install Cap",
 					content:
-						'Download and install Cap from <a href="/download">Cap.so/download</a>.',
+						'Download and install Cap from <a href="/download">Looms/download</a>.',
 				},
 				{
 					title: "Step 2: Start a Recording",
@@ -191,10 +191,10 @@ export const recordScreenMacContent = {
 		title: "Start Recording with System Audio Today",
 		description:
 			"Cap makes recording your Mac screen with system audio incredibly simple. No complex audio routing, no expensive software.",
-		buttonText: "Download Cap",
+		buttonText: "Download Looms",
 		buttonLink: "/download",
 		subtitle:
-			"Download Cap for macOS – free forever • Open-source • 14-day Pro trial",
+			"Download Looms for macOS – free forever • Open-source • 14-day Pro trial",
 	},
 
 	relatedLinks: [

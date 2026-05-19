@@ -5,7 +5,7 @@ import { SeoPageTemplate } from "../../seo/SeoPageTemplate";
 import type { SeoPageContent } from "../../seo/types";
 
 export const recordScreenContent: SeoPageContent = {
-	title: "Record Screen — Capture Your Screen Instantly and Share with a Link",
+	title: "Record Screen — Loomsture Your Screen Instantly and Share with a Link",
 	description:
 		"Cap makes it easy to record your screen on Mac or Windows. Capture in HD with audio and webcam, then share with a link in seconds. Free, open-source, no watermarks.",
 
@@ -42,7 +42,7 @@ export const recordScreenContent: SeoPageContent = {
 		{
 			title: "Free with Zero Watermarks",
 			description:
-				"Cap's Studio Mode lets you record your screen for free with no watermarks, no time limits, and no hidden fees. <a href='/free-screen-recorder'>Download Cap's free screen recorder</a> and start recording today.",
+				"Cap's Studio Mode lets you record your screen for free with no watermarks, no time limits, and no hidden fees. <a href='/free-screen-recorder'>Download Looms's free screen recorder</a> and start recording today.",
 		},
 		{
 			title: "AI-Powered Captions",
@@ -167,7 +167,7 @@ export const recordScreenContent: SeoPageContent = {
 
 	useCasesTitle: "Why People Use Cap to Record Their Screen",
 	useCasesDescription:
-		"From quick async updates to polished tutorials — Cap fits every screen recording workflow",
+		"From quick async updates to polished tutorials — Looms fits every screen recording workflow",
 
 	useCases: [
 		{
@@ -207,12 +207,12 @@ export const recordScreenContent: SeoPageContent = {
 		{
 			question: "How do I record my screen?",
 			answer:
-				"With Cap, recording your screen takes under a minute. Download Cap for Mac or Windows, launch the app, select your recording region (full screen, a specific window, or a custom area), and click Record. When you stop, Cap instantly generates a shareable link. No uploading, no waiting — your screen recording is live and ready to share.",
+				"With Cap, recording your screen takes under a minute. Download Looms for Mac or Windows, launch the app, select your recording region (full screen, a specific window, or a custom area), and click Record. When you stop, Cap instantly generates a shareable link. No uploading, no waiting — your screen recording is live and ready to share.",
 		},
 		{
 			question: "Is it free to record your screen with Cap?",
 			answer:
-				"Yes. Cap's Studio Mode is completely free for personal use with unlimited recording time, no watermarks, and no time limits. Instant Mode on the free plan supports recordings up to 5 minutes with instant shareable links and thread commenting. <a href='/free-screen-recorder'>Download Cap's free screen recorder</a> to get started.",
+				"Yes. Cap's Studio Mode is completely free for personal use with unlimited recording time, no watermarks, and no time limits. Instant Mode on the free plan supports recordings up to 5 minutes with instant shareable links and thread commenting. <a href='/free-screen-recorder'>Download Looms's free screen recorder</a> to get started.",
 		},
 		{
 			question: "Can I record my screen and webcam at the same time?",
@@ -227,7 +227,7 @@ export const recordScreenContent: SeoPageContent = {
 		{
 			question: "How do I record my screen on Mac?",
 			answer:
-				"Download Cap for macOS and click the Cap icon in your menu bar to start recording your screen. Choose your region and hit Record. Alternatively, macOS has a built-in screen recorder accessible with Cmd+Shift+5, but it lacks system audio and instant sharing. <a href='/screen-recorder-mac'>Learn more about screen recording on Mac</a>.",
+				"Download Looms for macOS and click the Cap icon in your menu bar to start recording your screen. Choose your region and hit Record. Alternatively, macOS has a built-in screen recorder accessible with Cmd+Shift+5, but it lacks system audio and instant sharing. <a href='/screen-recorder-mac'>Learn more about screen recording on Mac</a>.",
 		},
 		{
 			question: "How do I record my screen on Windows?",
@@ -237,7 +237,7 @@ export const recordScreenContent: SeoPageContent = {
 		{
 			question: "Is there a time limit when recording your screen with Cap?",
 			answer:
-				"Studio Mode in Cap has no time limit on screen recordings — record as long as you need completely free. Instant Mode on the free plan supports recordings up to 5 minutes. Upgrading to Cap Pro removes this limit for Instant Mode as well.",
+				"Studio Mode in Cap has no time limit on screen recordings — record as long as you need completely free. Instant Mode on the free plan supports recordings up to 5 minutes. Upgrading to Looms Pro removes this limit for Instant Mode as well.",
 		},
 		{
 			question: "How do I share a screen recording?",
@@ -254,7 +254,7 @@ export const recordScreenContent: SeoPageContent = {
 
 	cta: {
 		title: "Record Your Screen for Free with Cap",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 		secondaryButtonText: "Try Instant Mode in Browser",
 	},
 };

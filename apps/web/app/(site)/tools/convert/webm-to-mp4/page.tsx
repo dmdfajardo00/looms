@@ -5,7 +5,7 @@ import type { ToolPageContent } from "@/components/tools/types";
 import { createBreadcrumbSchema } from "@/utils/web-schema";
 
 export const metadata: Metadata = {
-	title: "WebM to MP4 Converter — Free Online Video Converter | Cap",
+	title: "WebM to MP4 Converter — Free Online Video Converter | Looms",
 	description:
 		"Convert WebM videos to MP4 format directly in your browser. Free, private, no upload needed. Works with browser screen recordings, OBS exports, and any WebM video file.",
 	keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 		"screen recording webm to mp4",
 	],
 	openGraph: {
-		title: "WebM to MP4 Converter — Free Online Video Converter | Cap",
+		title: "WebM to MP4 Converter — Free Online Video Converter | Looms",
 		description:
 			"Convert WebM videos to the universally compatible MP4 format directly in your browser. No uploads, no installs, 100% private. Works with browser screen recordings and any WebM file.",
 		url: "https://cap.so/tools/convert/webm-to-mp4",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "WebM to MP4 Converter — Free Online Video Converter | Cap",
+		title: "WebM to MP4 Converter — Free Online Video Converter | Looms",
 		description:
 			"Convert WebM to MP4 directly in your browser. No uploads, no installs, 100% private.",
 		images: ["https://cap.so/og.png"],
@@ -191,7 +191,7 @@ export default function WebmToMp4Page() {
 			title: "Cap is the open source Loom alternative",
 			description:
 				"Record, edit, and share video messages with Cap. 100% open source and privacy focused. Records directly to MP4 — no conversion needed.",
-			buttonText: "Download Cap Free",
+			buttonText: "Download Looms Free",
 		},
 	};
 

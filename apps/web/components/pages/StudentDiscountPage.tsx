@@ -190,7 +190,7 @@ export const StudentDiscountPage = () => {
 							size="lg"
 							className="flex justify-center items-center font-medium"
 						>
-							Download Cap Free
+							Download Looms Free
 						</Button>
 					</motion.div>
 				</motion.div>

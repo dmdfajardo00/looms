@@ -181,7 +181,7 @@ export const remoteTeamCollaborationContent: SeoPageContent = {
 	migrationGuide: {
 		title: "How to Implement Cap for Your Remote Team",
 		steps: [
-			"Download Cap for all team members' operating systems (Mac and Windows)",
+			"Download Looms for all team members' operating systems (Mac and Windows)",
 			"Set up shared S3 storage (optional) for complete data ownership",
 			"Create a quick getting-started recording to onboard your team",
 			"Establish guidelines for when to use Instant vs. Studio recording modes",
@@ -198,7 +198,7 @@ export const remoteTeamCollaborationContent: SeoPageContent = {
 
 	cta: {
 		title: "Ready to Transform Your Remote Team Communication?",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 	},
 };
 

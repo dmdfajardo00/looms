@@ -141,7 +141,7 @@ export const loomAlternativeContent: SeoPageContent = {
 		{
 			question: "Can I import my existing Loom videos into Cap?",
 			answer:
-				"Yes! Cap Pro includes a built-in Loom video importer. Simply paste your Loom video links and Cap will import them directly into your library. It's the easiest way to migrate from Loom without losing any of your existing content.",
+				"Yes! Looms Pro includes a built-in Loom video importer. Simply paste your Loom video links and Cap will import them directly into your library. It's the easiest way to migrate from Loom without losing any of your existing content.",
 		},
 	],
 
@@ -204,8 +204,8 @@ export const loomAlternativeContent: SeoPageContent = {
 	migrationGuide: {
 		title: "How to Get Started with Cap (Easy Guide)",
 		steps: [
-			"Download Cap for your operating system (Mac or Windows)",
-			"Launch the application and sign in to your Cap account",
+			"Download Looms for your operating system (Mac or Windows)",
+			"Launch the application and sign in to your Looms account",
 			"Import your existing Loom videos using Cap's built-in Loom video importer",
 			"Start recording using either Instant Mode or Studio Mode",
 			"Share your recordings easily with Cap's built-in sharing features",
@@ -221,7 +221,7 @@ export const loomAlternativeContent: SeoPageContent = {
 
 	cta: {
 		title: "Ready to Try Cap for Your Screen Recording Needs?",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 	},
 };
 

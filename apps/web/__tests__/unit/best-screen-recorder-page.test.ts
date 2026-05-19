@@ -93,7 +93,7 @@ describe("BestScreenRecorderPage FAQ schema", () => {
 		{
 			question: "What is the best free screen recorder?",
 			answer:
-				'Cap is the best free screen recorder available. Studio Mode is 100% free for personal use with unlimited recording time, no watermarks, and no time limits. <a href="/free-screen-recorder">Download Cap free</a> to get started.',
+				'Cap is the best free screen recorder available. Studio Mode is 100% free for personal use with unlimited recording time, no watermarks, and no time limits. <a href="/free-screen-recorder">Download Looms free</a> to get started.',
 		},
 		{
 			question: "What is the best screen recorder for Mac?",

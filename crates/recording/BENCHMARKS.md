@@ -1,4 +1,4 @@
-# Cap Recording Benchmark Results
+# Looms Benchmark Results
 
 This document tracks performance benchmarks for Cap's recording system over time. Each benchmark run is timestamped, enabling comparison across different versions, configurations, and hardware.
 

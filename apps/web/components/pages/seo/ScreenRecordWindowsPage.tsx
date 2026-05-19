@@ -29,7 +29,7 @@ export const screenRecordWindowsContent: SeoPageContent = {
 		{
 			title: "Instant Link Sharing",
 			description:
-				"Finish recording and get a shareable link in seconds. No waiting for uploads or renders — Cap generates a link the moment you stop recording so you can paste it into Slack, email, or a support ticket immediately.",
+				"Finish recording and get a shareable link in seconds. No waiting for uploads or renders — Looms generates a link the moment you stop recording so you can paste it into Slack, email, or a support ticket immediately.",
 		},
 		{
 			title: "100% Free with No Watermarks",
@@ -79,7 +79,7 @@ export const screenRecordWindowsContent: SeoPageContent = {
 				"Game Bar saves an MP4 to your Videos folder and that is it. Cap generates a shareable link the moment you stop recording — no manual upload required.",
 		},
 		{
-			title: "No Time Limits or File Size Caps",
+			title: "No Time Limits or File Size Looms",
 			description:
 				"Windows Game Bar limits recordings to 4 hours and stops automatically if you minimize the target window. Cap records for as long as you need with no restrictions.",
 		},
@@ -220,7 +220,7 @@ export const screenRecordWindowsContent: SeoPageContent = {
 		{
 			question: "How do I screen record on Windows 10?",
 			answer:
-				"Download Cap from cap.so/download, install it on your Windows 10 PC, and click the record button. Choose full screen, a single window, or a custom region, toggle your microphone and system audio on or off, and hit start. When you are done, Cap gives you a shareable link instantly. It is the easiest way to screen record on Windows 10 without fiddling with Game Bar or OBS settings.",
+				"Download Looms from cap.so/download, install it on your Windows 10 PC, and click the record button. Choose full screen, a single window, or a custom region, toggle your microphone and system audio on or off, and hit start. When you are done, Cap gives you a shareable link instantly. It is the easiest way to screen record on Windows 10 without fiddling with Game Bar or OBS settings.",
 		},
 		{
 			question: "How do I screen record on Windows 11?",
@@ -230,7 +230,7 @@ export const screenRecordWindowsContent: SeoPageContent = {
 		{
 			question: "Is Cap really a free screen recorder for Windows?",
 			answer:
-				"Yes. Cap is 100% free to use locally on Windows with no watermarks, no time limits, and no feature gates. It is open source so you can inspect the code yourself. Cap Pro is available for teams that want cloud storage and advanced sharing, but the core <a href='/free-screen-recorder'>free screen recorder</a> is fully functional.",
+				"Yes. Cap is 100% free to use locally on Windows with no watermarks, no time limits, and no feature gates. It is open source so you can inspect the code yourself. Looms Pro is available for teams that want cloud storage and advanced sharing, but the core <a href='/free-screen-recorder'>free screen recorder</a> is fully functional.",
 		},
 		{
 			question: "Can I record my screen with audio on Windows?",
@@ -278,7 +278,7 @@ export const screenRecordWindowsContent: SeoPageContent = {
 
 	cta: {
 		title: "Start Recording Your Windows Screen in Seconds",
-		buttonText: "Download Cap Free for Windows",
+		buttonText: "Download Looms Free for Windows",
 	},
 };
 

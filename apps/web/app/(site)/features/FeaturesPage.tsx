@@ -367,7 +367,7 @@ export const FeaturesPage = () => {
 							size="lg"
 							className="flex justify-center items-center w-full font-medium text-md sm:w-auto"
 						>
-							Download Cap Free
+							Download Looms Free
 						</Button>
 						<Button
 							href="/pricing"
@@ -375,7 +375,7 @@ export const FeaturesPage = () => {
 							size="lg"
 							className="flex justify-center items-center w-full font-medium text-md sm:w-auto"
 						>
-							Upgrade to Cap Pro
+							Upgrade to Pro
 						</Button>
 					</div>
 				</div>
@@ -418,7 +418,7 @@ export const FeaturesPage = () => {
 											href="/pricing"
 											className="inline-flex items-center px-2 py-1 ml-2 text-xs font-medium text-white bg-gradient-to-br from-blue-400 to-blue-600 rounded-full transition-all duration-200 hover:from-blue-500 hover:to-blue-700"
 										>
-											Cap Pro
+											Looms Pro
 										</Link>
 									)}
 									{feature.isComingSoon && (
@@ -459,7 +459,7 @@ export const FeaturesPage = () => {
 							size="lg"
 							className="font-medium"
 						>
-							Download Cap Free
+							Download Looms Free
 						</Button>
 						<Button
 							href="/pricing"

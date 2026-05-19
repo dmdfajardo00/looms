@@ -88,7 +88,7 @@ export function AnalyticsDashboard() {
 			}
 
 			if (data.subscription === true) {
-				toast.success("You are already on the Cap Pro plan");
+				toast.success("You are already on the Pro plan");
 				return;
 			}
 
@@ -154,7 +154,7 @@ export function AnalyticsDashboard() {
 				browsers: analytics.breakdowns.browsers,
 				operatingSystems: analytics.breakdowns.operatingSystems,
 				deviceTypes: analytics.breakdowns.devices,
-				topCaps: capId ? null : analytics.breakdowns.topCaps,
+				topLooms: capId ? null : analytics.breakdowns.topLooms,
 			}
 		: {
 				countries: [],
@@ -162,7 +162,7 @@ export function AnalyticsDashboard() {
 				browsers: [],
 				operatingSystems: [],
 				deviceTypes: [],
-				topCaps: [],
+				topLooms: [],
 			};
 
 	return (
@@ -185,7 +185,7 @@ export function AnalyticsDashboard() {
 					selectedSpaceId={selectedSpaceId}
 					onOrganizationChange={setSelectedOrgId}
 					onSpaceChange={setSelectedSpaceId}
-					hideCapsSelect={!!capId}
+					hideLoomsSelect={!!capId}
 					capId={capId}
 					capName={analytics?.capName ?? null}
 				/>
@@ -314,7 +314,7 @@ export function AnalyticsDashboard() {
 									>
 										{proCheckoutMutation.isPending
 											? "Loading..."
-											: "Upgrade to Cap Pro"}
+											: "Upgrade to Pro"}
 									</Button>
 								</div>
 							</div>

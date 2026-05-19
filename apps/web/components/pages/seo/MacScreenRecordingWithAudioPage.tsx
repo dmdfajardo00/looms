@@ -5,7 +5,7 @@ import { SeoPageTemplate } from "../../seo/SeoPageTemplate";
 import type { SeoPageContent } from "../../seo/types";
 
 export const macScreenRecordingWithAudioContent: SeoPageContent = {
-	title: "Mac Screen Recording with Audio — Capture System Sound & Mic | Cap",
+	title: "Mac Screen Recording with Audio — Loomsture System Sound & Mic | Looms",
 	description:
 		"Record your Mac screen with both system audio and microphone using Cap. The free, open-source solution to macOS's missing internal audio recording. No plugins, no setup — just press record.",
 
@@ -42,7 +42,7 @@ export const macScreenRecordingWithAudioContent: SeoPageContent = {
 		{
 			title: "Free with No Watermarks",
 			description:
-				"Cap's Studio Mode is completely free for personal use on Mac with no watermarks, no time limits, and no hidden fees. <a href='/free-screen-recorder'>Download Cap's free screen recorder</a> to start recording with audio on Mac today.",
+				"Cap's Studio Mode is completely free for personal use on Mac with no watermarks, no time limits, and no hidden fees. <a href='/free-screen-recorder'>Download Looms's free screen recorder</a> to start recording with audio on Mac today.",
 		},
 		{
 			title: "AI-Generated Captions from Your Audio",
@@ -251,7 +251,7 @@ export const macScreenRecordingWithAudioContent: SeoPageContent = {
 		{
 			question: "Is there a free way to record Mac screen with audio?",
 			answer:
-				"Yes. Cap is completely free for Mac screen recording with audio. Studio Mode has no time limits, no watermarks, and no fees. Instant Mode on the free plan supports recordings up to 5 minutes with shareable links. <a href='/free-screen-recorder'>Download Cap free</a> and start recording your Mac with audio today.",
+				"Yes. Cap is completely free for Mac screen recording with audio. Studio Mode has no time limits, no watermarks, and no fees. Instant Mode on the free plan supports recordings up to 5 minutes with shareable links. <a href='/free-screen-recorder'>Download Looms free</a> and start recording your Mac with audio today.",
 		},
 		{
 			question: "Does Cap record Mac screen with audio in 4K?",
@@ -278,7 +278,7 @@ export const macScreenRecordingWithAudioContent: SeoPageContent = {
 
 	cta: {
 		title: "Record Your Mac Screen with Audio — Free",
-		buttonText: "Download Cap Free for Mac",
+		buttonText: "Download Looms Free for Mac",
 		secondaryButtonText: "Try Instant Mode in Browser",
 	},
 };

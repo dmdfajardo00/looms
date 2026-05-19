@@ -31,7 +31,7 @@ export const DownloadPage = () => {
 		<div className="py-32 md:py-40 wrapper wrapper-sm">
 			<div className="space-y-4 text-center">
 				<h1 className="text-2xl fade-in-down animate-delay-1 md:text-4xl">
-					Download Cap
+					Download Looms
 				</h1>
 				<p className="px-4 text-sm fade-in-down text-gray-11 animate-delay-2 md:text-base md:px-0">
 					The quickest way to share your screen. Pin to your dock and record in

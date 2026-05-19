@@ -5,7 +5,7 @@ import type { ToolPageContent } from "@/components/tools/types";
 import { createBreadcrumbSchema } from "@/utils/web-schema";
 
 export const metadata: Metadata = {
-	title: "MP4 to MP3 Converter | Extract Audio from Video | Cap",
+	title: "MP4 to MP3 Converter | Extract Audio from Video | Looms",
 	description:
 		"Extract audio from MP4 videos and save as MP3 files directly in your browser. No uploads required, completely private and secure.",
 	openGraph: {
@@ -88,7 +88,7 @@ export default function MP4ToMP3Page() {
 			title: "Cap is the open source Loom alternative",
 			description:
 				"Record, edit, and share video messages with Cap. 100% open source and privacy focused.",
-			buttonText: "Download Cap Free",
+			buttonText: "Download Looms Free",
 		},
 	};
 

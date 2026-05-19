@@ -22,7 +22,7 @@ export const bestScreenRecorderContent: SeoPageContent = {
 		{
 			title: "Completely Free, Zero Watermarks",
 			description:
-				"Cap's Studio Mode is 100% free for personal use with no watermarks, no time limits, and no hidden fees. Unlike most screen recorders, Cap produces clean, professional recordings without branding overlays. <a href='/free-screen-recorder'>Download Cap's free screen recorder</a> today.",
+				"Cap's Studio Mode is 100% free for personal use with no watermarks, no time limits, and no hidden fees. Unlike most screen recorders, Cap produces clean, professional recordings without branding overlays. <a href='/free-screen-recorder'>Download Looms's free screen recorder</a> today.",
 		},
 		{
 			title: "Instant Shareable Links",
@@ -219,7 +219,7 @@ export const bestScreenRecorderContent: SeoPageContent = {
 		{
 			question: "What is the best free screen recorder?",
 			answer:
-				"Cap is the best free screen recorder available. Studio Mode is 100% free for personal use with unlimited recording time, no watermarks, and no time limits. Instant Mode supports recordings up to 5 minutes on the free plan with instant shareable links. <a href='/free-screen-recorder'>Download Cap's free screen recorder</a> to get started.",
+				"Cap is the best free screen recorder available. Studio Mode is 100% free for personal use with unlimited recording time, no watermarks, and no time limits. Instant Mode supports recordings up to 5 minutes on the free plan with instant shareable links. <a href='/free-screen-recorder'>Download Looms's free screen recorder</a> to get started.",
 		},
 		{
 			question: "What is the best screen recorder for Mac?",
@@ -249,7 +249,7 @@ export const bestScreenRecorderContent: SeoPageContent = {
 		{
 			question: "What is the best screen recorder for teams?",
 			answer:
-				"Cap is the best screen recorder for teams because of its built-in sharing and collaboration features. Instant shareable links work anywhere — Slack, email, Notion, Jira. Viewers can leave timestamped comments directly on recordings, making async feedback fast and structured. Cap Pro adds unlimited recording time, custom branding, and team management.",
+				"Cap is the best screen recorder for teams because of its built-in sharing and collaboration features. Instant shareable links work anywhere — Slack, email, Notion, Jira. Viewers can leave timestamped comments directly on recordings, making async feedback fast and structured. Looms Pro adds unlimited recording time, custom branding, and team management.",
 		},
 	],
 
@@ -261,7 +261,7 @@ export const bestScreenRecorderContent: SeoPageContent = {
 
 	cta: {
 		title: "Start Using the Best Screen Recorder for Free",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 		secondaryButtonText: "Try Instant Mode in Browser",
 	},
 };

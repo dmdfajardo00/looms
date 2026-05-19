@@ -431,7 +431,7 @@ async function generateSingleChunk(
 		)
 		.join("\n");
 
-	const prompt = `You are Cap AI, an expert at analyzing video content and creating comprehensive summaries.
+	const prompt = `You are Looms AI, an expert at analyzing video content and creating comprehensive summaries.
 
 The video is ${videoDuration} seconds long (${Math.floor(videoDuration / 60)}:${String(Math.floor(videoDuration % 60)).padStart(2, "0")} total). Analyze this timestamped transcript and provide a detailed JSON response:
 {
@@ -476,7 +476,7 @@ async function generateMultipleChunks(
 		const chunk = chunks[i];
 		if (!chunk) continue;
 
-		const chunkPrompt = `You are Cap AI, an expert at analyzing video content. This is section ${i + 1} of ${chunks.length} from a video that is ${videoDuration} seconds long (${Math.floor(videoDuration / 60)}:${String(Math.floor(videoDuration % 60)).padStart(2, "0")} total). This section covers timestamp ${Math.floor(chunk.startTime / 60)}:${String(chunk.startTime % 60).padStart(2, "0")} to ${Math.floor(chunk.endTime / 60)}:${String(chunk.endTime % 60).padStart(2, "0")}.
+		const chunkPrompt = `You are Looms AI, an expert at analyzing video content. This is section ${i + 1} of ${chunks.length} from a video that is ${videoDuration} seconds long (${Math.floor(videoDuration / 60)}:${String(Math.floor(videoDuration % 60)).padStart(2, "0")} total). This section covers timestamp ${Math.floor(chunk.startTime / 60)}:${String(chunk.startTime % 60).padStart(2, "0")} to ${Math.floor(chunk.endTime / 60)}:${String(chunk.endTime % 60).padStart(2, "0")}.
 
 Analyze this section thoroughly and provide JSON:
 {
@@ -529,7 +529,7 @@ ${chunk.text}`;
 		})
 		.join("\n\n");
 
-	const finalPrompt = `You are Cap AI, an expert at synthesizing information into comprehensive, well-organized summaries.
+	const finalPrompt = `You are Looms AI, an expert at synthesizing information into comprehensive, well-organized summaries.
 
 Based on these detailed section analyses of a video, create a thorough final summary that captures EVERYTHING important.
 

@@ -348,7 +348,7 @@ export function SignupForm() {
 							className="text-xs text-center text-gray-9"
 						>
 							By typing your email and clicking continue, you acknowledge that
-							you have both read and agree to Cap's{" "}
+							you have both read and agree to the{" "}
 							<Link
 								href="/terms"
 								target="_blank"

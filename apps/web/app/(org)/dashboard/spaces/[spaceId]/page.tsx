@@ -32,10 +32,10 @@ import { Effect } from "effect";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { runPromise } from "@/lib/server";
-import { SharedCaps } from "./SharedCaps";
+import { SharedLooms } from "./SharedLooms";
 
 export const metadata: Metadata = {
-	title: "Shared Caps — Cap",
+	title: "Shared Looms — Looms",
 };
 
 export type SpaceMemberData = {
@@ -190,7 +190,7 @@ async function fetchSharedSpacesForVideos(videoIds: Video.VideoId[]) {
 	}, {});
 }
 
-export default async function SharedCapsPage(props: {
+export default async function SharedLoomsPage(props: {
 	params: Promise<{ spaceId: string }>;
 	searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
@@ -337,7 +337,7 @@ export default async function SharedCapsPage(props: {
 		});
 
 		return (
-			<SharedCaps
+			<SharedLooms
 				data={processedVideoData}
 				count={totalCount}
 				spaceData={resolvedSpace}
@@ -468,7 +468,7 @@ export default async function SharedCapsPage(props: {
 		});
 
 		return (
-			<SharedCaps
+			<SharedLooms
 				data={processedVideoData}
 				count={totalCount}
 				hideSharedWith

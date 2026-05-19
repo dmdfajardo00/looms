@@ -17,7 +17,7 @@ export const TermsPage = () => {
 						<li>
 							<h3>Introduction</h3>
 							<br />
-							Welcome to Cap Software, Inc. ("Cap," "we," "us," or "our"). These
+							Welcome to Looms Software, Inc. ("Cap," "we," "us," or "our"). These
 							Terms of Service ("Terms") govern your access to and use of our
 							website, software, and services (collectively, the "Services"). By
 							accessing or using our Services, you agree to be bound by these
@@ -30,7 +30,7 @@ export const TermsPage = () => {
 							Cap provides a platform that allows users to record their screen
 							and webcam, edit their recordings, generate shareable links, and
 							collaborate with others through "Spaces." We offer a free plan
-							with usage limits and a paid "Cap Pro" plan.
+							with usage limits and a paid "Looms Pro" plan.
 						</li>
 						<li>
 							<h3>User Accounts</h3>
@@ -93,7 +93,7 @@ export const TermsPage = () => {
 							presentations, and promotional materials, to indicate you as a
 							user or customer of our Services. If you do not wish for your
 							company’s name or logo to be used for such purposes, you may opt
-							out by contacting us at hello@cap.so.
+							out by contacting us at looms-manager@dmdfajardo.pro.
 						</li>
 						<li>
 							<h3>Privacy</h3>
@@ -162,7 +162,7 @@ export const TermsPage = () => {
 							<h3>Contact Us</h3>
 							<br />
 							If you have any questions about these Terms, please contact us at
-							hello@cap.so.
+							looms-manager@dmdfajardo.pro.
 						</li>
 					</ol>
 					<p>Last updated: 24th April 2024</p>

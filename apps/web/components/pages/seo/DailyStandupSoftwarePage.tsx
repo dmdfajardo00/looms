@@ -181,7 +181,7 @@ export const dailyStandupSoftwareContent: SeoPageContent = {
 	migrationGuide: {
 		title: "How to Implement Cap for Your Daily Standups",
 		steps: [
-			"Download Cap for all team members (available on Mac and Windows)",
+			"Download Looms for all team members (available on Mac and Windows)",
 			"Set up shared S3 storage (optional) for secure standup content",
 			"Create standup guidelines (recommended length, format, etc.)",
 			"Decide on a consistent time window for recording daily updates",
@@ -198,7 +198,7 @@ export const dailyStandupSoftwareContent: SeoPageContent = {
 
 	cta: {
 		title: "Ready to Transform Your Daily Standups?",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 	},
 };
 

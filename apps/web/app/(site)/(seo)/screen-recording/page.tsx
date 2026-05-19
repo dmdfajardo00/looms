@@ -6,14 +6,14 @@ import {
 import { createFAQSchema } from "@/utils/web-schema";
 
 export const metadata: Metadata = {
-	title: "Screen Recording — Free HD Capture, Instant Sharing | Cap",
+	title: "Screen Recording — Free HD Capture, Instant Sharing | Looms",
 	description:
 		"Record your screen in HD with audio and webcam overlay, then share instantly with a link. Cap is free, open-source screen recording software for Mac and Windows.",
 	alternates: {
 		canonical: "https://cap.so/screen-recording",
 	},
 	openGraph: {
-		title: "Screen Recording — Free HD Capture, Instant Sharing | Cap",
+		title: "Screen Recording — Free HD Capture, Instant Sharing | Looms",
 		description:
 			"Record your screen in HD with audio and webcam overlay, then share instantly with a link. Free, open-source, available on Mac and Windows.",
 		url: "https://cap.so/screen-recording",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Screen Recording — Free HD Capture, Instant Sharing | Cap",
+		title: "Screen Recording — Free HD Capture, Instant Sharing | Looms",
 		description:
 			"Record your screen in HD with audio and webcam overlay, then share instantly with a link. Free, open-source, available on Mac and Windows.",
 		images: ["https://cap.so/og.png"],

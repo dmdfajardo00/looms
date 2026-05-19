@@ -109,7 +109,7 @@ export const screenRecordMacContent = {
 
 	cta: {
 		title: "Get Started with Cap – The Best Screen Recorder for Mac",
-		buttonText: "Download Cap Free for Mac",
+		buttonText: "Download Looms Free for Mac",
 	},
 };
 

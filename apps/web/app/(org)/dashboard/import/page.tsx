@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ImportPage } from "./ImportPage";
 
 export const metadata: Metadata = {
-	title: "Import — Cap",
+	title: "Import — Looms",
 };
 
 export default function Page() {

@@ -190,7 +190,7 @@ const CapAIArt = ({ className }: ArtProps) => {
 					>
 						<Sparkles size={11} className="text-blue-500" />
 					</motion.div>
-					<span className="text-gray-12 text-[11px] font-medium">Cap AI</span>
+					<span className="text-gray-12 text-[11px] font-medium">Looms AI</span>
 				</div>
 
 				<div className="w-full rounded-xl border border-gray-5 bg-gray-1 shadow-sm min-h-[140px]">

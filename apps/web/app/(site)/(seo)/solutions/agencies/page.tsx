@@ -23,7 +23,7 @@ const createFaqStructuredData = () => {
 		{
 			question: "How long can we record on the free version?",
 			answer:
-				"The free version supports recordings up to 5 minutes. For longer client presentations and unlimited recording time, upgrade to Cap Pro at $8.16/month (billed annually).",
+				"The free version supports recordings up to 5 minutes. For longer client presentations and unlimited recording time, upgrade to Looms Pro at $8.16/month (billed annually).",
 		},
 		{
 			question: "Is Cap secure enough for confidential client work?",
@@ -33,12 +33,12 @@ const createFaqStructuredData = () => {
 		{
 			question: "Can we use our own branding with Cap?",
 			answer:
-				"Yes. Cap Pro includes custom domain support (cap.yourdomain.com) so share links reflect your agency's brand. You can also use your own S3 storage for complete data ownership.",
+				"Yes. Looms Pro includes custom domain support (cap.yourdomain.com) so share links reflect your agency's brand. You can also use your own S3 storage for complete data ownership.",
 		},
 		{
 			question: "How does Cap pricing work for agency teams?",
 			answer:
-				"Cap Pro is $8.16/month per user (billed annually) and includes unlimited cloud storage, custom domains, team workspaces, and all collaboration features. Volume discounts are available for teams over 10 users.",
+				"Looms Pro is $8.16/month per user (billed annually) and includes unlimited cloud storage, custom domains, team workspaces, and all collaboration features. Volume discounts are available for teams over 10 users.",
 		},
 	];
 

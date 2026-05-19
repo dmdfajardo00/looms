@@ -1,7 +1,7 @@
 {
 	"name": "@cap/sdk-recorder",
 	"version": "0.1.0",
-	"description": "Cap Recording SDK for third-party integrations",
+	"description": "Looms SDK for third-party integrations",
 	"type": "module",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",

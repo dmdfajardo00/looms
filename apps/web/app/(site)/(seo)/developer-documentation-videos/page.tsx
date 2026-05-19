@@ -7,7 +7,7 @@ import { createFAQSchema } from "@/utils/web-schema";
 
 export const metadata: Metadata = {
 	title:
-		"Developer Documentation Videos — Record API Demos and SDK Walkthroughs | Cap",
+		"Developer Documentation Videos — Record API Demos and SDK Walkthroughs | Looms",
 	description:
 		"Create professional developer documentation videos with screen recording. Record API demos, SDK walkthroughs, and technical tutorials instantly. Cap is free, open-source, 4K quality, and built for developers.",
 	alternates: {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 	},
 	openGraph: {
 		title:
-			"Developer Documentation Videos — Record API Demos and SDK Walkthroughs | Cap",
+			"Developer Documentation Videos — Record API Demos and SDK Walkthroughs | Looms",
 		description:
 			"Create professional developer documentation videos with screen recording. Record API demos, SDK walkthroughs, and technical tutorials instantly. Free, open-source, and built for developers.",
 		url: "https://cap.so/developer-documentation-videos",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title:
-			"Developer Documentation Videos — Record API Demos and SDK Walkthroughs | Cap",
+			"Developer Documentation Videos — Record API Demos and SDK Walkthroughs | Looms",
 		description:
 			"Record API demos, SDK walkthroughs, and changelog videos instantly. Share a link, embed in your docs, get AI transcripts. Free and open-source.",
 		images: ["https://cap.so/og.png"],

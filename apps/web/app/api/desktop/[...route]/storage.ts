@@ -557,14 +557,14 @@ app.get("/google-drive/callback", async (c) => {
 				organizationId
 					? {
 							title: "Google Drive connected",
-							body: 'Your Google account is now linked to Cap. We\'ve created a "Cap" folder in your Drive to store your recordings.',
+							body: 'Your Google account is now linked to Cap. We\'ve created a "Looms" folder in your Drive to store your recordings.',
 							redirectUrl: orgRedirectUrl,
 							redirectLabel: "Back to settings",
 							redirectSeconds: 5,
 						}
 					: {
 							title: "Google Drive connected",
-							body: "Return to the Cap app to finish setting up your storage.",
+							body: "Return to the Looms app to finish setting up your storage.",
 						},
 			),
 		);

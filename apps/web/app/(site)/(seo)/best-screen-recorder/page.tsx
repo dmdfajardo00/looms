@@ -6,7 +6,7 @@ import {
 import { createFAQSchema } from "@/utils/web-schema";
 
 export const metadata: Metadata = {
-	title: "Best Screen Recorder in 2026 — Free, No Watermark, 4K Quality | Cap",
+	title: "Best Screen Recorder in 2026 — Free, No Watermark, 4K Quality | Looms",
 	description:
 		"Cap is the best screen recorder for Mac and Windows. Record in 4K with audio and webcam overlay, then share instantly. 100% free with no watermarks, no time limits in Studio Mode.",
 	alternates: {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 	},
 	openGraph: {
 		title:
-			"Best Screen Recorder in 2026 — Free, No Watermark, 4K Quality | Cap",
+			"Best Screen Recorder in 2026 — Free, No Watermark, 4K Quality | Looms",
 		description:
 			"Cap is the best screen recorder for Mac and Windows. Record in 4K with audio and webcam overlay, then share instantly. Free, open-source, no watermarks.",
 		url: "https://cap.so/best-screen-recorder",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title:
-			"Best Screen Recorder in 2026 — Free, No Watermark, 4K Quality | Cap",
+			"Best Screen Recorder in 2026 — Free, No Watermark, 4K Quality | Looms",
 		description:
 			"Cap is the best screen recorder for Mac and Windows. Record in 4K with audio and webcam overlay, then share instantly. Free, open-source, no watermarks.",
 		images: ["https://cap.so/og.png"],

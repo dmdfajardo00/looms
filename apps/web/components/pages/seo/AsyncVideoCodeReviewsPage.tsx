@@ -220,7 +220,7 @@ export const asyncVideoCodeReviewsContent: SeoPageContent = {
 	migrationGuide: {
 		title: "How to Start Doing Async Video Code Reviews with Cap",
 		steps: [
-			"Download Cap for Mac or Windows — setup takes under 2 minutes",
+			"Download Looms for Mac or Windows — setup takes under 2 minutes",
 			"Open your IDE or GitHub/GitLab in your browser and pull up the diff you want to review",
 			"Click the Cap icon in your menu bar and choose Instant Mode for quick reviews or Studio Mode for longer walkthroughs",
 			"Start recording — Cap captures your screen and webcam simultaneously",
@@ -285,7 +285,7 @@ export const asyncVideoCodeReviewsContent: SeoPageContent = {
 
 	cta: {
 		title: "Start Doing Code Reviews with Async Video",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 		secondaryButtonText: "View Pricing",
 	},
 };

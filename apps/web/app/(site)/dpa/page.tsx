@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Data Processing Agreement - Cap",
+	title: "Data Processing Agreement - Looms",
 	description:
 		"Cap's Data Processing Agreement for GDPR, UK GDPR, and related data protection laws.",
 };
@@ -84,7 +84,7 @@ export default function DataProcessingAgreementPage() {
 							processes for its own business purposes rather than on Customer's
 							behalf, including account administration, billing, sales,
 							marketing, website analytics, security, fraud prevention, product
-							analytics, and legal compliance. Cap's Privacy Policy governs that
+							analytics, and legal compliance. Privacy Policy governs that
 							processing.
 							<br />
 							Customer decides what to record, upload, share, transcribe, store,
@@ -139,7 +139,7 @@ export default function DataProcessingAgreementPage() {
 							ensuring that Customer Content is lawful.
 							<br />
 							Customer is responsible for configuring the Services for its
-							compliance needs, including whether to use Cap Cloud storage, a
+							compliance needs, including whether to use Looms storage, a
 							custom S3-compatible bucket, a self-hosted deployment,
 							password-protected sharing, restricted access, optional AI
 							features, retention settings, or other available controls.
@@ -431,7 +431,7 @@ export default function DataProcessingAgreementPage() {
 							<h3>Contact</h3>
 							<br />
 							For questions about this DPA, data protection, or Subprocessor
-							information, contact Cap at hello@cap.so.
+							information, contact Cap at looms-manager@dmdfajardo.pro.
 						</li>
 						<li>
 							<h3>Annex I: Details of Processing</h3>

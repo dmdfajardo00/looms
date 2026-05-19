@@ -19,7 +19,7 @@ export const testimonials = [
 		handle: "@olivialawson.co",
 		image: "/testimonials/olivialawson.jpg",
 		content:
-			"I've been testing Cap.so for no other reason than some old habits die hard for this former software analyst. Whew that UI is so polished and crispy. Between the open source code, self hosted vids, editing features and price point -- gone give Loom some competition 🤞🏽",
+			"I've been testing Looms for no other reason than some old habits die hard for this former software analyst. Whew that UI is so polished and crispy. Between the open source code, self hosted vids, editing features and price point -- gone give Loom some competition 🤞🏽",
 		url: "https://www.threads.com/@olivialawson.co/post/DIj1kOfpPgX",
 	},
 	{
@@ -34,7 +34,7 @@ export const testimonials = [
 		handle: "@_rogermattos",
 		image: "/testimonials/_rogermattos.jpg",
 		content:
-			"Tip for people that need to make screen recordings: Cap is the open source alternative to Loom. Lightweight, powerful, and stunning. Record and share in seconds.",
+			"Tip for people that need to make screen recordings: Looms is a personal Loom alternative. Lightweight, powerful, and stunning. Record and share in seconds.",
 		url: "https://x.com/_rogermattos/status/1844398522650722596",
 	},
 	{
@@ -48,7 +48,7 @@ export const testimonials = [
 		name: "Azzam",
 		handle: "@azrrow_s",
 		image: "/testimonials/azrrow_s.jpg",
-		content: "you can try Cap.so, it's just better!",
+		content: "you can try Looms, it's just better!",
 		url: "https://x.com/azrrow_s/status/1863202543725121586",
 	},
 	{
@@ -71,7 +71,7 @@ export const testimonials = [
 		handle: "@BilalBudhani",
 		image: "/testimonials/BilalBudhani.jpg",
 		content:
-			"Tried @Cap v 0.3.beta and found an issue while exporting video.\n\nWrote to @richiemcilroy about the problem and ~40 mins later the issue is fixed.\n\nI'm sold. Checkout Cap.so",
+			"Tried @Cap v 0.3.beta and found an issue while exporting video.\n\nWrote to @richiemcilroy about the problem and ~40 mins later the issue is fixed.\n\nI'm sold. Checkout Looms",
 		url: "https://x.com/BilalBudhani/status/1842198507756675104",
 	},
 	{
@@ -183,7 +183,7 @@ export const testimonials = [
 		name: "Dozie",
 		handle: "@dozibe",
 		image: "/testimonials/dozibe.jpg",
-		content: "Came at the right time. Cap.so was well needed.",
+		content: "Came at the right time. Looms was well needed.",
 		url: "https://x.com/dozibe/status/1842653324635455914",
 	},
 	{

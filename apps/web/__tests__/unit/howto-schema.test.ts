@@ -78,7 +78,7 @@ describe("createHowToSchema", () => {
 			steps: [
 				{
 					name: "Download and install Cap",
-					text: "Download Cap for free from cap.so/download.",
+					text: "Download Looms for free from cap.so/download.",
 				},
 				{
 					name: "Start recording",
@@ -99,7 +99,7 @@ describe("createHowToSchema", () => {
 		const howToSteps = [
 			{
 				name: "Download and install Cap",
-				text: "Download Cap for free from cap.so/download for Mac or Windows.",
+				text: "Download Looms for free from cap.so/download for Mac or Windows.",
 			},
 			{
 				name: "Choose your recording settings",

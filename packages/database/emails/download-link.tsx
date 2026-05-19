@@ -18,7 +18,7 @@ export function DownloadLink({ email = "" }: { email: string }) {
 	return (
 		<Html>
 			<Head />
-			<Preview>Download Cap — the open source Loom alternative</Preview>
+			<Preview>Download Looms — the open source Loom alternative</Preview>
 			<Tailwind>
 				<Body className="mx-auto my-auto bg-gray-1 font-sans">
 					<Container className="mx-auto my-10 max-w-[500px] rounded border border-solid border-gray-200 px-10 py-5">
@@ -75,7 +75,7 @@ export function DownloadLink({ email = "" }: { email: string }) {
 						</Section>
 
 						<Text className="text-sm leading-6 text-black mt-4">
-							Cap is the open source alternative to Loom. Beautiful, shareable
+							Looms is a personal Loom alternative. Beautiful, shareable
 							screen recordings — lightweight, powerful, and privacy-focused.
 						</Text>
 						<Footer email={email} marketing={true} />

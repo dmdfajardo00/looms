@@ -5,7 +5,7 @@ import { SeoPageTemplate } from "../../seo/SeoPageTemplate";
 import type { SeoPageContent } from "../../seo/types";
 
 export const videoRecordingSoftwareContent: SeoPageContent = {
-	title: "Video Recording Software — Free, HD Quality, Instant Sharing | Cap",
+	title: "Video Recording Software — Free, HD Quality, Instant Sharing | Looms",
 	description:
 		"Cap is free video recording software for Mac and Windows. Record your screen, webcam, and audio in HD, then share instantly with a link. Open-source, no watermarks, no time limits in Studio Mode.",
 
@@ -32,7 +32,7 @@ export const videoRecordingSoftwareContent: SeoPageContent = {
 		{
 			title: "Completely Free, No Watermarks",
 			description:
-				"Cap's Studio Mode is 100% free for personal use with no watermarks, no time limits, and no hidden fees. Unlike most video recording software, Cap never adds branding overlays to your recordings. <a href='/free-screen-recorder'>Download Cap's free recorder</a> today.",
+				"Cap's Studio Mode is 100% free for personal use with no watermarks, no time limits, and no hidden fees. Unlike most video recording software, Cap never adds branding overlays to your recordings. <a href='/free-screen-recorder'>Download Looms's free recorder</a> today.",
 		},
 		{
 			title: "Open Source and Auditable",
@@ -174,7 +174,7 @@ export const videoRecordingSoftwareContent: SeoPageContent = {
 
 	useCasesTitle: "Who Uses Cap as Their Video Recording Software",
 	useCasesDescription:
-		"From solo developers to enterprise teams — Cap fits every workflow that needs fast, professional video recordings",
+		"From solo developers to enterprise teams — Looms fits every workflow that needs fast, professional video recordings",
 
 	useCases: [
 		{
@@ -219,12 +219,12 @@ export const videoRecordingSoftwareContent: SeoPageContent = {
 		{
 			question: "What is the best free video recording software?",
 			answer:
-				"Cap is the best free video recording software for most users. Studio Mode is 100% free for personal use with no watermarks, no time limits, and up to 4K recording quality. Instant Mode supports recordings up to 5 minutes on the free plan with instant shareable links. <a href='/free-screen-recorder'>Download Cap's free recorder</a> to get started.",
+				"Cap is the best free video recording software for most users. Studio Mode is 100% free for personal use with no watermarks, no time limits, and up to 4K recording quality. Instant Mode supports recordings up to 5 minutes on the free plan with instant shareable links. <a href='/free-screen-recorder'>Download Looms's free recorder</a> to get started.",
 		},
 		{
 			question: "Is Cap video recording software free?",
 			answer:
-				"Yes. Cap's Studio Mode is completely free for personal use with no time limits, no watermarks, and no hidden fees. Instant Mode is free for recordings up to 5 minutes. Cap Pro at $9.99/month removes Instant Mode limits and adds team features — but the core video recording software is free to use forever.",
+				"Yes. Cap's Studio Mode is completely free for personal use with no time limits, no watermarks, and no hidden fees. Instant Mode is free for recordings up to 5 minutes. Looms Pro at $9.99/month removes Instant Mode limits and adds team features — but the core video recording software is free to use forever.",
 		},
 		{
 			question: "Does Cap video recording software work on Mac and Windows?",
@@ -261,7 +261,7 @@ export const videoRecordingSoftwareContent: SeoPageContent = {
 
 	cta: {
 		title: "Start Recording Video for Free with Cap",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 		secondaryButtonText: "Try Instant Mode in Browser",
 	},
 };

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { FaqPage } from "@/components/pages/FaqPage";
 
 export const metadata: Metadata = {
-	title: "FAQ — Cap",
+	title: "FAQ — Looms",
 };
 
 export default function App() {

@@ -52,7 +52,7 @@ export const recordScreenWindowsContent = {
 				{
 					title: "Step 1: Install Cap",
 					content:
-						'Download and install Cap from <a href="/download">Cap.so/download</a>.',
+						'Download and install Cap from <a href="/download">Looms/download</a>.',
 				},
 				{
 					title: "Step 2: Configure Audio (1 Minute Setup)",
@@ -182,10 +182,10 @@ export const recordScreenWindowsContent = {
 		title: "Start Recording with System Audio Today",
 		description:
 			"Cap makes recording your Windows screen with system audio incredibly simple. No Stereo Mix required, no complex audio routing.",
-		buttonText: "Download Cap",
+		buttonText: "Download Looms",
 		buttonLink: "/download",
 		subtitle:
-			"Download Cap for Windows – free forever • Open-source • 14-day Pro trial",
+			"Download Looms for Windows – free forever • Open-source • 14-day Pro trial",
 	},
 
 	relatedLinks: [

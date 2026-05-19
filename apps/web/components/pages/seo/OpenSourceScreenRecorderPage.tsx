@@ -174,7 +174,7 @@ export const openSourceScreenRecorderContent: SeoPageContent = {
 
 	useCasesTitle: "Who Uses Cap as Their Open Source Screen Recorder",
 	useCasesDescription:
-		"From privacy-conscious developers to enterprises with compliance requirements — Cap fits every team that values transparency",
+		"From privacy-conscious developers to enterprises with compliance requirements — Looms fits every team that values transparency",
 
 	useCases: [
 		{
@@ -219,7 +219,7 @@ export const openSourceScreenRecorderContent: SeoPageContent = {
 		{
 			question: "Can I self-host Cap's screen recordings?",
 			answer:
-				"Yes. Cap supports any S3-compatible storage provider, including AWS S3, Cloudflare R2, Backblaze B2, and self-hosted MinIO. Configure your own bucket in Cap's settings and your recordings are stored entirely within your infrastructure — Cap's servers never see your content.",
+				"Yes. Cap supports any S3-compatible storage provider, including AWS S3, Cloudflare R2, Backblaze B2, and self-hosted MinIO. Configure your own bucket in Cap's settings and your recordings are stored entirely within your infrastructure — Looms's servers never see your content.",
 		},
 		{
 			question: "What is the best open source screen recorder?",
@@ -229,7 +229,7 @@ export const openSourceScreenRecorderContent: SeoPageContent = {
 		{
 			question: "Is Cap's open source version free?",
 			answer:
-				"Yes. Cap's Studio Mode is completely free for personal use with no time limits and no watermarks. Instant Mode on the free plan supports recordings up to 5 minutes. Cap Pro ($9.99/month) removes Instant Mode time limits and adds team features. The core software will always be open source and free to use.",
+				"Yes. Cap's Studio Mode is completely free for personal use with no time limits and no watermarks. Instant Mode on the free plan supports recordings up to 5 minutes. Looms Pro ($9.99/month) removes Instant Mode time limits and adds team features. The core software will always be open source and free to use.",
 		},
 		{
 			question:
@@ -262,7 +262,7 @@ export const openSourceScreenRecorderContent: SeoPageContent = {
 
 	cta: {
 		title: "Start Recording with the Best Open Source Screen Recorder",
-		buttonText: "Download Cap Free",
+		buttonText: "Download Looms Free",
 		secondaryButtonText: "View on GitHub",
 	},
 };

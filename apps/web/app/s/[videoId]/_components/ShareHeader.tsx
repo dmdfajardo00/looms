@@ -270,11 +270,11 @@ export const ShareHeader = ({
 
 		try {
 			await hideShareableLinkCapLogo(data.orgId);
-			toast.success("Cap logo hidden");
+			toast.success("Looms logo hidden");
 			refresh();
 		} catch (error) {
 			toast.error(
-				error instanceof Error ? error.message : "Failed to hide Cap logo",
+				error instanceof Error ? error.message : "Failed to hide Looms logo",
 			);
 		} finally {
 			setIsHidingBranding(false);
@@ -324,7 +324,7 @@ export const ShareHeader = ({
 							<Button
 								variant="gray"
 								size="xs"
-								aria-label="Hide Cap logo"
+								aria-label="Hide Looms logo"
 								className="h-7 gap-1 whitespace-nowrap rounded-full px-2 text-[11px]"
 								disabled={isHidingBranding}
 								onClick={handleHideBranding}
@@ -373,7 +373,7 @@ export const ShareHeader = ({
 						size="sm"
 						variant="blue"
 					>
-						Upgrade To Cap Pro
+						Upgrade to Pro
 					</Button>
 				</div>
 			)}

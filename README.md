@@ -1,5 +1,5 @@
 <p align="center">
-	<img width="150" height="150" src="https://github.com/CapSoftware/Cap/blob/main/apps/desktop/src-tauri/icons/Square310x310Logo.png" alt="Cap logo">
+	<img width="150" height="150" src="https://github.com/CapSoftware/Cap/blob/main/apps/desktop/src-tauri/icons/Square310x310Logo.png" alt="Looms logo">
 </p>
 
 <h1 align="center">Cap</h1>
@@ -13,7 +13,7 @@
 	 |
 	<a href="https://cap.so/download">Download</a>
 	 |
-	<a href="https://cap.so/docs">Docs</a>
+	<a href="https://looms.dmdfajardo.pro">Docs</a>
 	 |
 	<a href="https://cap.so/pricing">Pricing</a>
 	 |
@@ -28,7 +28,7 @@
 
 <img src="https://raw.githubusercontent.com/CapSoftware/Cap/refs/heads/main/apps/web/public/landing-cover.png" alt="Cap app preview">
 
-Cap is the open source alternative to Loom. It gives you fast screen recording, polished local editing, instant share links, comments, transcripts, analytics, team workspaces, custom domains, custom S3 storage, and full self-hosting when you need complete control.
+Looms is a personal Loom alternative. It gives you fast screen recording, polished local editing, instant share links, comments, transcripts, analytics, team workspaces, custom domains, custom S3 storage, and full self-hosting when you need complete control.
 
 Use Cap for product demos, bug reports, onboarding, tutorials, design reviews, engineering walkthroughs, async standups, client updates, and any moment where showing the work is faster than scheduling another call.
 
@@ -38,7 +38,7 @@ Use Cap for product demos, bug reports, onboarding, tutorials, design reviews, e
 - **Instant Mode for speed.** Upload while recording and get a shareable link the moment you stop.
 - **Studio Mode for polish.** Record locally, edit with backgrounds, zooms, trimming, captions, and export controls.
 - **Desktop apps for your team.** Cap runs on macOS and Windows, with a web dashboard for viewing, sharing, and managing recordings.
-- **Own your storage.** Use Cap Cloud, connect your own S3-compatible bucket, keep recordings local, or self-host the full platform.
+- **Own your storage.** Use Looms, connect your own S3-compatible bucket, keep recordings local, or self-host the full platform.
 - **Privacy by default.** Share publicly or privately, add passwords, use your own domain, or keep sensitive recordings off hosted infrastructure.
 - **Async collaboration.** Comments, reactions, transcripts, viewer analytics, and team workspaces keep feedback attached to the video.
 - **Cap AI.** Generate titles, summaries, clickable chapters, captions, and transcripts automatically.
@@ -48,14 +48,14 @@ Use Cap for product demos, bug reports, onboarding, tutorials, design reviews, e
 
 | Mode | Best for | How it works |
 | --- | --- | --- |
-| Instant Mode | Fast feedback, bug reports, async updates | Cap uploads while you record, then gives you a share link as soon as recording stops. |
-| Studio Mode | Product demos, tutorials, launches, client work | Cap records locally, opens the editor, and lets you export or share a polished video. |
+| Instant Mode | Fast feedback, bug reports, async updates | Looms uploads while you record, then gives you a share link as soon as recording stops. |
+| Studio Mode | Product demos, tutorials, launches, client work | Looms records locally, opens the editor, and lets you export or share a polished video. |
 
 ## Data Ownership
 
 Cap is designed for people and teams who do not want their recording workflow locked inside a black box.
 
-- Use Cap Cloud for the fastest hosted experience.
+- Use Looms for the fastest hosted experience.
 - Connect AWS S3, Cloudflare R2, Backblaze B2, MinIO, Wasabi, or another S3-compatible provider.
 - Serve share pages from your own domain.
 - Self-host Cap Web, the API, database, media server, and object storage with Docker Compose.
@@ -65,13 +65,13 @@ Cap is designed for people and teams who do not want their recording workflow lo
 
 For most users, the fastest path is:
 
-1. Download Cap for macOS or Windows from [cap.so/download](https://cap.so/download).
+1. Download Looms for macOS or Windows from [cap.so/download](https://cap.so/download).
 2. Sign in or create an account.
 3. Choose Instant Mode or Studio Mode.
-4. Record your first Cap.
+4. Record your first Loom.
 5. Share the link, export the file, or keep it local.
 
-The full product docs live at [cap.so/docs](https://cap.so/docs).
+The full product docs live at [looms.dmdfajardo.pro](https://looms.dmdfajardo.pro).
 
 ## Self-Hosting
 
@@ -108,7 +108,7 @@ CAP_URL=https://cap.yourdomain.com
 S3_PUBLIC_URL=https://s3.yourdomain.com
 ```
 
-See the [self-hosting guide](https://cap.so/docs/self-hosting) for email setup, AI providers, SSL, storage, production hardening, and troubleshooting.
+See the [self-hosting guide](https://looms.dmdfajardo.pro/self-hosting) for email setup, AI providers, SSL, storage, production hardening, and troubleshooting.
 
 ## Local Development
 

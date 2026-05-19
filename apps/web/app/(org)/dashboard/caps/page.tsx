@@ -23,10 +23,10 @@ import { type Array, Effect } from "effect";
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { runPromise } from "@/lib/server";
-import { Caps } from "./Caps";
+import { Looms } from "./Looms";
 
 export const metadata: Metadata = {
-	title: "My Caps — Cap",
+	title: "My Looms — Looms",
 };
 
 // Helper function to fetch shared spaces data for videos
@@ -122,7 +122,7 @@ const getSharedSpacesForVideos = Effect.fn(function* (
 	return sharedSpacesMap;
 });
 
-export default async function CapsPage(props: PageProps<"/dashboard/caps">) {
+export default async function LoomsPage(props: PageProps<"/dashboard/caps">) {
 	const searchParams = await props.searchParams;
 	const user = await getCurrentUser();
 
@@ -315,7 +315,7 @@ export default async function CapsPage(props: PageProps<"/dashboard/caps">) {
 	).pipe(runPromise);
 
 	return (
-		<Caps
+		<Looms
 			data={processedVideoData}
 			folders={foldersData}
 			count={totalCount}

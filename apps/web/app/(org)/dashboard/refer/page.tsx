@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import ReferClient from "./ReferClient";
 
 export const metadata = {
-	title: "Refer - Cap",
+	title: "Refer - Looms",
 	description: "Earn rewards by referring friends to Cap",
 };
 

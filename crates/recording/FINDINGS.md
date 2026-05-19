@@ -1,4 +1,4 @@
-# Cap Recording Performance Findings
+# Looms Performance Findings
 
 > **SELF-HEALING DOCUMENT**: This file is designed to maintain complete context for recording performance work. After any work session, UPDATE this file with your findings before ending.
 

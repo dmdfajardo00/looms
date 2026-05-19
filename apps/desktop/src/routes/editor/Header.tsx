@@ -171,7 +171,7 @@ export function Header() {
 		const menu = await Menu.new({
 			items: [
 				await MenuItem.new({
-					text: "Existing Cap Recording...",
+					text: "Existing Looms...",
 					action: openExistingRecordingImporter,
 				}),
 				await MenuItem.new({

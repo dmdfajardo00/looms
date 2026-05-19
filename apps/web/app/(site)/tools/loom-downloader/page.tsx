@@ -6,7 +6,7 @@ import { createBreadcrumbSchema } from "@/utils/web-schema";
 
 export const metadata: Metadata = {
 	title:
-		"Loom Video Downloader — Download Loom Videos Free + Migrate to Cap | Cap",
+		"Loom Video Downloader — Download Loom Videos Free + Migrate to Cap | Looms",
 	description:
 		"Download any Loom video for free with Cap's online Loom video downloader. Then migrate your entire Loom library to Cap — the open source Loom alternative — with 20% off using code MIGRATE20.",
 	keywords: [
@@ -61,7 +61,7 @@ const pageContent: ToolPageContent = {
 		"Download any public Loom video as an MP4 — or skip the one-by-one downloads and migrate your whole Loom library to Cap with 20% off using code MIGRATE20.",
 	featuresTitle: "Download Loom videos, then move your whole library to Cap",
 	featuresDescription:
-		"Cap's Loom downloader is free, fast, and requires zero setup. When you're ready to leave Loom for good, Cap Pro's built-in <a href=\"/loom-alternative\">Loom video importer</a> moves your entire workspace in one click.",
+		"Cap's Loom downloader is free, fast, and requires zero setup. When you're ready to leave Loom for good, Looms Pro's built-in <a href=\"/loom-alternative\">Loom video importer</a> moves your entire workspace in one click.",
 	features: [
 		{
 			title: "Instant Downloads",
@@ -81,12 +81,12 @@ const pageContent: ToolPageContent = {
 		{
 			title: "Import Your Whole Loom Library",
 			description:
-				'Cap Pro includes a built-in <a href="/loom-alternative">Loom video importer</a> that transfers every Loom video you\'ve recorded — titles, transcripts, and chapters included — without manual re-uploads.',
+				'Looms Pro includes a built-in <a href="/loom-alternative">Loom video importer</a> that transfers every Loom video you\'ve recorded — titles, transcripts, and chapters included — without manual re-uploads.',
 		},
 		{
 			title: "Half the Price of Loom",
 			description:
-				"Cap Pro starts from just $8.16/user/month vs Loom's $18/user/month. Use code <strong>MIGRATE20</strong> at checkout for an extra 20% off your first year.",
+				"Looms Pro starts from just $8.16/user/month vs Loom's $18/user/month. Use code <strong>MIGRATE20</strong> at checkout for an extra 20% off your first year.",
 		},
 		{
 			title: "Open Source & Privacy-First",
@@ -108,12 +108,12 @@ const pageContent: ToolPageContent = {
 		{
 			question: "What is MIGRATE20 and how do I use it?",
 			answer:
-				'<strong>MIGRATE20</strong> is a 20% discount code for new Cap Pro subscribers who are switching from Loom. Just apply it at <a href="/pricing">checkout on the pricing page</a> to take 20% off your first year of Cap Pro — including the built-in Loom video importer.',
+				'<strong>MIGRATE20</strong> is a 20% discount code for new Looms Pro subscribers who are switching from Loom. Just apply it at <a href="/pricing">checkout on the pricing page</a> to take 20% off your first year of Looms Pro — including the built-in Loom video importer.',
 		},
 		{
 			question: "Can I import all my Loom videos into Cap at once?",
 			answer:
-				'Yes. Cap Pro\'s built-in <a href="/loom-alternative">Loom video importer</a> connects to your Loom workspace and transfers every video in one go — titles, transcripts, chapters, and all — without you having to download and re-upload anything manually.',
+				'Yes. Looms Pro\'s built-in <a href="/loom-alternative">Loom video importer</a> connects to your Loom workspace and transfers every video in one go — titles, transcripts, chapters, and all — without you having to download and re-upload anything manually.',
 		},
 		{
 			question: "Why migrate from Loom to Cap?",
@@ -138,17 +138,17 @@ const pageContent: ToolPageContent = {
 		{
 			question: "What is Cap?",
 			answer:
-				'Cap is the <a href="/">open source alternative to Loom</a>. It\'s a privacy-focused screen recorder that lets you record, edit, and share videos instantly — with unlimited storage, custom domains, and a built-in Loom video importer. <a href="/download">Download Cap for free</a>.',
+				'Cap is the <a href="/">open source alternative to Loom</a>. It\'s a privacy-focused screen recorder that lets you record, edit, and share videos instantly — with unlimited storage, custom domains, and a built-in Loom video importer. <a href="/download">Download Looms for free</a>.',
 		},
 	],
 	cta: {
 		title: "Ready to leave Loom for good?",
 		description:
-			"Skip the one-by-one downloads. Cap Pro imports your entire Loom library in one click — and costs half what Loom charges. Use MIGRATE20 at checkout for an extra 20% off your first year.",
-		buttonText: "Migrate to Cap Pro — save 20%",
+			"Skip the one-by-one downloads. Looms Pro imports your entire Loom library in one click — and costs half what Loom charges. Use MIGRATE20 at checkout for an extra 20% off your first year.",
+		buttonText: "Migrate to Looms Pro — save 20%",
 		buttonHref:
 			"/pricing?promo=MIGRATE20&utm_source=loom-downloader&utm_campaign=migrate20",
-		secondaryButtonText: "Download Cap free",
+		secondaryButtonText: "Download Looms free",
 		secondaryButtonHref: "/download",
 	},
 };

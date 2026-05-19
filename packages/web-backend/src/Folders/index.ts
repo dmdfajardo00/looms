@@ -118,7 +118,7 @@ export class Folders extends Effect.Service<Folders>()("Folders", {
 
 			/**
 			 * Deletes a folder and all its subfolders. Videos inside the folders will be
-			 * relocated to the root of the collection (space or My Caps) they're in
+			 * relocated to the root of the collection (space or My Looms) they're in
 			 */
 			delete: Effect.fn("Folders.delete")(function* (id: Folder.FolderId) {
 				const [folder] = yield* db

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Privacy Policy — Cap",
+	title: "Privacy Policy — Looms",
 };
 
 export default function App() {
@@ -131,7 +131,7 @@ export default function App() {
 							<h3>Contact Us</h3>
 							<br />
 							If you have any questions or concerns about this Privacy Policy or
-							our privacy practices, please contact us at hello@cap.so.
+							our privacy practices, please contact us at looms-manager@dmdfajardo.pro.
 						</li>
 					</ol>
 					<p>

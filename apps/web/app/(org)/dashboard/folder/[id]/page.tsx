@@ -15,7 +15,7 @@ import { UploadCapButton } from "../../caps/components";
 import FolderCard from "../../caps/components/Folder";
 import {
 	BreadcrumbItem,
-	ClientMyCapsLink,
+	ClientMyLoomsLink,
 	NewSubfolderButton,
 } from "./components";
 import FolderVideosSection from "./components/FolderVideosSection";
@@ -44,7 +44,7 @@ const FolderPage = async (props: PageProps<"/dashboard/folder/[id]">) => {
 				</div>
 				<div className="flex justify-between items-center mb-6 w-full">
 					<div className="flex overflow-x-auto items-center font-medium">
-						<ClientMyCapsLink />
+						<ClientMyLoomsLink />
 
 						{breadcrumb.map((folder, index) => (
 							<div key={folder.id} className="flex items-center">

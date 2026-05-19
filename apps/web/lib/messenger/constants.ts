@@ -22,22 +22,22 @@ export const MESSENGER_AGENT: {
 export const CAP_REFERENCE_GUIDE = `CAP REFERENCE GUIDE (use this to give accurate, detailed answers with correct links):
 
 WHAT IS CAP:
-Cap is the open source alternative to Loom. It's a lightweight, powerful screen recording and video messaging tool for creators, educators, marketers, developers, and remote teams. Cap is privacy-first, open source, and built with Tauri (Rust + native UI) so it's fast and uses minimal resources (not Electron). Cap lets you record your screen, camera, or both, then share instantly or edit locally with professional tools.
+Looms is a personal Loom alternative. It's a lightweight, powerful screen recording and video messaging tool for creators, educators, marketers, developers, and remote teams. Cap is privacy-first, open source, and built with Tauri (Rust + native UI) so it's fast and uses minimal resources (not Electron). Cap lets you record your screen, camera, or both, then share instantly or edit locally with professional tools.
 
 IMPORTANT URLS:
 - Homepage: https://cap.so
-- Download Cap: https://cap.so/download
+- Download Looms: https://cap.so/download
 - Download (all versions): https://cap.so/download/versions
 - Pricing: https://cap.so/pricing
 - Features: https://cap.so/features
 - Instant Mode: https://cap.so/features/instant-mode
 - Studio Mode: https://cap.so/features/studio-mode
-- Documentation: https://cap.so/docs
+- Documentation: https://looms.dmdfajardo.pro
 - FAQ: https://cap.so/faq
 - Blog: https://cap.so/blog
 - About: https://cap.so/about
 - Self-hosting docs: https://cap.so/self-hosting
-- Commercial license info: https://cap.so/docs/commercial-license
+- Commercial license info: https://looms.dmdfajardo.pro/commercial-license
 - Testimonials: https://cap.so/testimonials
 - Student discount: https://cap.so/student-discount
 - Deactivate license: https://cap.so/deactivate-license
@@ -45,7 +45,7 @@ IMPORTANT URLS:
 - Privacy Policy: https://cap.so/privacy
 - GitHub (open source): https://github.com/CapSoftware/Cap
 - Enterprise call booking: https://cal.com/cap.so/15min
-- Support email: hello@cap.so
+- Support email: looms-manager@dmdfajardo.pro
 - Loom importer (dashboard): https://cap.so/dashboard/import/loom
 - Loom downloader tool: https://cap.so/tools/loom-downloader
 - Referral program: https://cap.so/dashboard/refer
@@ -87,7 +87,7 @@ PLATFORM SUPPORT:
 PRICING (early adopter beta pricing, locked in for lifetime of subscription):
 - Free plan: personal use, Studio Mode, unlimited local recordings, shareable links up to 5 minutes, export to MP4 or GIF, web recorder
 - Desktop License: $58 one-time (lifetime) or $29/year, commercial usage rights, Studio Mode with full editor, unlimited local recordings, shareable links up to 5 minutes, export to MP4 or GIF
-- Cap Pro: $8.16/mo per user (billed annually) or $12/mo per user (billed monthly), includes everything in Desktop License plus unlimited cloud storage and bandwidth, unlimited shareable links (no 5-minute limit), auto-generated AI titles/summaries/chapters/transcriptions, custom domain (cap.yourdomain.com), password-protected shares, viewer analytics, team workspaces, Loom video importer, custom S3 bucket support, priority support
+- Looms Pro: $8.16/mo per user (billed annually) or $12/mo per user (billed monthly), includes everything in Desktop License plus unlimited cloud storage and bandwidth, unlimited shareable links (no 5-minute limit), auto-generated AI titles/summaries/chapters/transcriptions, custom domain (cap.yourdomain.com), password-protected shares, viewer analytics, team workspaces, Loom video importer, custom S3 bucket support, priority support
 - Enterprise: custom pricing, contact via https://cal.com/cap.so/15min, includes SLAs, priority support, Loom video importer, bulk discounts, managed self-hosting, SAML SSO via WorkOS, advanced security controls
 - Early adopters keep their pricing forever, even after beta ends and regular prices change.
 - Student discount available at https://cap.so/student-discount
@@ -122,7 +122,7 @@ DESKTOP APP SETTINGS:
 - Automatically open shareable links (Pro): on/off
 - Default project name template with placeholders: {target_name}, {target_kind}, {date}, {time}, {recording_mode}, {mode}, {moment:...}
 - Excluded windows: hide specific windows from recordings (useful for hiding Cap itself or other tools)
-- Self-host server URL: point desktop app to a self-hosted Cap server
+- Self-host server URL: point desktop app to a self-hosted Looms server
 - Configurable keyboard shortcuts for: screenshot (display/window/area), open recording picker, stop recording, restart recording, pause/resume recording, cycle recording mode, record display/window/area
 
 STUDIO MODE EDITOR (DESKTOP APP):
@@ -235,7 +235,7 @@ TROUBLESHOOTING - COMMON ISSUES:
 - Export failing: try a different compression preset. If frame decode errors occur, Cap automatically falls back to FFmpeg decoder.
 - Shared link not working: make sure the video finished uploading and processing. Check if password protection is enabled.
 - Custom domain not working: verify DNS settings in organization settings. Domain verification can take a few minutes.
-- Loom import failing: make sure the Loom video is public (not private or password-protected), the link hasnt expired, and you have an active Cap Pro subscription.
+- Loom import failing: make sure the Loom video is public (not private or password-protected), the link hasnt expired, and you have an active Looms Pro subscription.
 - Crash recovery: if Cap crashes during a Studio Mode recording, recovered segments can be found in Settings > Recordings. Crash-recoverable recording must be enabled in settings.
 
 TROUBLESHOOTING - SIGNIN ISSUES:
@@ -261,13 +261,13 @@ FAQ:
 - Can I self-host? Yes, full self-hosting with Docker Compose.
 - What happens after beta? Early adopters keep their pricing forever.
 - Is there a commercial license? Yes, for businesses using the desktop app. Pro plan includes commercial license.
-- Can I import Loom videos? Yes, Cap Pro includes a built-in Loom importer.
+- Can I import Loom videos? Yes, Looms Pro includes a built-in Loom importer.
 
 COMMON USER TASKS:
 - To download Cap: go to https://cap.so/download
 - To upgrade to Pro: go to https://cap.so/pricing
-- To import Loom videos: go to https://cap.so/dashboard/import/loom (requires Cap Pro)
-- To view docs: go to https://cap.so/docs
+- To import Loom videos: go to https://cap.so/dashboard/import/loom (requires Looms Pro)
+- To view docs: go to https://looms.dmdfajardo.pro
 - To self-host: go to https://cap.so/self-hosting
 - To book an enterprise call: go to https://cal.com/cap.so/15min
 - To get student discount: go to https://cap.so/student-discount
