@@ -13,11 +13,9 @@ import { Storage } from "@cap/web-backend";
 import {
 	AI_GENERATION_LANGUAGE_AUTO,
 	type AiGenerationLanguage,
-	type AiGenerationLanguageCode,
 	parseAiGenerationLanguage,
 	type Video,
 } from "@cap/web-domain";
-import { createClient } from "@deepgram/sdk";
 import { eq } from "drizzle-orm";
 import { FatalError } from "workflow";
 import {
@@ -34,7 +32,6 @@ import {
 	probeVideoViaMediaServer,
 } from "@/lib/media-client";
 import { runPromise } from "@/lib/server";
-import { type DeepgramResult, formatToWebVTT } from "@/lib/transcribe-utils";
 import { decodeStorageVideo } from "@/lib/video-storage";
 
 interface TranscribeWorkflowPayload {
@@ -76,7 +73,7 @@ export async function transcribeVideoWorkflow(
 		}
 
 		const [transcription] = await Promise.all([
-			transcribeWithDeepgram(audioUrl, videoData.aiGenerationLanguage),
+			transcribeWithGladia(audioUrl, videoData.aiGenerationLanguage),
 		]);
 
 		await saveTranscription(videoId, userId, videoData.video, transcription);
@@ -98,8 +95,8 @@ export async function transcribeVideoWorkflow(
 async function validateVideo(videoId: string): Promise<VideoData> {
 	"use step";
 
-	if (!serverEnv().DEEPGRAM_API_KEY) {
-		throw new FatalError("Missing DEEPGRAM_API_KEY");
+	if (!serverEnv().GLADIA_API_KEY) {
+		throw new FatalError("Missing GLADIA_API_KEY");
 	}
 
 	const query = await db()
@@ -301,34 +298,42 @@ async function resolveVideoSourceUrl(
 	throw new Error("Video file not accessible");
 }
 
-export function getDeepgramTranscriptionOptions(
-	language: AiGenerationLanguage,
-) {
-	const baseOptions = {
-		model: "nova-3",
-		smart_format: true,
-		utterances: true,
-		mime_type: "audio/mpeg",
-	} as const;
+const GLADIA_API_BASE = "https://api.gladia.io";
+const GLADIA_POLL_TIMEOUT_MS = 10 * 60 * 1000;
+const GLADIA_POLL_INITIAL_DELAY_MS = 2_000;
+const GLADIA_POLL_MAX_DELAY_MS = 10_000;
 
-	if (language === AI_GENERATION_LANGUAGE_AUTO) {
-		return {
-			...baseOptions,
-			detect_language: [...DEEPGRAM_DETECTABLE_LANGUAGES],
+type GladiaUploadResponse = {
+	audio_url: string;
+};
+
+type GladiaInitResponse = {
+	id: string;
+	result_url: string;
+};
+
+type GladiaSubtitle = {
+	format: "srt" | "vtt";
+	subtitles: string;
+};
+
+type GladiaResultResponse = {
+	status: "queued" | "processing" | "done" | "error";
+	error_code?: number | null;
+	result?: {
+		transcription?: {
+			subtitles?: GladiaSubtitle[];
 		};
-	}
-
-	return {
-		...baseOptions,
-		language,
 	};
-}
+};
 
-async function transcribeWithDeepgram(
+async function transcribeWithGladia(
 	audioUrl: string,
 	language: AiGenerationLanguage,
 ): Promise<string> {
 	"use step";
+
+	const apiKey = serverEnv().GLADIA_API_KEY as string;
 
 	const audioResponse = await fetch(audioUrl);
 	if (!audioResponse.ok) {
@@ -336,42 +341,85 @@ async function transcribeWithDeepgram(
 			`Audio URL not accessible: ${audioResponse.status} ${audioResponse.statusText}`,
 		);
 	}
-
 	const audioBuffer = Buffer.from(await audioResponse.arrayBuffer());
 
-	const deepgram = createClient(serverEnv().DEEPGRAM_API_KEY as string);
-
-	const { result, error } = await deepgram.listen.prerecorded.transcribeFile(
-		audioBuffer,
-		getDeepgramTranscriptionOptions(language),
+	const form = new FormData();
+	form.append(
+		"audio",
+		new Blob([audioBuffer], { type: "audio/mpeg" }),
+		"audio.mp3",
 	);
 
-	if (error) {
+	const uploadResp = await fetch(`${GLADIA_API_BASE}/v2/upload`, {
+		method: "POST",
+		headers: { "x-gladia-key": apiKey },
+		body: form,
+	});
+	if (!uploadResp.ok) {
 		throw new Error(
-			`Deepgram transcription failed (language=${language}): ${error.message}`,
+			`Gladia upload failed: ${uploadResp.status} ${await uploadResp.text()}`,
 		);
 	}
+	const { audio_url: gladiaAudioUrl } =
+		(await uploadResp.json()) as GladiaUploadResponse;
 
-	return formatToWebVTT(result as unknown as DeepgramResult);
+	const initBody: Record<string, unknown> = {
+		audio_url: gladiaAudioUrl,
+		subtitles: true,
+		subtitles_config: { formats: ["vtt"] },
+		punctuation_enhanced: true,
+	};
+	if (language !== AI_GENERATION_LANGUAGE_AUTO) {
+		initBody.language_config = { languages: [language] };
+	}
+
+	const initResp = await fetch(`${GLADIA_API_BASE}/v2/pre-recorded`, {
+		method: "POST",
+		headers: {
+			"x-gladia-key": apiKey,
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify(initBody),
+	});
+	if (!initResp.ok) {
+		throw new Error(
+			`Gladia init failed (language=${language}): ${initResp.status} ${await initResp.text()}`,
+		);
+	}
+	const { result_url: resultUrl } =
+		(await initResp.json()) as GladiaInitResponse;
+
+	const startedAt = Date.now();
+	let delayMs = GLADIA_POLL_INITIAL_DELAY_MS;
+	while (Date.now() - startedAt < GLADIA_POLL_TIMEOUT_MS) {
+		await new Promise((resolve) => setTimeout(resolve, delayMs));
+		const poll = await fetch(resultUrl, {
+			headers: { "x-gladia-key": apiKey },
+		});
+		if (!poll.ok) {
+			throw new Error(
+				`Gladia poll failed: ${poll.status} ${await poll.text()}`,
+			);
+		}
+		const data = (await poll.json()) as GladiaResultResponse;
+		if (data.status === "done") {
+			const vtt = data.result?.transcription?.subtitles?.find(
+				(subtitle) => subtitle.format === "vtt",
+			)?.subtitles;
+			if (!vtt) {
+				throw new Error("Gladia transcription completed without VTT output");
+			}
+			return vtt;
+		}
+		if (data.status === "error") {
+			throw new Error(
+				`Gladia transcription error (code=${data.error_code ?? "unknown"})`,
+			);
+		}
+		delayMs = Math.min(delayMs * 1.5, GLADIA_POLL_MAX_DELAY_MS);
+	}
+	throw new Error("Gladia transcription timed out after 10 minutes");
 }
-
-const DEEPGRAM_DETECTABLE_LANGUAGES = [
-	"en",
-	"es",
-	"fr",
-	"de",
-	"pt",
-	"it",
-	"nl",
-	"pl",
-	"sk",
-	"ru",
-	"tr",
-	"ja",
-	"ko",
-	"zh",
-	"hi",
-] as const satisfies readonly AiGenerationLanguageCode[];
 
 async function saveTranscription(
 	videoId: string,
