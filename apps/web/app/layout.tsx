@@ -61,11 +61,11 @@ const defaultFont = localFont({
 });
 
 export const metadata: Metadata = {
-	title: "Screen",
-	description: "Screen recordings.",
+	title: "Looms",
+	description: "Personal screen recordings, owned by me.",
 	openGraph: {
 		title: "Looms",
-		description: "Screen recordings, owned by me.",
+		description: "Personal screen recordings, owned by me.",
 		type: "website",
 		url: "https://looms.dmdfajardo.pro",
 	},
