@@ -81,6 +81,9 @@
 			"extractAudio": {
 				"stepId": "step//./workflows/transcribe//extractAudio"
 			},
+			"markError": {
+				"stepId": "step//./workflows/transcribe//markError"
+			},
 			"markNoAudio": {
 				"stepId": "step//./workflows/transcribe//markNoAudio"
 			},
@@ -93,8 +96,8 @@
 			"saveTranscription": {
 				"stepId": "step//./workflows/transcribe//saveTranscription"
 			},
-			"transcribeWithDeepgram": {
-				"stepId": "step//./workflows/transcribe//transcribeWithDeepgram"
+			"transcribeWithGladia": {
+				"stepId": "step//./workflows/transcribe//transcribeWithGladia"
 			},
 			"validateVideo": {
 				"stepId": "step//./workflows/transcribe//validateVideo"
