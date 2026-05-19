@@ -1,0 +1,104 @@
+name: screen
+
+services:
+  cap-web:
+    container_name: screen-web
+    image: ghcr.io/dmdfajardo00/cap-web:screen
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: mysql://cap:${MYSQL_PASSWORD}@mysql:3306/cap
+      WEB_URL: https://screen.dmdfajardo.pro
+      NEXTAUTH_URL: https://screen.dmdfajardo.pro
+      NEXT_PUBLIC_WEB_URL: https://screen.dmdfajardo.pro
+      DATABASE_ENCRYPTION_KEY: ${DATABASE_ENCRYPTION_KEY}
+      NEXTAUTH_SECRET: ${NEXTAUTH_SECRET}
+      MEDIA_SERVER_WEBHOOK_SECRET: ${MEDIA_SERVER_WEBHOOK_SECRET}
+      CAP_AWS_BUCKET: ${R2_BUCKET}
+      CAP_AWS_REGION: auto
+      CAP_AWS_ACCESS_KEY: ${R2_ACCESS_KEY_ID}
+      CAP_AWS_SECRET_KEY: ${R2_SECRET_ACCESS_KEY}
+      S3_INTERNAL_ENDPOINT: ${R2_S3_ENDPOINT}
+      S3_PUBLIC_ENDPOINT: ${R2_PUBLIC_URL}
+      S3_PATH_STYLE: "true"
+      RESEND_API_KEY: ${RESEND_API_KEY:-}
+      RESEND_FROM_DOMAIN: ${RESEND_FROM_DOMAIN:-}
+      GLADIA_API_KEY: ${GLADIA_API_KEY}
+      MEDIA_SERVER_URL: http://media-server:3456
+      MEDIA_SERVER_WEBHOOK_URL: http://cap-web:3000
+      CAP_VIDEOS_DEFAULT_PUBLIC: "false"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:3000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 90s
+    mem_limit: 1g
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.screen-http.entryPoints=web
+      - traefik.http.routers.screen-http.rule=Host(`screen.dmdfajardo.pro`)
+      - traefik.http.routers.screen-http.middlewares=redirect-to-https@file
+      - traefik.http.routers.screen-https.entryPoints=websecure
+      - traefik.http.routers.screen-https.rule=Host(`screen.dmdfajardo.pro`)
+      - traefik.http.routers.screen-https.tls=true
+      - traefik.http.routers.screen-https.tls.certresolver=letsencrypt
+      - traefik.http.services.screen.loadbalancer.server.port=3000
+      - traefik.docker.network=dokploy-network
+    networks:
+      - default
+      - dokploy-network
+
+  media-server:
+    container_name: screen-media-server
+    image: ghcr.io/capsoftware/cap-media-server:latest
+    restart: unless-stopped
+    environment:
+      PORT: 3456
+      MEDIA_SERVER_WEBHOOK_SECRET: ${MEDIA_SERVER_WEBHOOK_SECRET}
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3456/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    mem_limit: 1g
+    networks:
+      - default
+
+  mysql:
+    container_name: screen-mysql
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: cap
+      MYSQL_USER: cap
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    command:
+      - --max_connections=200
+      - --default-authentication-plugin=mysql_native_password
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --innodb-buffer-pool-size=256M
+    volumes:
+      - screen-mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "cap", "-p${MYSQL_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    mem_limit: 512m
+    networks:
+      - default
+
+volumes:
+  screen-mysql-data:
+
+networks:
+  default: {}
+  dokploy-network:
+    external: true
