@@ -8,10 +8,10 @@ export default function NotFound() {
 			<p className="text-gray-400 text-lg md:text-xl">
 				Contact if this seems like a mistake:{" "}
 				<a
-					href="mailto:screen-rec-manager@dmdfajardo.pro"
+					href="mailto:looms-manager@dmdfajardo.pro"
 					className="font-medium text-gray-500 text-lg md:text-xl hover:underline"
 				>
-					screen-rec-manager@dmdfajardo.pro
+					looms-manager@dmdfajardo.pro
 				</a>
 			</p>
 		</div>
