@@ -10,9 +10,9 @@ services:
         condition: service_healthy
     environment:
       DATABASE_URL: mysql://cap:${MYSQL_PASSWORD}@mysql:3306/cap
-      WEB_URL: https://screen.dmdfajardo.pro
-      NEXTAUTH_URL: https://screen.dmdfajardo.pro
-      NEXT_PUBLIC_WEB_URL: https://screen.dmdfajardo.pro
+      WEB_URL: https://looms.dmdfajardo.pro
+      NEXTAUTH_URL: https://looms.dmdfajardo.pro
+      NEXT_PUBLIC_WEB_URL: https://looms.dmdfajardo.pro
       DATABASE_ENCRYPTION_KEY: ${DATABASE_ENCRYPTION_KEY}
       NEXTAUTH_SECRET: ${NEXTAUTH_SECRET}
       MEDIA_SERVER_WEBHOOK_SECRET: ${MEDIA_SERVER_WEBHOOK_SECRET}
@@ -22,6 +22,7 @@ services:
       CAP_AWS_SECRET_KEY: ${R2_SECRET_ACCESS_KEY}
       S3_INTERNAL_ENDPOINT: ${R2_S3_ENDPOINT}
       S3_PUBLIC_ENDPOINT: ${R2_PUBLIC_URL}
+      S3_PUBLIC_BUCKET_URL: ${R2_PUBLIC_URL}
       S3_PATH_STYLE: "true"
       RESEND_API_KEY: ${RESEND_API_KEY:-}
       RESEND_FROM_DOMAIN: ${RESEND_FROM_DOMAIN:-}
@@ -38,14 +39,14 @@ services:
     mem_limit: 1g
     labels:
       - traefik.enable=true
-      - traefik.http.routers.screen-http.entryPoints=web
-      - traefik.http.routers.screen-http.rule=Host(`screen.dmdfajardo.pro`)
-      - traefik.http.routers.screen-http.middlewares=redirect-to-https@file
-      - traefik.http.routers.screen-https.entryPoints=websecure
-      - traefik.http.routers.screen-https.rule=Host(`screen.dmdfajardo.pro`)
-      - traefik.http.routers.screen-https.tls=true
-      - traefik.http.routers.screen-https.tls.certresolver=letsencrypt
-      - traefik.http.services.screen.loadbalancer.server.port=3000
+      - traefik.http.routers.looms-http.entryPoints=web
+      - traefik.http.routers.looms-http.rule=Host(`looms.dmdfajardo.pro`) || Host(`screen.dmdfajardo.pro`)
+      - traefik.http.routers.looms-http.middlewares=redirect-to-https@file
+      - traefik.http.routers.looms-https.entryPoints=websecure
+      - traefik.http.routers.looms-https.rule=Host(`looms.dmdfajardo.pro`) || Host(`screen.dmdfajardo.pro`)
+      - traefik.http.routers.looms-https.tls=true
+      - traefik.http.routers.looms-https.tls.certresolver=letsencrypt
+      - traefik.http.services.looms.loadbalancer.server.port=3000
       - traefik.docker.network=dokploy-network
     networks:
       - default
