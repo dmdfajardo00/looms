@@ -77,3 +77,8 @@ analysis/
 analysis/plans/
 .ralphy
 tmp/
+
+# Local rebrand script (private to this fork, do not publish)
+scripts/rebrand.py
+scripts/rebrand_report.txt
+scripts/rebrand_backup/

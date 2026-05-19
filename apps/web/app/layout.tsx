@@ -80,6 +80,7 @@ export default ({ children }: PropsWithChildren) =>
 		return (
 			<html className={defaultFont.className} lang="en">
 				<head>
+					<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 					<link
 						rel="apple-touch-icon"
 						sizes="180x180"
@@ -98,7 +99,7 @@ export default ({ children }: PropsWithChildren) =>
 						href="/favicon-16x16.png"
 					/>
 					<link rel="manifest" href="/site.webmanifest" />
-					<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+					<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2D6FF7" />
 					<link rel="shortcut icon" href="/favicon.ico" />
 					<meta name="msapplication-TileColor" content="#da532c" />
 					<meta name="theme-color" content="#ffffff" />
