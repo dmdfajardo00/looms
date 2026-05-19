@@ -17,7 +17,7 @@ export async function transcribeVideo(
 	aiGenerationEnabled = false,
 	_isRetry = false,
 ): Promise<TranscribeResult> {
-	if (!serverEnv().DEEPGRAM_API_KEY) {
+	if (!serverEnv().GLADIA_API_KEY) {
 		return {
 			success: false,
 			message: "Missing necessary environment variables",
