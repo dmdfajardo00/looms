@@ -236,8 +236,8 @@ export async function generateMetadata(
 					).toString();
 
 					return {
-						title: `${video.name} | Screen Recording`,
-						description: "Watch this screen recording.",
+						title: `${video.name} | Looms`,
+						description: "Watch this recording.",
 						openGraph: {
 							images: [
 								{
@@ -263,8 +263,8 @@ export async function generateMetadata(
 						},
 						twitter: {
 							card: "player",
-							title: `${video.name} | Screen Recording`,
-							description: "Watch this screen recording.",
+							title: `${video.name} | Looms`,
+							description: "Watch this recording.",
 							images: [
 								{
 									url: previewImageUrl,
@@ -298,7 +298,7 @@ export async function generateMetadata(
 		Effect.catchTags({
 			PolicyDenied: () =>
 				Effect.succeed({
-					title: "Screen: This video is restricted",
+					title: "Looms: This video is restricted",
 					description: "This video has restricted access.",
 					openGraph: {
 						images: [
@@ -327,7 +327,7 @@ export async function generateMetadata(
 				}),
 			VerifyVideoPasswordError: () =>
 				Effect.succeed({
-					title: "Screen: Password Protected Video",
+					title: "Looms: Password Protected Video",
 					description: "This video is password protected.",
 					openGraph: {
 						images: [
@@ -343,7 +343,7 @@ export async function generateMetadata(
 					},
 					twitter: {
 						card: "summary_large_image",
-						title: "Screen: Password Protected Video",
+						title: "Looms: Password Protected Video",
 						description: "This video is password protected.",
 						images: [
 							new URL(

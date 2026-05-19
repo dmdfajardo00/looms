@@ -64,10 +64,10 @@ export const metadata: Metadata = {
 	title: "Screen",
 	description: "Screen recordings.",
 	openGraph: {
-		title: "Screen",
-		description: "Screen recordings.",
+		title: "Looms",
+		description: "Screen recordings, owned by me.",
 		type: "website",
-		url: "https://screen.dmdfajardo.pro",
+		url: "https://looms.dmdfajardo.pro",
 	},
 };
 
