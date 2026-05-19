@@ -192,11 +192,7 @@ function getSharePageBranding(data: {
 		};
 	}
 
-	if (data.orgSettings?.hideShareableLinkCapLogo) {
-		return null;
-	}
-
-	return { type: "cap" };
+	return null;
 }
 
 const getShareVideoPageCatchers = (videoId: Video.VideoId) => ({
@@ -240,8 +236,8 @@ export async function generateMetadata(
 					).toString();
 
 					return {
-						title: `${video.name} | Cap Recording`,
-						description: "Watch this video on Cap",
+						title: `${video.name} | Screen Recording`,
+						description: "Watch this screen recording.",
 						openGraph: {
 							images: [
 								{
@@ -267,8 +263,8 @@ export async function generateMetadata(
 						},
 						twitter: {
 							card: "player",
-							title: `${video.name} | Cap Recording`,
-							description: "Watch this video on Cap",
+							title: `${video.name} | Screen Recording`,
+							description: "Watch this screen recording.",
 							images: [
 								{
 									url: previewImageUrl,
@@ -302,7 +298,7 @@ export async function generateMetadata(
 		Effect.catchTags({
 			PolicyDenied: () =>
 				Effect.succeed({
-					title: "Cap: This video is restricted",
+					title: "Screen: This video is restricted",
 					description: "This video has restricted access.",
 					openGraph: {
 						images: [
@@ -331,7 +327,7 @@ export async function generateMetadata(
 				}),
 			VerifyVideoPasswordError: () =>
 				Effect.succeed({
-					title: "Cap: Password Protected Video",
+					title: "Screen: Password Protected Video",
 					description: "This video is password protected.",
 					openGraph: {
 						images: [
@@ -347,7 +343,7 @@ export async function generateMetadata(
 					},
 					twitter: {
 						card: "summary_large_image",
-						title: "Cap: Password Protected Video",
+						title: "Screen: Password Protected Video",
 						description: "This video is password protected.",
 						images: [
 							new URL(
