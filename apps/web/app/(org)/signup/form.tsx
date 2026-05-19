@@ -176,7 +176,7 @@ export function SignupForm() {
 					layout="position"
 					className="text-2xl font-semibold text-gray-12"
 				>
-					Sign up to Screen
+					Sign up to Looms
 				</motion.h1>
 				<motion.p
 					key="subtitle"

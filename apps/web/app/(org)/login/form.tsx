@@ -176,7 +176,7 @@ export function LoginForm() {
 					layout="position"
 					className="text-2xl font-semibold text-gray-12"
 				>
-					Sign in to Screen
+					Sign in to Looms
 				</motion.h1>
 				<motion.p
 					key="subtitle"
