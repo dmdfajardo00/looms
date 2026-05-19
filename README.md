@@ -1,202 +1,110 @@
 <p align="center">
-	<img width="150" height="150" src="https://github.com/CapSoftware/Cap/blob/main/apps/desktop/src-tauri/icons/Square310x310Logo.png" alt="Looms logo">
+	<img width="120" height="120" src="apps/web/public/looms-mark.svg" alt="Looms">
 </p>
 
-<h1 align="center">Cap</h1>
+<h1 align="center">Looms</h1>
 
 <p align="center">
-	Beautiful, shareable screen recordings. Open source, fast, and built for teams that want to own their data.
-</p>
-
-<p align="center">
-	<a href="https://cap.so">Website</a>
-	 |
-	<a href="https://cap.so/download">Download</a>
-	 |
-	<a href="https://looms.dmdfajardo.pro">Docs</a>
-	 |
-	<a href="https://cap.so/pricing">Pricing</a>
-	 |
-	<a href="https://cap.link/discord">Discord</a>
+	A self-hosted screen-recording app at <a href="https://looms.dmdfajardo.pro">looms.dmdfajardo.pro</a>.
+	<br/>
+	Personal fork of <a href="https://github.com/CapSoftware/Cap">CapSoftware/Cap</a>. Built for sending recordings to clients without paying a SaaS.
 </p>
 
 <p align="center">
-	<a href="https://console.algora.io/org/CapSoftware/bounties?status=open">
-		<img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fconsole.algora.io%2Fapi%2Fshields%2FCapSoftware%2Fbounties%3Fstatus%3Dopen" alt="Open bounties">
-	</a>
+	<a href="https://looms.dmdfajardo.pro">looms.dmdfajardo.pro</a>
 </p>
 
-<img src="https://raw.githubusercontent.com/CapSoftware/Cap/refs/heads/main/apps/web/public/landing-cover.png" alt="Cap app preview">
+---
 
-Looms is a personal Loom alternative. It gives you fast screen recording, polished local editing, instant share links, comments, transcripts, analytics, team workspaces, custom domains, custom S3 storage, and full self-hosting when you need complete control.
+## What this is
 
-Use Cap for product demos, bug reports, onboarding, tutorials, design reviews, engineering walkthroughs, async standups, client updates, and any moment where showing the work is faster than scheduling another call.
+Looms is my private screen-recording tool. It runs on my own VPS, stores recordings on my own Cloudflare R2 bucket, transcribes them through Gladia, and emails magic-link logins through Resend — all under my own domain. When I send a client a `looms.dmdfajardo.pro/s/<id>` link, they get the Loom-style experience without me paying $20/seat/month for it.
 
-## Why Cap
+It started as a fork of the excellent open-source [Cap](https://github.com/CapSoftware/Cap) project. I rebranded it, swapped Deepgram for Gladia, patched the R2 storage layer, fixed multipart upload chunking for R2's stricter spec, white-labelled all user-visible Cap branding, and stripped out the upsell UI that doesn't apply to a self-hosted single-user deploy.
 
-- **Record, edit, share.** Capture your screen, camera, and microphone, then share a link or export a finished video.
-- **Instant Mode for speed.** Upload while recording and get a shareable link the moment you stop.
-- **Studio Mode for polish.** Record locally, edit with backgrounds, zooms, trimming, captions, and export controls.
-- **Desktop apps for your team.** Cap runs on macOS and Windows, with a web dashboard for viewing, sharing, and managing recordings.
-- **Own your storage.** Use Looms, connect your own S3-compatible bucket, keep recordings local, or self-host the full platform.
-- **Privacy by default.** Share publicly or privately, add passwords, use your own domain, or keep sensitive recordings off hosted infrastructure.
-- **Async collaboration.** Comments, reactions, transcripts, viewer analytics, and team workspaces keep feedback attached to the video.
-- **Cap AI.** Generate titles, summaries, clickable chapters, captions, and transcripts automatically.
-- **Move from Loom.** Import existing Loom videos into Cap and keep your library in one place.
+**This repo is not affiliated with CapSoftware Pty Ltd.** It's a private fork for personal use. All upstream rights belong to the original authors. If you want the real Cap product, go to [cap.so](https://cap.so).
 
-## Recording Modes
+## Why fork instead of use Loom or Cap Cloud
 
-| Mode | Best for | How it works |
-| --- | --- | --- |
-| Instant Mode | Fast feedback, bug reports, async updates | Looms uploads while you record, then gives you a share link as soon as recording stops. |
-| Studio Mode | Product demos, tutorials, launches, client work | Looms records locally, opens the editor, and lets you export or share a polished video. |
+- **Cost.** $20/user/month for Loom Business adds up. The VPS is already paid for.
+- **Data ownership.** Every video lives in my R2 bucket. No vendor.
+- **Custom domain.** `looms.dmdfajardo.pro/s/<id>` is the share URL. Clients see my brand, not someone else's.
+- **Zero egress.** Cloudflare R2 has no egress fees — important for a video product.
+- **The story.** When a client sees a `looms.dmdfajardo.pro` link, they ask "wait, did you build your own?" That's the impression I want.
 
-## Data Ownership
+## Stack
 
-Cap is designed for people and teams who do not want their recording workflow locked inside a black box.
+| Layer | Choice | Why |
+|-|-|-|
+| Hosting | Hostinger VPS, Dokploy | I already run other services here |
+| Web app | Forked Cap (Next.js + Tauri) | Open source, polished, complete |
+| Object storage | Cloudflare R2 | Zero egress + custom domain at apex |
+| Transcription | [Gladia](https://gladia.io) | Better multilingual accuracy than Deepgram |
+| Email | [Resend](https://resend.com) | Domain already verified |
+| Reverse proxy | Traefik (via Dokploy) | Let's Encrypt + auto-routing |
+| Brand | "Looms" (plural) | Loom-adjacent without trademark exposure |
 
-- Use Looms for the fastest hosted experience.
-- Connect AWS S3, Cloudflare R2, Backblaze B2, MinIO, Wasabi, or another S3-compatible provider.
-- Serve share pages from your own domain.
-- Self-host Cap Web, the API, database, media server, and object storage with Docker Compose.
-- Point Cap Desktop at your self-hosted instance from `Settings > Cap Server URL`.
+## Architecture
 
-## Get Started
+```
+Browser ──HTTPS──► looms.dmdfajardo.pro ──► Traefik ──► looms-web (Next.js)
+                                                         │
+                                                         ├──► mysql              (auth, video metadata)
+                                                         ├──► media-server       (ffmpeg jobs, thumbs)
+                                                         ├──► Gladia API         (transcription)
+                                                         └──► Resend API         (magic-link emails)
 
-For most users, the fastest path is:
-
-1. Download Looms for macOS or Windows from [cap.so/download](https://cap.so/download).
-2. Sign in or create an account.
-3. Choose Instant Mode or Studio Mode.
-4. Record your first Loom.
-5. Share the link, export the file, or keep it local.
-
-The full product docs live at [looms.dmdfajardo.pro](https://looms.dmdfajardo.pro).
-
-## Self-Hosting
-
-The fastest way to self-host Cap Web is Docker Compose:
-
-```bash
-git clone https://github.com/CapSoftware/Cap.git
-cd Cap
-docker compose up -d
+Browser ──HTTPS──► dmdfajardo.pro/<key> ──► Cloudflare R2 ──► screen-recordings bucket
+                          ▲
+                          │ unsigned public reads
+                          │
+Browser ──signed PUT──────┘
+              (uploads go via <account>.r2.cloudflarestorage.com, path-style)
 ```
 
-Cap will be available at `http://localhost:3000`.
+## Three load-bearing changes from upstream Cap
 
-Login links appear in the service logs when email is not configured:
+These three patches are what make this fork actually work on my setup:
 
-```bash
-docker compose logs cap-web
-```
+1. **R2 custom-domain at root.** Cap's S3 SDK generates path-style URLs (`https://<endpoint>/<bucket>/<key>`). Cloudflare R2 with a custom domain bound to the apex serves the bucket at root (no bucket prefix). Patched `S3BucketAccess.getSignedObjectUrl()` to return unsigned `${publicBucketUrl}/${key}` when `S3_PUBLIC_BUCKET_URL` env is set. Upload presign URLs route through the internal R2 S3 API endpoint where path-style still works.
+2. **Uniform multipart chunk sizes.** R2 requires every non-trailing multipart part to be exactly the same size. S3 only enforces a 5MB minimum. Cap's `instant-mp4-uploader.ts` flushed variable-size parts; R2 rejected them with `InvalidPart`. Rewrote `flushBuffer()` to take exactly 16MB chunks.
+3. **Static-asset proxy bypass.** Cap's self-hosted-mode proxy redirects every unrecognized path to `/login`. That broke `/site.webmanifest`, `/_next/*`, fonts, OG images. Expanded the allowlist + added a regex for common static extensions.
 
-### Deployment Options
+Other changes: Deepgram → Gladia, Resend `RESEND_API_KEY` for outbound mail, white-label all visible "Cap" text → "Looms", new SVG mark/wordmark/favicon, hide Pro upsell UI on self-hosted, force-hide the Cap logo on share pages.
 
-| Method | Best for |
-| --- | --- |
-| Docker Compose | VPS, home servers, and any Docker-capable host |
-| [Railway](https://railway.com/new/template/PwpGcf) | One-click managed hosting |
-| Coolify | Self-hosted PaaS deployments with `docker-compose.coolify.yml` |
+## Local development
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/PwpGcf)
-
-For production, configure public URLs and replace the default secrets before exposing the deployment to the internet:
-
-```bash
-CAP_URL=https://cap.yourdomain.com
-S3_PUBLIC_URL=https://s3.yourdomain.com
-```
-
-See the [self-hosting guide](https://looms.dmdfajardo.pro/self-hosting) for email setup, AI providers, SSL, storage, production hardening, and troubleshooting.
-
-## Local Development
-
-Cap is a Turborepo monorepo with Rust, TypeScript, Tauri, SolidStart, Next.js, Drizzle, MySQL, Tailwind CSS, and shared media crates.
-
-Requirements:
-
-- Node.js 20 or newer
-- pnpm 10.5.2
-- Rust 1.88 or newer
-- Docker for MySQL, MinIO, and local services
-
-Install and set up the repo:
+Same as upstream Cap (this is a fork). See the original [CapSoftware/Cap README](https://github.com/CapSoftware/Cap) for the full dev setup. Short version:
 
 ```bash
 pnpm install
 pnpm env-setup
 pnpm cap-setup
+pnpm dev:web
 ```
 
-Common commands:
+## Deploy to my VPS
 
-| Command | Purpose |
-| --- | --- |
-| `pnpm dev` | Start the full local development stack |
-| `pnpm dev:web` | Start the web app without the desktop app |
-| `pnpm dev:desktop` | Start the desktop app |
-| `pnpm build` | Build the workspace |
-| `pnpm tauri:build` | Build the desktop release |
-| `pnpm lint` | Run Biome linting |
-| `pnpm format` | Format with Biome |
-| `pnpm typecheck` | Run TypeScript project references |
-| `cargo test -p <crate>` | Run Rust tests for a crate |
+Documented in `deploy/SCREEN-DEPLOY.md` and the private `/dave-looms-vps` agent skill in my Claude config. Short version:
 
-Database commands:
+```bash
+# 1. Push to main
+git push
 
-| Command | Purpose |
-| --- | --- |
-| `pnpm db:generate` | Generate database artifacts |
-| `pnpm db:push` | Push schema changes |
-| `pnpm db:studio` | Open Drizzle Studio |
+# 2. GHA builds the image (~10 min)
+gh run watch --repo dmdfajardo00/looms
 
-## Repository Map
-
-| Path | What lives there |
-| --- | --- |
-| `apps/desktop` | Tauri v2 desktop app with SolidStart UI and Rust backend |
-| `apps/web` | Next.js web app for marketing, docs, dashboard, sharing, API routes, and auth |
-| `apps/cli` | Rust CLI |
-| `apps/media-server` | Media processing service used by the web app |
-| `apps/discord-bot` | Discord integration |
-| `packages/database` | Drizzle schema and database access |
-| `packages/ui` | Shared React UI |
-| `packages/ui-solid` | Shared Solid UI |
-| `packages/web-backend` | Backend service layer |
-| `packages/web-domain` | Web domain models and types |
-| `packages/env` | Environment validation |
-| `packages/sdk-embed` | Embed SDK |
-| `packages/sdk-recorder` | Recorder SDK |
-| `crates/*` | Recording, capture, camera, audio, encoding, rendering, muxing, export, and test crates |
-| `scripts/*` | Setup, analytics, build, and maintenance tooling |
-| `infra/*` | Infrastructure configuration |
-
-The web API uses Effect and `@effect/platform` HTTP APIs. Desktop capture and export paths are backed by Rust crates for fast recording, rendering, and platform-specific media access.
-
-## Analytics
-
-Cap uses [Tinybird](https://www.tinybird.co) for viewer telemetry dashboards. Set `TINYBIRD_ADMIN_TOKEN` or `TINYBIRD_TOKEN` before running analytics commands.
-
-| Command | Purpose |
-| --- | --- |
-| `pnpm analytics:setup` | Deploy Tinybird datasources and pipes from `scripts/analytics/tinybird` |
-| `pnpm analytics:check` | Validate that the Tinybird workspace matches the app expectations |
-
-`analytics:setup` can remove Tinybird resources outside the checked-in analytics configuration. Use it only against the workspace you intend to manage from this repo.
-
-## Contributing
-
-Cap is built in public. Issues, pull requests, design feedback, bug reports, docs fixes, and bounties are welcome.
-
-- Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
-- Join the community on [Discord](https://cap.link/discord).
-- Check open bounties on [Algora](https://console.algora.io/org/CapSoftware/bounties?status=open).
+# 3. Manual pull + recreate (Dokploy doesn't auto-pull)
+ssh root@31.97.190.82 "\
+  docker pull ghcr.io/dmdfajardo00/looms-web:latest && \
+  cd /etc/dokploy/compose/stack-w1yuvu/code && \
+  docker compose -p stack-w1yuvu up -d --force-recreate cap-web"
+```
 
 ## License
 
-Portions of this software are licensed as follows:
+Cap is licensed under AGPLv3 (with parts under MIT). This fork inherits those terms. See [LICENSE](LICENSE) and [licenses/LICENSE-MIT](licenses/LICENSE-MIT).
 
-- Code in the `cap-camera*` and `scap-*` crate families is licensed under the MIT License. See [licenses/LICENSE-MIT](https://github.com/CapSoftware/Cap/blob/main/licenses/LICENSE-MIT).
-- Third-party components are licensed under the original license provided by their owner.
-- All other content not mentioned above is available under the AGPLv3 license as defined in [LICENSE](https://github.com/CapSoftware/Cap/blob/main/LICENSE).
+## Credit
+
+The hard work in this repo belongs to the [CapSoftware](https://github.com/CapSoftware) team. They built an exceptional open-source product. This fork is just my plumbing on top.
